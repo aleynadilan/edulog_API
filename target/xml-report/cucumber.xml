@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="7.757">
+    <testcase classname="As an administrator" name="When a GET request" time="7.259">
+        <system-out>
+            <![CDATA[* Api kullanicisi "employee" token ile base urli olusturur..................passed
+* APi kullanicisi ealth check path parametrelerini olusturur................passed
+* Api kullanicisi get request gonderir ve ealth check endpointinden donen responsei kaydeder.passed
+* Api kullanicisi status codeun 200 oldugunu dogrular.......................passed
+]]>
+        </system-out>
+    </testcase>
+</testsuite>
