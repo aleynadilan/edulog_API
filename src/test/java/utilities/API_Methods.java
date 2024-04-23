@@ -8,6 +8,7 @@ import static io.restassured.RestAssured.given;
 
 public class API_Methods {
     public static Response response;
+    public static String pathParam;
 
     public static Response getResponse(String pathParam) {
         response = given()
@@ -77,4 +78,20 @@ public class API_Methods {
                 .assertThat()
                 .statusCode(statusCode);
     }
+
+    public static String tryCatchGet(String pathParam) {
+        String exceptionMesaj = null;
+        try {
+            response = given()
+                    .spec(spec)
+                    .when()
+                    .get(pathParam);
+        } catch (Exception e) {
+            exceptionMesaj = e.getMessage();
+        }
+        System.out.println("Exception Mesaj : " + exceptionMesaj);
+
+        return exceptionMesaj;
+    }
+
 }
