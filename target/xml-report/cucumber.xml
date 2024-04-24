@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="7.886">
-    <testcase classname="Okul Resmi Dosya Türü Denetleyicisi Tümünü Bul." name="/panel/school-official-file-type endpoint'ine gecerli authorization bilgileri ile bir GET request" time="7.409">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="8.123">
+    <testcase classname="Sınıf Denetleyicisi oluştur." name="API uzerinden olusturulmak istenen yeni Sınıf Denetleyicisi kaydinin olustugu API uzerinden dogrulanmali." time="7.4">
         <system-out>
             <![CDATA[* Api kullanicisi "employee" token ile base urli olusturur..................passed
-* Api kullanicisi "panel", "school-official-file-type" path parametrelerini olusturur.passed
+* Api kullanicisi "classess", 76 path parametrelerini olusturur.............passed
 * Api kullanicisi get request gonderir ve donen responsei kaydeder..........passed
-* Api kullanıcısi response body icindeki 2 indexe sahip olan "internal" bilgisini dogrular..passed
+* Api kullanicisi response body icindeki name bilgisinin "Aleyna" ve id bilgisininde 76 oldugunu dogrular.passed
 ]]>
         </system-out>
     </testcase>
