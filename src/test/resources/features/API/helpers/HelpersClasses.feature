@@ -4,7 +4,7 @@ Feature: İlgili okulun sınıfları.
   bulundugu bir GET request gönderildiginde dönen status code'in 200 oldugu dogrulanmali.
 
     * Api kullanicisi "employee" token ile base urli olusturur
-    * Api kullanicisi "helpers", "classes" ve <seasonId> path parametrelerini olusturur
+    * Api kullanicisi "helpers", "classes" ve "<seasonId>" path parametrelerini olusturur
     * Api kullanicisi get request gonderir ve donen responsei kaydeder
     * Api kullanicisi status codeun 200 oldugunu dogrular
 
@@ -18,7 +18,7 @@ Feature: İlgili okulun sınıfları.
   array'in bos oldugu dogrulanmali.
 
     * Api kullanicisi "employee" token ile base urli olusturur
-    * Api kullanicisi "helpers", "classes" ve <seasonId> path parametrelerini olusturur
+    * Api kullanicisi "helpers", "classes" ve "<seasonId>" path parametrelerini olusturur
     * Api kullanicisi get request gonderir ve donen responsei kaydeder
     * Api kullanicisi status codeun 200 oldugunu dogrular
     * Api kullanicisi response body'deki arrayin bos oldugunu dogrular
@@ -33,7 +33,7 @@ Feature: İlgili okulun sınıfları.
   "Unauthorized" oldugu dogrulanmali.
 
     * Api kullanicisi "invalid" token ile base urli olusturur
-    * Api kullanicisi "helpers", "classes" ve <seasonId> path parametrelerini olusturur
+    * Api kullanicisi "helpers", "classes" ve "<seasonId>" path parametrelerini olusturur
     * Api kullanicisi donen responsei kaydeder, status codeun '401' ve reason phrase bilgisinin Unauthorized oldugunu dogrular
 
     Examples:
@@ -46,7 +46,7 @@ Feature: İlgili okulun sınıfları.
   updatedAt, deletedAt, name, level_key) dogrulanmali.
 
     * Api kullanicisi "employee" token ile base urli olusturur
-    * Api kullanicisi "helpers", "classes" ve <seasonId> path parametrelerini olusturur
+    * Api kullanicisi "helpers", "classes" ve "<seasonId>" path parametrelerini olusturur
     * Api kullanicisi get request gonderir ve donen responsei kaydeder
     * Api kullanıcısi response bodyde ki <dataIndex> indexe sahip olanin "<createdAt>", "<updatedAt>", "<name>" ve "<level_key>" bilgilerini doğrular.
 
