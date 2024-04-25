@@ -9,10 +9,13 @@ import static io.restassured.RestAssured.given;
 public class API_Methods {
     public static Response response;
     public static String pathParam;
+    public static Object requestBody;
+
 
     public static Response getResponse(String pathParam) {
         response = given()
                 .spec(spec)
+                .contentType(ContentType.JSON)
                 .when()
                 .get(pathParam);
 
