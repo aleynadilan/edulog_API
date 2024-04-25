@@ -73,6 +73,17 @@ public class API_Methods {
         return response;
     }
 
+    public static Response deleteResponse(String pathParam) {
+        response = given()
+                .spec(spec)
+                .when()
+                .delete(pathParam);
+
+        response.prettyPrint();
+
+        return response;
+    }
+
     public static void statusCodeAssert(int statusCode) {
         response.then()
                 .assertThat()
@@ -94,4 +105,35 @@ public class API_Methods {
         return exceptionMesaj;
     }
 
+    public static String tryCatchDelete(String pathParam) {
+        String exceptionMesaj = null;
+        try {
+            response = given()
+                    .spec(spec)
+                    .when()
+                    .delete(pathParam);
+        } catch (Exception e) {
+            exceptionMesaj = e.getMessage();
+        }
+        System.out.println("Exception Mesaj : " + exceptionMesaj);
+
+        return exceptionMesaj;
+    }
+
+    public static String tryCatchPatch(Object requestBody, String pathParam) {
+        String exceptionMesaj = null;
+        try {
+            response = given()
+                    .spec(spec)
+                    .contentType(ContentType.JSON)
+                    .when()
+                    .body(requestBody)
+                    .patch(pathParam);
+        } catch (Exception e) {
+            exceptionMesaj = e.getMessage();
+        }
+        System.out.println("Exception Mesaj : " + exceptionMesaj);
+
+        return exceptionMesaj;
+    }
 }

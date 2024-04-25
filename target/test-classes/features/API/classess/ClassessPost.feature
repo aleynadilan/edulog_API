@@ -9,6 +9,7 @@ Feature: Sınıf Denetleyicisi oluştur.
     * Api kullanicisi classess endpointine gondermek icin gerekli verileri iceren bir post request olusturur
     * Api kullanicisi post request gonderir ve classess endpointinden donen responsei kaydeder
     * Api kullanicisi status codeun 201 oldugunu dogrular
+    * Api kullanicisi response bodydeki bilgileri dogrular
 
 
   Scenario: /classess endpoint'ine gecersiz authorization bilgileri ve gerekli verileri (isActive,
@@ -22,7 +23,7 @@ Feature: Sınıf Denetleyicisi oluştur.
     * Api kullanicisi status codeun 401 oldugunu dogrular
     * Api kullanicisi response bodydeki errorData bilgisinin "Unauthorized" oldugunu dogrular
 
-  @API
+
   Scenario Outline: API uzerinden olusturulmak istenen yeni Sınıf Denetleyicisi kaydinin olustugu API uzerinden dogrulanmali.
   (Response bodyde dönen id ile /classess/{id} endpoint'ine GET request gönderilerek kayıt oluşturulduğu doğrulanabilir.)
 
@@ -30,7 +31,6 @@ Feature: Sınıf Denetleyicisi oluştur.
     * Api kullanicisi "classess", <id> path parametrelerini olusturur
     * Api kullanicisi get request gonderir ve donen responsei kaydeder
     * Api kullanicisi response body icindeki name bilgisinin "<name>" ve id bilgisininde <responseId> oldugunu dogrular
-
 
     Examples:
       | id | name   | responseId |
