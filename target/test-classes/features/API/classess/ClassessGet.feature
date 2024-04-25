@@ -2,7 +2,7 @@ Feature: Sınıf Denetleyicisi Tümünü bul.
 
   Scenario Outline: /classess endpoint'ine gecerli authorization bilgileri ile bir GET request
   gönderildiginde dönen status code'in 200 oldugu ve id(x) olaninin response body'de donen bilgileri
-  (year, name) dogrulanmali
+  (isActive, createdAt, updatedAt, deletedAt, name, level_key) dogrulanmali
 
     * Api kullanicisi "employee" token ile base urli olusturur
     * Api kullanicisi "classess" path parametrelerini olusturur
