@@ -1,20 +1,35 @@
 package stepdefinitions;
 
 import io.cucumber.java.en.Given;
+import io.restassured.path.json.JsonPath;
 import org.json.JSONObject;
 import utilities.API_Methods;
+import utilities.ConfigReader;
 
 import static hooks.HooksAPI.spec;
 import static org.hamcrest.Matchers.equalTo;
+import static org.junit.Assert.*;
 
 public class Classess {
 
     JSONObject requestBody;
 
+    JsonPath jsonPath;
+
     @Given("Api kullanicisi {string}, {int} path parametrelerini olusturur")
     public void api_kullanicisi_path_parametrelerini_olusturur(String pp1, int pp2) {
         spec.pathParams("pp1", pp1, "pp2", pp2);
         API_Methods.pathParam = "/{pp1}/{pp2}";
+    }
+
+    @Given("Api kullanicisi delete request gonderir ve donen responsei kaydeder")
+    public void api_kullanicisi_delete_request_gonderir_ve_donen_responsei_kaydeder() {
+        API_Methods.deleteResponse(API_Methods.pathParam);
+    }
+
+    @Given("Api kullanicisi donen delete responsei kaydeder, status codeun '401' ve reason phrase bilgisinin Unauthorized oldugunu dogrular")
+    public void api_kullanicisi_donen_delete_responsei_kaydeder_status_codeun_ve_reason_phrase_bilgisinin_unauthorized_oldugunu_dogrular() {
+        assertTrue(API_Methods.tryCatchDelete(API_Methods.pathParam).equals(ConfigReader.getProperty("unauthorizedExceptionMessage")));
     }
 
     // ***************************************** /classess (post) ***************************************************
@@ -33,6 +48,16 @@ public class Classess {
         API_Methods.postResponse(requestBody.toString(), API_Methods.pathParam);
     }
 
+    @Given("Api kullanicisi response bodydeki bilgileri dogrular")
+    public void api_kullanicisi_response_bodydeki_bilgileri_dogrular() {
+        jsonPath = API_Methods.response.jsonPath();
+
+        assertTrue(jsonPath.getBoolean("isActive"));
+        assertEquals(requestBody.get("name"), jsonPath.getString("name"));
+        assertNull(jsonPath.get("level_key"));
+        assertNull(jsonPath.get("deletedAt"));
+    }
+
     @Given("Api kullanicisi response bodydeki errorData bilgisinin {string} oldugunu dogrular")
     public void api_kullanicisi_response_bodydeki_error_data_bilgisinin_oldugunu_dogrular(String errorData) {
         API_Methods.response.then()
@@ -48,4 +73,41 @@ public class Classess {
                         "id", equalTo(id));
     }
     // **************************************************************************************************************
+
+    // ***************************************** /classess (get) ***************************************************
+    @Given("Api kullanıcısi response body icinde {int} indexe sahip olan {string}, {string} ve {string} bilgilerini doğrular.")
+    public void api_kullanıcısi_response_body_icinde_indexe_sahip_olan_ve_bilgilerini_doğrular(int dataIndex, String createdAt, String updatedAt, String name) {
+        jsonPath = API_Methods.response.jsonPath();
+
+        assertTrue(jsonPath.getBoolean("[" + dataIndex + "].isActive"));
+        assertEquals(createdAt, jsonPath.getString("[" + dataIndex + "].createdAt"));
+        assertEquals(updatedAt, jsonPath.getString("[" + dataIndex + "].updatedAt"));
+        assertNull(jsonPath.get("[" + dataIndex + "].deletedAt"));
+        assertEquals(name, jsonPath.getString("[" + dataIndex + "].name"));
+        assertNull(jsonPath.get("[" + dataIndex + "].level_key"));
+    }
+    // **************************************************************************************************************
+
+    // *************************************** /classess/{id} (get) **************************************************
+    @Given("Api kullanicisi response bodynin bos oldugunu dogrular")
+    public void api_kullanicisi_response_bodynin_bos_oldugunu_dogrular() {
+        API_Methods.response.then()
+                .assertThat()
+                .body(equalTo(""));
+    }
+
+    @Given("Api kullanicisi response bodydeki data {int}, {string}, {string}, {string} iceriklerini dogrular")
+    public void api_kullanicisi_response_bodydeki_data_iceriklerini_dogrular(int id, String createdAt, String updatedAt, String name) {
+        jsonPath = API_Methods.response.jsonPath();
+
+        assertEquals(id, jsonPath.getInt("id"));
+        assertTrue(jsonPath.getBoolean("isActive"));
+        assertEquals(createdAt, jsonPath.getString("createdAt"));
+        assertEquals(updatedAt, jsonPath.getString("updatedAt"));
+        assertNull(jsonPath.get("deletedAt"));
+        assertEquals(name, jsonPath.getString("name"));
+        assertNull(jsonPath.get("level_key"));
+    }
+    // **************************************************************************************************************
+
 }
