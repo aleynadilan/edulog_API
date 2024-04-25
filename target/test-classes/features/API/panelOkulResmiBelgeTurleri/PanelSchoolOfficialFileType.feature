@@ -19,7 +19,7 @@ Feature: Okul Resmi Dosya Türü Denetleyicisi Tümünü Bul.
     * Api kullanicisi "panel", "school-official-file-type" path parametrelerini olusturur
     * Api kullanicisi donen responsei kaydeder, status codeun '401' ve reason phrase bilgisinin Unauthorized oldugunu dogrular
 
-  @API
+
   Scenario Outline: /panel/school-official-file-type endpoint'ine gecerli authorization bilgileri ile bir GET request
   gönderildiginde id(x) olaninin response body'de donen bilgisi (key) dogrulanmali.
 
