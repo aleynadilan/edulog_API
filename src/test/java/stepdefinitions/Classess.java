@@ -1,10 +1,13 @@
 package stepdefinitions;
 
 import io.cucumber.java.en.Given;
+import io.restassured.module.jsv.JsonSchemaValidator;
 import io.restassured.path.json.JsonPath;
 import org.json.JSONObject;
 import utilities.API_Methods;
 import utilities.ConfigReader;
+
+import java.io.InputStream;
 
 import static hooks.HooksAPI.spec;
 import static org.hamcrest.Matchers.equalTo;
@@ -86,6 +89,16 @@ public class Classess {
         assertEquals(name, jsonPath.getString("[" + dataIndex + "].name"));
         assertNull(jsonPath.get("[" + dataIndex + "].level_key"));
     }
+
+    @Given("Api kullanicisi classess endpointinden donen response bodynin schema validation dogrulamasini yapar")
+    public void api_kullanicisi_classess_endpointinden_donen_response_bodynin_schema_validation_dogrulamasini_yapar() {
+        InputStream classessGetJsonSchema = getClass().getClassLoader()
+                .getResourceAsStream("src/test/resources/features/API/classess/classessJsonSchema/classessGet.json");
+
+        API_Methods.response.then()
+                .assertThat()
+                .body(JsonSchemaValidator.matchesJsonSchema(classessGetJsonSchema));
+    }
     // **************************************************************************************************************
 
     // *************************************** /classess/{id} (get) **************************************************
@@ -107,6 +120,16 @@ public class Classess {
         assertNull(jsonPath.get("deletedAt"));
         assertEquals(name, jsonPath.getString("name"));
         assertNull(jsonPath.get("level_key"));
+    }
+
+    @Given("Api kullanicisi classess id endpointinden donen response bodynin schema validation dogrulamasini yapar")
+    public void api_kullanicisi_classess_id_endpointinden_donen_response_bodynin_schema_validation_dogrulamasini_yapar() {
+        InputStream classessIdGetJsonSchema = getClass().getClassLoader()
+                .getResourceAsStream("features/API/classess/classessJsonSchema/classessIdGet.json");
+
+        API_Methods.response.then()
+                .assertThat()
+                .body(JsonSchemaValidator.matchesJsonSchema(classessIdGetJsonSchema));
     }
     // **************************************************************************************************************
 

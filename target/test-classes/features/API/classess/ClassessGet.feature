@@ -2,13 +2,14 @@ Feature: Sınıf Denetleyicisi Tümünü bul.
 
   Scenario Outline: /classess endpoint'ine gecerli authorization bilgileri ile bir GET request
   gönderildiginde dönen status code'in 200 oldugu ve id(x) olaninin response body'de donen bilgileri
-  (year, name) dogrulanmali
+  (isActive, createdAt, updatedAt, deletedAt, name, level_key) dogrulanmali
 
     * Api kullanicisi "employee" token ile base urli olusturur
     * Api kullanicisi "classess" path parametrelerini olusturur
     * Api kullanicisi get request gonderir ve donen responsei kaydeder
     * Api kullanicisi status codeun 200 oldugunu dogrular
     * Api kullanıcısi response body icinde <dataIndex> indexe sahip olan "<createdAt>", "<updatedAt>" ve "<name>" bilgilerini doğrular.
+    * Api kullanicisi classess endpointinden donen response bodynin schema validation dogrulamasini yapar
 
     Examples:
       | dataIndex | createdAt                | updatedAt                | name |
