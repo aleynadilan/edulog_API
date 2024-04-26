@@ -1,7 +1,7 @@
 package stepdefinitions;
 
-import com.fasterxml.jackson.module.jsonSchema.factories.JsonSchemaFactory;
 import hooks.HooksAPI;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 
@@ -13,6 +13,7 @@ import utilities.API_Methods;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.HashMap;
 import java.util.Map;
 
 import static hooks.HooksAPI.spec;
@@ -86,5 +87,58 @@ public class Campus_Student {
 
     }
 
-//
+    @And("Mustafa kullanicisi isActive kismi null body olusturur")
+    public void mustafaKullanicisiIsActiveKismiNullBodyOlusturur() {
+        requestBody = "{\n" +
+                "  \"ids\": [\n" +
+                "    1,\n" +
+                "    2,\n" +
+                "    3,\n" +
+                "    4\n" +
+                "  ],\n" +
+                "  \"update\": {\n" +
+                "    \"isActive\": null\n" +
+                "  }\n" +
+                "}";
+    }
+
+
+    @And("Mustafa kullanicisi id kismi bos body olusturur")
+    public void mustafaKullanicisiIdKismiBosBodyOlusturur() {
+        requestBody = "{\n" +
+                "  \"ids\": [\n" +
+                "    \n" +
+                "  ],\n" +
+                "  \"update\": {\n" +
+                "    \"isActive\": true\n" +
+                "  }\n" +
+                "}";
+    }
+
+    @And("Mustafa kullanicisi download body olusturur")
+    public void mustafaKullanicisiDownloadBodyOlusturur() {
+        requestBody = "{\n" +
+                "  \"ids\": [\n" +
+                "    34,\n" +
+                "    17\n" +
+                "  ]\n" +
+                "}";
+    }
+
+    @And("Mustafa kullanicisi get request gonderir ve donen responsei kaydeder")
+    public void mustafaKullanicisiGetRequestGonderirVeDonenResponseiKaydeder() {
+        API_Methods.getResponseWithBodyAndQueryParams(requestBody, pathParam,queryParams);
+    }
+
+    @And("Mustafa kullanicisi {string}, {string},{string},{string} path ve query parametrelerini olusturur")
+    public void mustafaKullanicisiPathVeQueryParametreleriniOlusturur(String pp1, String pp2, String pp3, String pp4) {
+        spec.pathParams("pp1", pp1, "pp2", pp2, "pp3", pp3, "pp4", pp4);
+        API_Methods.pathParam = "/{pp1}/{pp2}/{pp3}/{pp4}";
+
+        queryParams = new HashMap<>();
+        queryParams.put("ids", "34");
+        queryParams.put("ids", "17");
+
+
+    }
 }

@@ -21,3 +21,16 @@ Feature: Ogrencilerin Toplu Guncelleme Islemi
       Then Mustafa kullanicisi status code 201 oldugunu dogrular
       And Mustafa kullanicisi request bodynin schema validation dogrulamasini yapar
 
+      Scenario: Negatif isActive bos Öğrencileri toplu güncelleme işlemi.
+        Given Mustafa kullanicisi "student" token ile base urli olusturur
+        And Mustafa kullanicisi "campus", "student","bulk","update" path parametrelerini olusturur
+        And Mustafa kullanicisi isActive kismi null body olusturur
+        And Mustafa kullanicisi post request gonderir ve donen responsei kaydeder
+        Then Mustafa kullanicisi status code 400 oldugunu dogrular
+
+  Scenario: Negatif body id kisimlari bos Öğrencileri toplu güncelleme işlemi.
+    Given Mustafa kullanicisi "student" token ile base urli olusturur
+    And Mustafa kullanicisi "campus", "student","bulk","update" path parametrelerini olusturur
+    And Mustafa kullanicisi id kismi bos body olusturur
+    And Mustafa kullanicisi post request gonderir ve donen responsei kaydeder
+    Then Mustafa kullanicisi status code 400 oldugunu dogrular
