@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="7.655">
-    <testcase classname="Sezon Kontrolörü Birini Bul." name="/seasons/{id} endpoint'ine gecerli authorization bilgileri ve id verisinin bulundugu bir GET" time="6.964">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="7.735">
+    <testcase classname="Çalışan Rolü Denetleyicisi Çalışan Listesini Al." name="/authorization/employee-role/employee-list endpoint'ine gecerli authorization bilgileri ile bir GET request" time="7.12">
         <system-out>
             <![CDATA[* Api kullanicisi "employee" token ile base urli olusturur..................passed
-* Api kullanicisi "seasons", 11 path parametrelerini olusturur..............passed
+* Api kullanicisi "authorization", "employee-role", "employee-list" path parametrelerini olusturur.passed
 * Api kullanicisi get request gonderir ve donen responsei kaydeder..........passed
-* Api kullanicisi response bodydeki data 11, "2024-04-25T14:47:00.192Z", "2024-04-25T14:47:00.192Z", "Aleyna", "2024-09-17T00:00:00.000Z" ve "2025-09-17T00:00:00.000Z" iceriklerini dogrular.passed
+* Api kullanicisi status codeun 200 oldugunu dogrular.......................passed
+* Api kullanicisi response bodydeki message bilgisinin "success" oldugunu dogrular.passed
+* Api kullanicisi response bodydeki status bilgisinin true oldugunu dogrular.passed
 ]]>
         </system-out>
     </testcase>

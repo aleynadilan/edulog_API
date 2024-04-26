@@ -40,7 +40,7 @@ Feature: Sezon Kontrolörü Birini Bul.
       | id |
       | 11 |
 
-  @API
+
   Scenario Outline: /seasons/{id} endpoint'ine gecerli authorization bilgileri ve id verisinin bulundugu bir GET
   request gönderildiginde dönen response body'deki datalar (id, isActive, created_at, updated_at, deletedAt, name,
   seasonStartDate, seasonEndDate) dogrulanmali.
