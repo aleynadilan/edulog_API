@@ -9,6 +9,7 @@ Feature: Sınıf Denetleyicisi Tümünü bul.
     * Api kullanicisi get request gonderir ve donen responsei kaydeder
     * Api kullanicisi status codeun 200 oldugunu dogrular
     * Api kullanıcısi response body icinde <dataIndex> indexe sahip olan "<createdAt>", "<updatedAt>" ve "<name>" bilgilerini doğrular.
+    * Api kullanicisi classess endpointinden donen response bodynin schema validation dogrulamasini yapar
 
     Examples:
       | dataIndex | createdAt                | updatedAt                | name |

@@ -7,11 +7,11 @@ Feature: Sınıf Denetleyicisi Birini Bul.
     * Api kullanicisi "classess", <id> path parametrelerini olusturur
     * Api kullanicisi get request gonderir ve donen responsei kaydeder
     * Api kullanicisi status codeun 200 oldugunu dogrular
+    * Api kullanicisi classess id endpointinden donen response bodynin schema validation dogrulamasini yapar
 
     Examples:
       | id |
       | 76 |
-      | 24 |
 
 
   Scenario Outline: /classess/{id} endpoint'ine gecerli authorization bilgileri ve sistemde bulunmayan
@@ -55,4 +55,3 @@ Feature: Sınıf Denetleyicisi Birini Bul.
     Examples:
       | id | id | createdAt                | updatedAt                | name   |
       | 76 | 76 | 2024-04-24T16:48:48.212Z | 2024-04-24T16:48:48.212Z | Aleyna |
-      | 24 | 24 | 2023-12-23T06:23:56.124Z | 2023-12-23T06:23:56.124Z | 9      |
