@@ -1,8 +1,13 @@
 package stepdefinitions;
 
 import io.cucumber.java.en.Given;
+import io.restassured.module.jsv.JsonSchemaValidator;
 import io.restassured.path.json.JsonPath;
+import org.json.JSONArray;
+import org.json.JSONObject;
 import utilities.API_Methods;
+
+import java.io.InputStream;
 
 import static org.hamcrest.Matchers.equalTo;
 import static org.junit.Assert.assertEquals;
@@ -10,6 +15,7 @@ import static org.junit.Assert.assertEquals;
 public class Meet {
 
     JsonPath jsonPath;
+    JSONObject requestBody;
 
     // ***************************************** /meet/widgets ******************************************************
     @Given("Api kullanıcısi response body icinde {int} indexe sahip olanin {string}, {string}, {string} ve {string} bilgilerini doğrular.")
@@ -47,6 +53,31 @@ public class Meet {
                         "data.meetDate", equalTo(meetDate),
                         "data.status", equalTo(status),
                         "data.isSibling", equalTo(false));
+    }
+    // **************************************************************************************************************
+
+    // ******************************************* /meet/bulk/update ************************************************
+    @Given("Api kullanicisi meet bulk update endpointine gondermek icin gerekli verileri iceren bir post request olusturur")
+    public void api_kullanicisi_meet_bulk_update_endpointine_gondermek_icin_gerekli_verileri_iceren_bir_post_request_olusturur() {
+        JSONArray ids = new JSONArray();
+        ids.put(1);
+        ids.put(2);
+        ids.put(3);
+        ids.put(4);
+
+        JSONObject update = new JSONObject();
+        update.put("isActive", true);
+
+        requestBody = new JSONObject();
+        requestBody.put("ids", ids);
+        requestBody.put("update", update);
+
+        System.out.println(requestBody.toString());
+    }
+
+    @Given("Api kullanicisi post request gonderir ve meet bulk update endpointinden donen responsei kaydeder")
+    public void api_kullanicisi_post_request_gonderir_ve_meet_bulk_update_endpointinden_donen_responsei_kaydeder() {
+        API_Methods.postResponse(requestBody.toString(), API_Methods.pathParam);
     }
     // **************************************************************************************************************
 
