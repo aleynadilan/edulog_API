@@ -1,0 +1,121 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://example.com/object1714245276.json",
+  "title": "Root",
+  "type": "object",
+  "required": [
+    "status",
+    "message",
+    "data",
+    "statusCode"
+  ],
+  "properties": {
+    "status": {
+      "$id": "#root/status",
+      "title": "Status",
+      "type": "boolean",
+      "default": true
+    },
+    "message": {
+      "$id": "#root/message",
+      "title": "Message",
+      "type": "string",
+      "default": "",
+      "pattern": "^.*$"
+    },
+    "data": {
+      "$id": "#root/data",
+      "title": "Data",
+      "type": "array",
+      "default": [],
+      "items":{
+        "$id": "#root/data/items",
+        "title": "Items",
+        "type": "object",
+        "required": [
+          "key",
+          "icon",
+          "color",
+          "chartType",
+          "data"
+        ],
+        "properties": {
+          "key": {
+            "$id": "#root/data/items/key",
+            "title": "Key",
+            "type": "string",
+            "default": "",
+            "pattern": "^.*$"
+          },
+          "icon": {
+            "$id": "#root/data/items/icon",
+            "title": "Icon",
+            "type": "string",
+            "default": "",
+            "pattern": "^.*$"
+          },
+          "color": {
+            "$id": "#root/data/items/color",
+            "title": "Color",
+            "type": "string",
+            "default": "",
+            "pattern": "^.*$"
+          },
+          "chartType": {
+            "$id": "#root/data/items/chartType",
+            "title": "Charttype",
+            "type": "string",
+            "default": "",
+            "pattern": "^.*$"
+          },
+          "data": {
+            "$id": "#root/data/items/data",
+            "title": "Data",
+            "type": "array",
+            "default": [],
+            "items":{
+              "$id": "#root/data/items/data/items",
+              "title": "Items",
+              "type": "object",
+              "required": [
+                "key",
+                "value",
+                "chartData"
+              ],
+              "properties": {
+                "key": {
+                  "$id": "#root/data/items/data/items/key",
+                  "title": "Key",
+                  "type": "string",
+                  "default": "",
+                  "pattern": "^.*$"
+                },
+                "value": {
+                  "$id": "#root/data/items/data/items/value",
+                  "title": "Value",
+                  "type": "integer",
+                  "default": 0
+                },
+                "chartData": {
+                  "$id": "#root/data/items/data/items/chartData",
+                  "title": "Chartdata",
+                  "type": "integer",
+                  "default": 0
+                }
+              }
+            }
+
+          }
+        }
+      }
+
+    },
+    "statusCode": {
+      "$id": "#root/statusCode",
+      "title": "Statuscode",
+      "type": "integer",
+      "default": 0
+    }
+  }
+}
