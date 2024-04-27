@@ -1,21 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="7.488">
-    <testcase classname="Öğrencileri toplu güncelleme işlemi." name="/meet/bulk/update endpoint'ine gecerli authorization bilgileri ve gerekli verileri iceren bir POST body" time="6.868">
-        <failure message="" type="java.lang.NullPointerException">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="10.745">
+    <testcase classname="Sınıf Denetleyicisi Birini Bul." name="/classess/{id} endpoint'ine gecerli authorization bilgileri ve id verisinin bulundugu" time="9.933">
+        <system-out>
             <![CDATA[* Api kullanicisi "employee" token ile base urli olusturur..................passed
-* Api kullanicisi "meet", "bulk" ve "update" path parametrelerini olusturur.passed
-* Api kullanicisi meet bulk update endpointine gondermek icin gerekli verileri iceren bir post request olusturur.passed
-* Api kullanicisi post request gonderir ve meet bulk update endpointinden donen responsei kaydeder.passed
-* Api kullanicisi meet bulk update endpointinden donen response bodynin schema validation dogrulamasini yapar.failed
-
-StackTrace:
-java.lang.NullPointerException
-	at java.base/java.io.Reader.<init>(Reader.java:167)
-	at java.base/java.io.InputStreamReader.<init>(InputStreamReader.java:72)
-	at io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchema(JsonSchemaValidator.java:127)
-	at stepdefinitions.Meet.api_kullanicisi_meet_bulk_update_endpointinden_donen_response_bodynin_schema_validation_dogrulamasini_yapar(Meet.java:90)
-	at ✽.Api kullanicisi meet bulk update endpointinden donen response bodynin schema validation dogrulamasini yapar(file:///C:/Users/ACER/IdeaProjects/com.edulog_API/src/test/resources/features/API/meet/MeetBulkUpdate.feature:10)
+* Api kullanicisi "classess", 76 path parametrelerini olusturur.............passed
+* Api kullanicisi get request gonderir ve donen responsei kaydeder..........passed
+* Api kullanicisi status codeun 200 oldugunu dogrular.......................passed
+* Api kullanicisi classess id endpointinden donen response bodynin schema validation dogrulamasini yapar.passed
 ]]>
-        </failure>
+        </system-out>
     </testcase>
 </testsuite>
