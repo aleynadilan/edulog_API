@@ -1,6 +1,53 @@
 {
-  "status": false,
-  "message": "success",
-  "data": "",
-  "statusCode": 200
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://example.com/object1714243520.json",
+  "title": "Root",
+  "type": "object",
+  "required": [
+    "status",
+    "message",
+    "data",
+    "statusCode"
+  ],
+  "properties": {
+    "status": {
+      "$id": "#root/status",
+      "title": "Status",
+      "type": "boolean",
+      "examples": [
+        true
+      ],
+      "default": true
+    },
+    "message": {
+      "$id": "#root/message",
+      "title": "Message",
+      "type": "string",
+      "default": "",
+      "examples": [
+        "success"
+      ],
+      "pattern": "^.*$"
+    },
+    "data": {
+      "$id": "#root/data",
+      "title": "Data",
+      "type": "string",
+      "default": "",
+      "examples": [
+        ""
+      ],
+      "pattern": "^.*$"
+    },
+    "statusCode": {
+      "$id": "#root/statusCode",
+      "title": "Statuscode",
+      "type": "integer",
+      "examples": [
+        200
+      ],
+      "default": 0
+    }
+  }
 }
