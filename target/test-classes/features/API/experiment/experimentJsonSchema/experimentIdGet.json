@@ -1,0 +1,258 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://example.com/object1714303511.json",
+  "title": "Root",
+  "type": "object",
+  "required": [
+    "status",
+    "message",
+    "data",
+    "statusCode"
+  ],
+  "properties": {
+    "status": {
+      "$id": "#root/status",
+      "title": "Status",
+      "type": "boolean",
+      "examples": [
+        true
+      ],
+      "default": true
+    },
+    "message": {
+      "$id": "#root/message",
+      "title": "Message",
+      "type": "string",
+      "default": "",
+      "examples": [
+        "success"
+      ],
+      "pattern": "^.*$"
+    },
+    "data": {
+      "$id": "#root/data",
+      "title": "Data",
+      "type": "object",
+      "required": [
+        "id",
+        "isActive",
+        "createdAt",
+        "updatedAt",
+        "deletedAt",
+        "name",
+        "key",
+        "type",
+        "capacity",
+        "image",
+        "steps",
+        "lives"
+      ],
+      "properties": {
+        "id": {
+          "$id": "#root/data/id",
+          "title": "Id",
+          "type": "integer",
+          "examples": [
+            1
+          ],
+          "default": 0
+        },
+        "isActive": {
+          "$id": "#root/data/isActive",
+          "title": "Isactive",
+          "type": "boolean",
+          "examples": [
+            true
+          ],
+          "default": true
+        },
+        "createdAt": {
+          "$id": "#root/data/createdAt",
+          "title": "Createdat",
+          "type": "string",
+          "default": "",
+          "examples": [
+            "2024-03-14T10:01:17.601Z"
+          ],
+          "pattern": "^.*$"
+        },
+        "updatedAt": {
+          "$id": "#root/data/updatedAt",
+          "title": "Updatedat",
+          "type": "string",
+          "default": "",
+          "examples": [
+            "2024-03-14T10:01:17.601Z"
+          ],
+          "pattern": "^.*$"
+        },
+        "deletedAt": {
+          "$id": "#root/data/deletedAt",
+          "title": "Deletedat",
+          "type": "null",
+          "default": null
+        },
+        "name": {
+          "$id": "#root/data/name",
+          "title": "Name",
+          "type": "string",
+          "default": "",
+          "examples": [
+            "12.Sınıf Fizik Elektrik 2 Deneyi"
+          ],
+          "pattern": "^.*$"
+        },
+        "key": {
+          "$id": "#root/data/key",
+          "title": "Key",
+          "type": "string",
+          "default": "",
+          "examples": [
+            "psychic_8_electricity_2"
+          ],
+          "pattern": "^.*$"
+        },
+        "type": {
+          "$id": "#root/data/type",
+          "title": "Type",
+          "type": "string",
+          "default": "",
+          "examples": [
+            "class"
+          ],
+          "pattern": "^.*$"
+        },
+        "capacity": {
+          "$id": "#root/data/capacity",
+          "title": "Capacity",
+          "type": "integer",
+          "examples": [
+            15
+          ],
+          "default": 0
+        },
+        "image": {
+          "$id": "#root/data/image",
+          "title": "Image",
+          "type": "string",
+          "default": "",
+          "examples": [
+            "https://i.ibb.co/Z8Hhqc9/Group-41683.png"
+          ],
+          "pattern": "^.*$"
+        },
+        "steps": {
+          "$id": "#root/data/steps",
+          "title": "Steps",
+          "type": "array",
+          "default": [],
+          "items":{
+            "$id": "#root/data/steps/items",
+            "title": "Items",
+            "type": "object",
+            "required": [
+              "id",
+              "isActive",
+              "createdAt",
+              "updatedAt",
+              "deletedAt",
+              "name",
+              "key",
+              "description"
+            ],
+            "properties": {
+              "id": {
+                "$id": "#root/data/steps/items/id",
+                "title": "Id",
+                "type": "integer",
+                "examples": [
+                  1
+                ],
+                "default": 0
+              },
+              "isActive": {
+                "$id": "#root/data/steps/items/isActive",
+                "title": "Isactive",
+                "type": "boolean",
+                "examples": [
+                  true
+                ],
+                "default": true
+              },
+              "createdAt": {
+                "$id": "#root/data/steps/items/createdAt",
+                "title": "Createdat",
+                "type": "string",
+                "default": "",
+                "examples": [
+                  "2024-03-14T10:01:17.601Z"
+                ],
+                "pattern": "^.*$"
+              },
+              "updatedAt": {
+                "$id": "#root/data/steps/items/updatedAt",
+                "title": "Updatedat",
+                "type": "string",
+                "default": "",
+                "examples": [
+                  "2024-03-14T10:01:17.601Z"
+                ],
+                "pattern": "^.*$"
+              },
+              "deletedAt": {
+                "$id": "#root/data/steps/items/deletedAt",
+                "title": "Deletedat",
+                "type": "null",
+                "default": null
+              },
+              "name": {
+                "$id": "#root/data/steps/items/name",
+                "title": "Name",
+                "type": "string",
+                "default": "",
+                "examples": [
+                  "Turuncu kalemi eline aldı"
+                ],
+                "pattern": "^.*$"
+              },
+              "key": {
+                "$id": "#root/data/steps/items/key",
+                "title": "Key",
+                "type": "string",
+                "default": "",
+                "examples": [
+                  "uinqueid-1"
+                ],
+                "pattern": "^.*$"
+              },
+              "description": {
+                "$id": "#root/data/steps/items/description",
+                "title": "Description",
+                "type": "null",
+                "default": null
+              }
+            }
+          }
+
+        },
+        "lives": {
+          "$id": "#root/data/lives",
+          "title": "Lives",
+          "type": "array",
+          "default": []
+        }
+      }
+    }
+  ,
+    "statusCode": {
+      "$id": "#root/statusCode",
+      "title": "Statuscode",
+      "type": "integer",
+      "examples": [
+        200
+      ],
+      "default": 0
+    }
+  }
+}

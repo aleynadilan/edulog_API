@@ -93,7 +93,7 @@ public class Classess {
     @Given("Api kullanicisi classess endpointinden donen response bodynin schema validation dogrulamasini yapar")
     public void api_kullanicisi_classess_endpointinden_donen_response_bodynin_schema_validation_dogrulamasini_yapar() {
         InputStream classessGetJsonSchema = getClass().getClassLoader()
-                .getResourceAsStream("src/test/resources/features/API/classess/classessJsonSchema/classessGet.json");
+                .getResourceAsStream("features/API/classess/classessJsonSchema/classessGet.json");
 
         API_Methods.response.then()
                 .assertThat()
@@ -125,7 +125,7 @@ public class Classess {
     @Given("Api kullanicisi classess id endpointinden donen response bodynin schema validation dogrulamasini yapar")
     public void api_kullanicisi_classess_id_endpointinden_donen_response_bodynin_schema_validation_dogrulamasini_yapar() {
         InputStream classessIdGetJsonSchema = getClass().getClassLoader()
-                .getResourceAsStream("src/test/resources/features/API/classess/classessJsonSchema/classessIdGet.json");
+                .getResourceAsStream("features/API/classess/classessJsonSchema/classessIdGet.json");
 
         API_Methods.response.then()
                 .assertThat()
