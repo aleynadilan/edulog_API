@@ -13,6 +13,7 @@ public class HealthCheck {
         spec.pathParam("pp1", pp1);
         API_Methods.pathParam = "/{pp1}";
     }
+
     @Given("Api kullanicisi response bodydeki message bilgisinin {string} oldugunu dogrular")
     public void api_kullanicisi_response_bodydeki_message_bilgisinin_oldugunu_dogrular(String message) {
         API_Methods.response.then()

@@ -511,5 +511,25 @@
     "deletedAt": null,
     "name": "ahmet",
     "level_key": null
+  },
+  {
+    "id": 80,
+    "isActive": true,
+    "createdAt": "2024-04-26T08:39:41.434Z",
+    "updatedAt": "2024-04-26T08:39:41.434Z",
+    "deletedAt": null,
+    "name": "12",
+    "level_key": null
+  },
+  {
+    "id": 81,
+    "isActive": true,
+    "createdAt": "2024-04-26T08:41:46.311Z",
+    "updatedAt": "2024-04-26T08:41:46.311Z",
+    "deletedAt": null,
+    "name": "Dila",
+    "level_key": null
   }
 ]
+
+
