@@ -1,9 +1,12 @@
 package stepdefinitions;
 
 import io.cucumber.java.en.Given;
+import io.restassured.module.jsv.JsonSchemaValidator;
 import io.restassured.path.json.JsonPath;
 import utilities.API_Methods;
 import utilities.ConfigReader;
+
+import java.io.InputStream;
 
 import static org.junit.Assert.*;
 
@@ -31,6 +34,16 @@ public class Experiment {
         assertEquals(type, jsonPath.getString("data.type"));
         assertEquals(capacity, jsonPath.getInt("data.capacity"));
         assertEquals(image, jsonPath.getString("data.image"));
+    }
+
+    @Given("Api kullanicisi experiment id endpointinden donen response bodynin schema validation dogrulamasini yapar")
+    public void api_kullanicisi_experiment_id_endpointinden_donen_response_bodynin_schema_validation_dogrulamasini_yapar() {
+        InputStream experimentIdGetJsonSchema = getClass().getClassLoader()
+                .getResourceAsStream("features/API/experiment/experimentJsonSchema/experimentIdGet.json");
+
+        API_Methods.response.then()
+                .assertThat()
+                .body(JsonSchemaValidator.matchesJsonSchema(experimentIdGetJsonSchema));
     }
     // **************************************************************************************************************
 }

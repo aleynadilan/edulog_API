@@ -9,6 +9,7 @@ Feature: Kimliğe göre denemeyi al.
     * Api kullanicisi status codeun 200 oldugunu dogrular
     * Api kullanicisi response bodydeki message bilgisinin "success" oldugunu dogrular
     * Api kullanicisi response bodydeki status bilgisinin true oldugunu dogrular
+    * Api kullanicisi experiment id endpointinden donen response bodynin schema validation dogrulamasini yapar
 
     Examples:
       | id |
