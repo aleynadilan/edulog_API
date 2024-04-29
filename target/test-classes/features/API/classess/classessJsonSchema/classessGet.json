@@ -1,0 +1,542 @@
+[
+  {
+    "id": 32,
+    "isActive": true,
+    "createdAt": "2023-12-23T06:23:56.124Z",
+    "updatedAt": "2023-12-23T06:23:56.124Z",
+    "deletedAt": null,
+    "name": "12",
+    "level_key": null
+  },
+  {
+    "id": 31,
+    "isActive": true,
+    "createdAt": "2023-12-23T06:23:56.124Z",
+    "updatedAt": "2023-12-23T06:23:56.124Z",
+    "deletedAt": null,
+    "name": "12",
+    "level_key": null
+  },
+  {
+    "id": 22,
+    "isActive": true,
+    "createdAt": "2023-12-23T06:23:56.124Z",
+    "updatedAt": "2023-12-23T06:23:56.124Z",
+    "deletedAt": null,
+    "name": "4",
+    "level_key": null
+  },
+  {
+    "id": 36,
+    "isActive": true,
+    "createdAt": "2023-12-23T06:23:56.124Z",
+    "updatedAt": "2023-12-23T06:23:56.124Z",
+    "deletedAt": null,
+    "name": "11",
+    "level_key": null
+  },
+  {
+    "id": 50,
+    "isActive": true,
+    "createdAt": "2023-12-23T06:23:56.124Z",
+    "updatedAt": "2023-12-23T06:23:56.124Z",
+    "deletedAt": null,
+    "name": "9",
+    "level_key": null
+  },
+  {
+    "id": 15,
+    "isActive": true,
+    "createdAt": "2023-12-23T06:23:56.124Z",
+    "updatedAt": "2023-12-23T06:23:56.124Z",
+    "deletedAt": null,
+    "name": "0",
+    "level_key": null
+  },
+  {
+    "id": 53,
+    "isActive": true,
+    "createdAt": "2023-12-23T06:23:56.124Z",
+    "updatedAt": "2023-12-23T06:23:56.124Z",
+    "deletedAt": null,
+    "name": "9",
+    "level_key": null
+  },
+  {
+    "id": 58,
+    "isActive": true,
+    "createdAt": "2023-12-23T06:23:56.124Z",
+    "updatedAt": "2023-12-23T06:23:56.124Z",
+    "deletedAt": null,
+    "name": "9",
+    "level_key": null
+  },
+  {
+    "id": 30,
+    "isActive": true,
+    "createdAt": "2023-12-23T06:23:56.124Z",
+    "updatedAt": "2023-12-23T06:23:56.124Z",
+    "deletedAt": null,
+    "name": "9",
+    "level_key": null
+  },
+  {
+    "id": 39,
+    "isActive": true,
+    "createdAt": "2023-12-23T06:23:56.124Z",
+    "updatedAt": "2023-12-23T06:23:56.124Z",
+    "deletedAt": null,
+    "name": "9",
+    "level_key": null
+  },
+  {
+    "id": 35,
+    "isActive": true,
+    "createdAt": "2023-12-23T06:23:56.124Z",
+    "updatedAt": "2023-12-23T06:23:56.124Z",
+    "deletedAt": null,
+    "name": "9",
+    "level_key": null
+  },
+  {
+    "id": 57,
+    "isActive": true,
+    "createdAt": "2023-12-23T06:23:56.124Z",
+    "updatedAt": "2023-12-23T06:23:56.124Z",
+    "deletedAt": null,
+    "name": "9",
+    "level_key": null
+  },
+  {
+    "id": 26,
+    "isActive": true,
+    "createdAt": "2023-12-23T06:23:56.124Z",
+    "updatedAt": "2023-12-23T06:23:56.124Z",
+    "deletedAt": null,
+    "name": "9",
+    "level_key": null
+  },
+  {
+    "id": 19,
+    "isActive": true,
+    "createdAt": "2023-12-23T06:23:56.124Z",
+    "updatedAt": "2023-12-23T06:23:56.124Z",
+    "deletedAt": null,
+    "name": "9",
+    "level_key": null
+  },
+  {
+    "id": 46,
+    "isActive": true,
+    "createdAt": "2023-12-23T06:23:56.124Z",
+    "updatedAt": "2023-12-23T06:23:56.124Z",
+    "deletedAt": null,
+    "name": "10",
+    "level_key": null
+  },
+  {
+    "id": 27,
+    "isActive": true,
+    "createdAt": "2023-12-23T06:23:56.124Z",
+    "updatedAt": "2023-12-23T06:23:56.124Z",
+    "deletedAt": null,
+    "name": "9",
+    "level_key": null
+  },
+  {
+    "id": 54,
+    "isActive": true,
+    "createdAt": "2023-12-23T06:23:56.124Z",
+    "updatedAt": "2023-12-23T06:23:56.124Z",
+    "deletedAt": null,
+    "name": "9",
+    "level_key": null
+  },
+  {
+    "id": 29,
+    "isActive": true,
+    "createdAt": "2023-12-23T06:23:56.124Z",
+    "updatedAt": "2023-12-23T06:23:56.124Z",
+    "deletedAt": null,
+    "name": "9",
+    "level_key": null
+  },
+  {
+    "id": 59,
+    "isActive": true,
+    "createdAt": "2023-12-23T06:23:56.124Z",
+    "updatedAt": "2023-12-23T06:23:56.124Z",
+    "deletedAt": null,
+    "name": "9",
+    "level_key": null
+  },
+  {
+    "id": 48,
+    "isActive": true,
+    "createdAt": "2023-12-23T06:23:56.124Z",
+    "updatedAt": "2023-12-23T06:23:56.124Z",
+    "deletedAt": null,
+    "name": "9",
+    "level_key": null
+  },
+  {
+    "id": 52,
+    "isActive": true,
+    "createdAt": "2023-12-23T06:23:56.124Z",
+    "updatedAt": "2023-12-23T06:23:56.124Z",
+    "deletedAt": null,
+    "name": "9",
+    "level_key": null
+  },
+  {
+    "id": 55,
+    "isActive": true,
+    "createdAt": "2023-12-23T06:23:56.124Z",
+    "updatedAt": "2023-12-23T06:23:56.124Z",
+    "deletedAt": null,
+    "name": "10",
+    "level_key": null
+  },
+  {
+    "id": 40,
+    "isActive": true,
+    "createdAt": "2023-12-23T06:23:56.124Z",
+    "updatedAt": "2023-12-23T06:23:56.124Z",
+    "deletedAt": null,
+    "name": "9",
+    "level_key": null
+  },
+  {
+    "id": 41,
+    "isActive": true,
+    "createdAt": "2023-12-23T06:23:56.124Z",
+    "updatedAt": "2023-12-23T06:23:56.124Z",
+    "deletedAt": null,
+    "name": "9",
+    "level_key": null
+  },
+  {
+    "id": 51,
+    "isActive": true,
+    "createdAt": "2023-12-23T06:23:56.124Z",
+    "updatedAt": "2023-12-23T06:23:56.124Z",
+    "deletedAt": null,
+    "name": "5",
+    "level_key": null
+  },
+  {
+    "id": 44,
+    "isActive": true,
+    "createdAt": "2023-12-23T06:23:56.124Z",
+    "updatedAt": "2023-12-23T06:23:56.124Z",
+    "deletedAt": null,
+    "name": "2",
+    "level_key": null
+  },
+  {
+    "id": 42,
+    "isActive": true,
+    "createdAt": "2023-12-23T06:23:56.124Z",
+    "updatedAt": "2023-12-23T06:23:56.124Z",
+    "deletedAt": null,
+    "name": "9",
+    "level_key": null
+  },
+  {
+    "id": 43,
+    "isActive": true,
+    "createdAt": "2023-12-23T06:23:56.124Z",
+    "updatedAt": "2023-12-23T06:23:56.124Z",
+    "deletedAt": null,
+    "name": "9",
+    "level_key": null
+  },
+  {
+    "id": 45,
+    "isActive": true,
+    "createdAt": "2023-12-23T06:23:56.124Z",
+    "updatedAt": "2023-12-23T06:23:56.124Z",
+    "deletedAt": null,
+    "name": "10",
+    "level_key": null
+  },
+  {
+    "id": 38,
+    "isActive": true,
+    "createdAt": "2023-12-23T06:23:56.124Z",
+    "updatedAt": "2023-12-23T06:23:56.124Z",
+    "deletedAt": null,
+    "name": "11",
+    "level_key": null
+  },
+  {
+    "id": 25,
+    "isActive": true,
+    "createdAt": "2023-12-23T06:23:56.124Z",
+    "updatedAt": "2023-12-23T06:23:56.124Z",
+    "deletedAt": null,
+    "name": "9",
+    "level_key": null
+  },
+  {
+    "id": 24,
+    "isActive": true,
+    "createdAt": "2023-12-23T06:23:56.124Z",
+    "updatedAt": "2023-12-23T06:23:56.124Z",
+    "deletedAt": null,
+    "name": "9",
+    "level_key": null
+  },
+  {
+    "id": 28,
+    "isActive": true,
+    "createdAt": "2023-12-23T06:23:56.124Z",
+    "updatedAt": "2023-12-23T06:23:56.124Z",
+    "deletedAt": null,
+    "name": "1",
+    "level_key": null
+  },
+  {
+    "id": 21,
+    "isActive": true,
+    "createdAt": "2023-12-23T06:23:56.124Z",
+    "updatedAt": "2023-12-23T06:23:56.124Z",
+    "deletedAt": null,
+    "name": "10",
+    "level_key": null
+  },
+  {
+    "id": 12,
+    "isActive": true,
+    "createdAt": "2023-12-23T06:23:56.124Z",
+    "updatedAt": "2023-12-23T06:23:56.124Z",
+    "deletedAt": null,
+    "name": "11",
+    "level_key": null
+  },
+  {
+    "id": 14,
+    "isActive": true,
+    "createdAt": "2023-12-23T06:23:56.124Z",
+    "updatedAt": "2023-12-23T06:23:56.124Z",
+    "deletedAt": null,
+    "name": "0",
+    "level_key": null
+  },
+  {
+    "id": 20,
+    "isActive": true,
+    "createdAt": "2023-12-23T06:23:56.124Z",
+    "updatedAt": "2023-12-23T06:23:56.124Z",
+    "deletedAt": null,
+    "name": "0",
+    "level_key": null
+  },
+  {
+    "id": 37,
+    "isActive": true,
+    "createdAt": "2023-12-23T06:23:56.124Z",
+    "updatedAt": "2023-12-23T06:23:56.124Z",
+    "deletedAt": null,
+    "name": "12",
+    "level_key": null
+  },
+  {
+    "id": 47,
+    "isActive": true,
+    "createdAt": "2023-12-23T06:23:56.124Z",
+    "updatedAt": "2023-12-23T06:23:56.124Z",
+    "deletedAt": null,
+    "name": "12",
+    "level_key": null
+  },
+  {
+    "id": 17,
+    "isActive": true,
+    "createdAt": "2023-12-23T06:23:56.124Z",
+    "updatedAt": "2023-12-23T06:23:56.124Z",
+    "deletedAt": null,
+    "name": "12",
+    "level_key": null
+  },
+  {
+    "id": 67,
+    "isActive": true,
+    "createdAt": "2024-04-01T20:04:37.731Z",
+    "updatedAt": "2024-04-01T20:04:37.731Z",
+    "deletedAt": null,
+    "name": "string",
+    "level_key": null
+  },
+  {
+    "id": 68,
+    "isActive": true,
+    "createdAt": "2024-04-02T12:28:51.936Z",
+    "updatedAt": "2024-04-02T12:28:51.936Z",
+    "deletedAt": null,
+    "name": "string",
+    "level_key": null
+  },
+  {
+    "id": 2,
+    "isActive": true,
+    "createdAt": "2023-10-02T11:16:39.000Z",
+    "updatedAt": "2024-02-06T19:04:41.601Z",
+    "deletedAt": null,
+    "name": "12",
+    "level_key": "12"
+  },
+  {
+    "id": 11,
+    "isActive": true,
+    "createdAt": "2023-12-23T06:23:56.124Z",
+    "updatedAt": "2023-12-23T06:23:56.124Z",
+    "deletedAt": null,
+    "name": "1",
+    "level_key": "1"
+  },
+  {
+    "id": 16,
+    "isActive": true,
+    "createdAt": "2023-12-23T06:23:56.124Z",
+    "updatedAt": "2023-12-23T06:23:56.124Z",
+    "deletedAt": null,
+    "name": "2",
+    "level_key": "2"
+  },
+  {
+    "id": 7,
+    "isActive": true,
+    "createdAt": "2023-12-23T06:23:56.124Z",
+    "updatedAt": "2023-12-23T06:23:56.124Z",
+    "deletedAt": null,
+    "name": "6",
+    "level_key": "6"
+  },
+  {
+    "id": 3,
+    "isActive": true,
+    "createdAt": "2023-12-18T12:38:01.978Z",
+    "updatedAt": "2023-12-18T12:38:01.978Z",
+    "deletedAt": null,
+    "name": "0",
+    "level_key": "0"
+  },
+  {
+    "id": 1,
+    "isActive": true,
+    "createdAt": "2023-10-02T11:16:39.000Z",
+    "updatedAt": "2023-10-02T11:16:39.000Z",
+    "deletedAt": null,
+    "name": "11",
+    "level_key": "11"
+  },
+  {
+    "id": 13,
+    "isActive": true,
+    "createdAt": "2023-12-23T06:23:56.124Z",
+    "updatedAt": "2023-12-23T06:23:56.124Z",
+    "deletedAt": null,
+    "name": "10",
+    "level_key": "10"
+  },
+  {
+    "id": 6,
+    "isActive": true,
+    "createdAt": "2023-12-23T06:23:56.124Z",
+    "updatedAt": "2023-12-23T06:23:56.124Z",
+    "deletedAt": null,
+    "name": "5",
+    "level_key": "5"
+  },
+  {
+    "id": 10,
+    "isActive": true,
+    "createdAt": "2023-12-23T06:23:56.124Z",
+    "updatedAt": "2023-12-23T06:23:56.124Z",
+    "deletedAt": null,
+    "name": "3",
+    "level_key": "3"
+  },
+  {
+    "id": 4,
+    "isActive": true,
+    "createdAt": "2023-12-18T19:27:44.851Z",
+    "updatedAt": "2023-12-18T19:27:44.851Z",
+    "deletedAt": null,
+    "name": "8",
+    "level_key": "8"
+  },
+  {
+    "id": 5,
+    "isActive": true,
+    "createdAt": "2023-12-23T06:23:56.124Z",
+    "updatedAt": "2023-12-23T06:23:56.124Z",
+    "deletedAt": null,
+    "name": "7",
+    "level_key": "7"
+  },
+  {
+    "id": 18,
+    "isActive": true,
+    "createdAt": "2023-12-23T06:23:56.124Z",
+    "updatedAt": "2024-04-01T20:06:40.768Z",
+    "deletedAt": null,
+    "name": "9",
+    "level_key": "9"
+  },
+  {
+    "id": 69,
+    "isActive": true,
+    "createdAt": "2024-04-20T14:00:44.409Z",
+    "updatedAt": "2024-04-20T14:00:44.409Z",
+    "deletedAt": null,
+    "name": "string",
+    "level_key": null
+  },
+  {
+    "id": 76,
+    "isActive": true,
+    "createdAt": "2024-04-24T16:48:48.212Z",
+    "updatedAt": "2024-04-24T16:48:48.212Z",
+    "deletedAt": null,
+    "name": "Aleyna",
+    "level_key": null
+  },
+  {
+    "id": 79,
+    "isActive": true,
+    "createdAt": "2024-04-26T08:34:07.856Z",
+    "updatedAt": "2024-04-26T08:34:07.856Z",
+    "deletedAt": null,
+    "name": "ahmet",
+    "level_key": null
+  },
+  {
+    "id": 80,
+    "isActive": true,
+    "createdAt": "2024-04-26T08:39:41.434Z",
+    "updatedAt": "2024-04-26T08:39:41.434Z",
+    "deletedAt": null,
+    "name": "12",
+    "level_key": null
+  },
+  {
+    "id": 81,
+    "isActive": true,
+    "createdAt": "2024-04-26T08:41:46.311Z",
+    "updatedAt": "2024-04-26T08:41:46.311Z",
+    "deletedAt": null,
+    "name": "Dila",
+    "level_key": null
+  },
+  {
+    "id": 82,
+    "isActive": true,
+    "createdAt": "2024-04-28T19:11:43.776Z",
+    "updatedAt": "2024-04-28T19:11:43.776Z",
+    "deletedAt": null,
+    "name": "string",
+    "level_key": null
+  }
+]
