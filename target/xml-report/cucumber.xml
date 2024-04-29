@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="9.627">
-    <testcase classname="Yardımcı Denetleyicinin İsim ve Kimliği Olan Çalışanları Alması." name="/helpers/employees endpoint'ine gecerli authorization bilgileri ile bir GET request gönderildiginde" time="8.966">
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="11.157">
+    <testcase classname="Sınıf Denetleyicisi Tümünü bul." name="/classess endpoint'ine gecerli authorization bilgileri ile bir GET request" time="10.373">
         <failure message="com.github.fge.jsonschema.core.exceptions.InvalidSchemaException: fatal: invalid JSON Schema, cannot continue&#10;Syntax errors:&#10;[ {&#13;&#10;  &quot;level&quot; : &quot;error&quot;,&#13;&#10;  &quot;schema&quot; : {&#13;&#10;    &quot;loadingURI&quot; : &quot;#&quot;,&#13;&#10;    &quot;pointer&quot; : &quot;&quot;&#13;&#10;  },&#13;&#10;  &quot;domain&quot; : &quot;syntax&quot;,&#13;&#10;  &quot;message&quot; : &quot;JSON value is of type array, not a JSON Schema (expected an object)&quot;,&#13;&#10;  &quot;found&quot; : &quot;array&quot;&#13;&#10;} ]&#10;    level: &quot;fatal&quot;&#10;" type="io.restassured.module.jsv.JsonSchemaValidationException">
             <![CDATA[* Api kullanicisi "employee" token ile base urli olusturur..................passed
-* Api kullanicisi "helpers", "employees" path parametrelerini olusturur.....passed
+* Api kullanicisi "classess" path parametrelerini olusturur.................passed
 * Api kullanicisi get request gonderir ve donen responsei kaydeder..........passed
 * Api kullanicisi status codeun 200 oldugunu dogrular.......................passed
-* Api kullanicisi helpers employees endpointinden donen response bodynin schema validation dogrulamasini yapar.failed
+* Api kullanıcısi response body icinde 0 indexe sahip olan "2023-12-23T06:23:56.124Z", "2023-12-23T06:23:56.124Z" ve "12" bilgilerini doğrular..passed
+* Api kullanicisi classess endpointinden donen response bodynin schema validation dogrulamasini yapar.failed
 
 StackTrace:
 io.restassured.module.jsv.JsonSchemaValidationException: com.github.fge.jsonschema.core.exceptions.InvalidSchemaException: fatal: invalid JSON Schema, cannot continue
@@ -86,8 +87,8 @@ Syntax errors:
 	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)
 	at io.restassured.internal.ValidatableResponseImpl.body(ValidatableResponseImpl.groovy:293)
 	at io.restassured.internal.ValidatableResponseImpl.body(ValidatableResponseImpl.groovy)
-	at stepdefinitions.Helpers.api_kullanicisi_helpers_employees_endpointinden_donen_response_bodynin_schema_validation_dogrulamasini_yapar(Helpers.java:63)
-	at ✽.Api kullanicisi helpers employees endpointinden donen response bodynin schema validation dogrulamasini yapar(file:///C:/Users/ACER/IdeaProjects/com.edulog_API/src/test/resources/features/API/helpers/HelpersEmployees.feature:10)
+	at stepdefinitions.Classess.api_kullanicisi_classess_endpointinden_donen_response_bodynin_schema_validation_dogrulamasini_yapar(Classess.java:100)
+	at ✽.Api kullanicisi classess endpointinden donen response bodynin schema validation dogrulamasini yapar(file:///C:/Users/ACER/IdeaProjects/com.edulog_API/src/test/resources/features/API/classess/ClassessGet.feature:12)
 Caused by: com.github.fge.jsonschema.core.exceptions.InvalidSchemaException: fatal: invalid JSON Schema, cannot continue
 Syntax errors:
 [ {
@@ -172,7 +173,7 @@ Syntax errors:
 	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)
 	at io.restassured.internal.ValidatableResponseImpl.body(ValidatableResponseImpl.groovy:293)
 	at io.restassured.internal.ValidatableResponseImpl.body(ValidatableResponseImpl.groovy)
-	at stepdefinitions.Helpers.api_kullanicisi_helpers_employees_endpointinden_donen_response_bodynin_schema_validation_dogrulamasini_yapar(Helpers.java:63)
+	at stepdefinitions.Classess.api_kullanicisi_classess_endpointinden_donen_response_bodynin_schema_validation_dogrulamasini_yapar(Classess.java:100)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
