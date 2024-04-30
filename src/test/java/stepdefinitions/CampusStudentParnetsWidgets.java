@@ -15,8 +15,10 @@ public class CampusStudentParnetsWidgets {
         spec.pathParams("pp1", pp1, "pp2", pp2, "pp3", pp3);
         API_Methods.pathParam = "/{pp1}/{pp2}/{pp3}";
     }
+
     @Then("Mustafa kullanicisi {string} icin schema validation yapar")
     public void mustafa_kullanicisi_icin_schema_validation_yapar(String string) {
+
         InputStream classessGetJsonSchema = getClass().getClassLoader()
                 .getResourceAsStream("features/API/campus/student/campusstudentparentwidgets.json");
 

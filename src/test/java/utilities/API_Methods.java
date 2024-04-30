@@ -1,8 +1,10 @@
 package utilities;
 
 import io.restassured.http.ContentType;
+import io.restassured.module.jsv.JsonSchemaValidator;
 import io.restassured.response.Response;
 
+import java.io.InputStream;
 import java.util.Map;
 
 import static hooks.HooksAPI.spec;
@@ -156,4 +158,14 @@ public class API_Methods {
 
         return response;
     }
+
+    public static void schemaValidateAssert(String schemaJsonPath) {
+        InputStream classessGetJsonSchema = ClassLoader.getSystemResourceAsStream(schemaJsonPath);
+
+        API_Methods.response.then()
+                .assertThat()
+                .body(JsonSchemaValidator.matchesJsonSchema(classessGetJsonSchema));
+    }
+
+
 }
