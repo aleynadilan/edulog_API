@@ -7,6 +7,7 @@ Feature: Yardımcı Denetleyicinin Öğrencilere İsim ve Kimliği Getirmesi.
     * Api kullanicisi "helpers", "students" path parametrelerini olusturur
     * Api kullanicisi get request gonderir ve donen responsei kaydeder
     * Api kullanicisi status codeun 200 oldugunu dogrular
+    * Api kullanicisi helpers students endpointinden donen response bodynin schema validation dogrulamasini yapar
 
 
   Scenario: /helpers/students endpoint'ine gecersiz authorization bilgileri ile bir GET request gönderildiginde

@@ -1,0 +1,40 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "classList": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "integer"
+          },
+          "label": {
+            "type": "string"
+          }
+        },
+        "required": ["value", "label"]
+      }
+    },
+    "branchList": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "integer"
+          },
+          "label": {
+            "type": "string"
+          },
+          "classId": {
+            "type": "integer"
+          }
+        },
+        "required": ["value", "label", "classId"]
+      }
+    }
+  },
+  "required": ["classList", "branchList"]
+}

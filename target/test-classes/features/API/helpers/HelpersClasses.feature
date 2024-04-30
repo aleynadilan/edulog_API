@@ -7,6 +7,7 @@ Feature: İlgili okulun sınıfları.
     * Api kullanicisi "helpers", "classes" ve "<seasonId>" path parametrelerini olusturur
     * Api kullanicisi get request gonderir ve donen responsei kaydeder
     * Api kullanicisi status codeun 200 oldugunu dogrular
+    * Api kullanicisi helpers classes endpointinden donen response bodynin schema validation dogrulamasini yapar
 
     Examples:
       | seasonId |

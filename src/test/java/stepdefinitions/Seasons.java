@@ -11,6 +11,7 @@ public class Seasons {
 
     SeasonsPostPojo requestBodyPojo;
     JsonPath jsonPath;
+    API_Methods api_methods = new API_Methods();
 
     // ***************************************** /seasons (post) ****************************************************
     @Given("Api kullanicisi seasons endpointine gondermek icin gerekli verileri iceren bir post request olusturur")
@@ -21,6 +22,11 @@ public class Seasons {
     @Given("Api kullanicisi post request gonderir ve seasons endpointinden donen responsei kaydeder")
     public void api_kullanicisi_post_request_gonderir_ve_seasons_endpointinden_donen_responsei_kaydeder() {
         API_Methods.postResponse(requestBodyPojo, API_Methods.pathParam);
+    }
+
+    @Given("Api kullanicisi seasons post endpointinden donen response bodynin schema validation dogrulamasini yapar")
+    public void api_kullanicisi_seasons_post_endpointinden_donen_response_bodynin_schema_validation_dogrulamasini_yapar() {
+        api_methods.schemaValidation("features/API/seasons/seasonsJsonSchema/seasonsPost.json");
     }
     // **************************************************************************************************************
 
@@ -37,6 +43,11 @@ public class Seasons {
         assertEquals(seasonStartDate, jsonPath.getString("[" + dataIndex + "].seasonStartDate"));
         assertEquals(seasonEndDate, jsonPath.getString("[" + dataIndex + "].seasonEndDate"));
     }
+
+    @Given("Api kullanicisi seasons get endpointinden donen response bodynin schema validation dogrulamasini yapar")
+    public void api_kullanicisi_seasons_get_endpointinden_donen_response_bodynin_schema_validation_dogrulamasini_yapar() {
+        api_methods.schemaValidation("features/API/seasons/seasonsJsonSchema/seasonsGet.json");
+    }
     // **************************************************************************************************************
 
     // *************************************** /seasons/{id} (get) **************************************************
@@ -52,6 +63,11 @@ public class Seasons {
         assertEquals(name, jsonPath.getString("name"));
         assertEquals(seasonStartDate, jsonPath.getString("seasonStartDate"));
         assertEquals(seasonEndDate, jsonPath.getString("seasonEndDate"));
+    }
+
+    @Given("Api kullanicisi seasons id endpointinden donen response bodynin schema validation dogrulamasini yapar")
+    public void api_kullanicisi_seasons_id_endpointinden_donen_response_bodynin_schema_validation_dogrulamasini_yapar() {
+        api_methods.schemaValidation("features/API/seasons/seasonsJsonSchema/seasonsIdGet.json");
     }
     // **************************************************************************************************************
 }

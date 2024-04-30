@@ -1,13 +1,9 @@
 {
-  "definitions": {},
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://example.com/object1714412765.json",
   "title": "Root",
   "type": "array",
-  "default": [],
-  "items":{
-    "$id": "#root/items",
-    "title": "Items",
+  "items": {
     "type": "object",
     "required": [
       "id",
@@ -20,66 +16,47 @@
     ],
     "properties": {
       "id": {
-        "$id": "#root/items/id",
-        "title": "Id",
         "type": "integer",
-        "examples": [
-          32
-        ],
+        "examples": [32],
         "default": 0
       },
       "isActive": {
-        "$id": "#root/items/isActive",
-        "title": "Isactive",
         "type": "boolean",
-        "examples": [
-          true
-        ],
+        "examples": [true],
         "default": true
       },
       "createdAt": {
-        "$id": "#root/items/createdAt",
-        "title": "Createdat",
         "type": "string",
         "default": "",
-        "examples": [
-          "2023-12-23T06:23:56.124Z"
-        ],
+        "examples": ["2023-12-23T06:23:56.124Z"],
         "pattern": "^.*$"
       },
       "updatedAt": {
-        "$id": "#root/items/updatedAt",
-        "title": "Updatedat",
         "type": "string",
         "default": "",
-        "examples": [
-          "2023-12-23T06:23:56.124Z"
-        ],
+        "examples": ["2023-12-23T06:23:56.124Z"],
         "pattern": "^.*$"
       },
       "deletedAt": {
-        "$id": "#root/items/deletedAt",
-        "title": "Deletedat",
-        "type": "null",
+        "anyOf": [
+          { "type": "string" },
+          { "type": "null" }
+        ],
         "default": null
       },
       "name": {
-        "$id": "#root/items/name",
-        "title": "Name",
         "type": "string",
         "default": "",
-        "examples": [
-          "12"
-        ],
+        "examples": ["12"],
         "pattern": "^.*$"
       },
       "level_key": {
-        "$id": "#root/items/level_key",
-        "title": "Level_key",
-        "type": "null",
+        "anyOf": [
+          { "type": "string" },
+          { "type": "null" }
+        ],
         "default": null
       }
     }
   }
-
 }

@@ -1,5 +1,5 @@
 Feature: Sezon Kontrolörü Birini Bul.
-
+  @API
   Scenario Outline: /seasons/{id} endpoint'ine gecerli authorization bilgileri ve id verisinin bulundugu
   bir GET request gönderildiginde dönen status code'in 200 oldugu dogrulanmali.
 
@@ -7,6 +7,7 @@ Feature: Sezon Kontrolörü Birini Bul.
     * Api kullanicisi "seasons", <id> path parametrelerini olusturur
     * Api kullanicisi get request gonderir ve donen responsei kaydeder
     * Api kullanicisi status codeun 200 oldugunu dogrular
+    * Api kullanicisi seasons id endpointinden donen response bodynin schema validation dogrulamasini yapar
 
     Examples:
       | id |
