@@ -22,6 +22,6 @@ public class CampusStudentStepStudent {
     }
     @Then("Mustafa kullanicisi {string} dosyasi schema validation yapar")
     public void mustafa_kullanicisi_dosyasi_schema_validation_yapar(String string) {
-       API_Methods.schemaValidateAssert(string);
+       API_Methods.schemaValidation(string);
     }
 }

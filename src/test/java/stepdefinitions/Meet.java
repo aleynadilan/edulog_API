@@ -14,6 +14,7 @@ import static org.junit.Assert.assertEquals;
 
 public class Meet {
 
+    API_Methods api_methods = new API_Methods();
     JsonPath jsonPath;
     JSONObject requestBody;
 
@@ -27,6 +28,11 @@ public class Meet {
         assertEquals(color, jsonPath.getString("data[" + dataIndex + "].color"));
         assertEquals(chartType, jsonPath.getString("data[" + dataIndex + "].chartType"));
     }
+
+    @Given("Api kullanicisi meet widgets endpointinden donen response bodynin schema validation dogrulamasini yapar")
+    public void api_kullanicisi_meet_widgets_endpointinden_donen_response_bodynin_schema_validation_dogrulamasini_yapar() {
+        api_methods.schemaValidation("features/API/meet/meetJsonSchema/meetWidgets.json");
+    }
     // **************************************************************************************************************
 
     // ********************************** /meet/dashboard-meet-list *************************************************
@@ -36,6 +42,11 @@ public class Meet {
                 .assertThat()
                 .body("data[" + dataIndex + "].type", equalTo(type),
                         "data[" + dataIndex + "].name", equalTo(name));
+    }
+
+    @Given("Api kullanicisi meet dashboard meet list endpointinden donen response bodynin schema validation dogrulamasini yapar")
+    public void api_kullanicisi_meet_dashboard_meet_list_endpointinden_donen_response_bodynin_schema_validation_dogrulamasini_yapar() {
+        api_methods.schemaValidation("features/API/meet/meetJsonSchema/meetDashboardMeetList.json");
     }
     // **************************************************************************************************************
 
@@ -53,6 +64,11 @@ public class Meet {
                         "data.meetDate", equalTo(meetDate),
                         "data.status", equalTo(status),
                         "data.isSibling", equalTo(false));
+    }
+
+    @Given("Api kullanicisi meet id endpointinden donen response bodynin schema validation dogrulamasini yapar")
+    public void api_kullanicisi_meet_id_endpointinden_donen_response_bodynin_schema_validation_dogrulamasini_yapar() {
+        api_methods.schemaValidation("features/API/meet/meetJsonSchema/meetIdGet.json");
     }
     // **************************************************************************************************************
 

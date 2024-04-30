@@ -1,13 +1,20 @@
 {
+<<<<<<< HEAD
   "definitions": {},
+=======
+>>>>>>> main
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://example.com/object1714412765.json",
   "title": "Root",
   "type": "array",
+<<<<<<< HEAD
   "default": [],
   "items":{
     "$id": "#root/items",
     "title": "Items",
+=======
+  "items": {
+>>>>>>> main
     "type": "object",
     "required": [
       "id",
@@ -20,6 +27,7 @@
     ],
     "properties": {
       "id": {
+<<<<<<< HEAD
         "$id": "#root/items/id",
         "title": "Id",
         "type": "integer",
@@ -77,9 +85,53 @@
         "$id": "#root/items/level_key",
         "title": "Level_key",
         "type": "null",
+=======
+        "type": "integer",
+        "examples": [32],
+        "default": 0
+      },
+      "isActive": {
+        "type": "boolean",
+        "examples": [true],
+        "default": true
+      },
+      "createdAt": {
+        "type": "string",
+        "default": "",
+        "examples": ["2023-12-23T06:23:56.124Z"],
+        "pattern": "^.*$"
+      },
+      "updatedAt": {
+        "type": "string",
+        "default": "",
+        "examples": ["2023-12-23T06:23:56.124Z"],
+        "pattern": "^.*$"
+      },
+      "deletedAt": {
+        "anyOf": [
+          { "type": "string" },
+          { "type": "null" }
+        ],
+        "default": null
+      },
+      "name": {
+        "type": "string",
+        "default": "",
+        "examples": ["12"],
+        "pattern": "^.*$"
+      },
+      "level_key": {
+        "anyOf": [
+          { "type": "string" },
+          { "type": "null" }
+        ],
+>>>>>>> main
         "default": null
       }
     }
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> main
 }

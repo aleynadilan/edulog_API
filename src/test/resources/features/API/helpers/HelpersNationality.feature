@@ -9,6 +9,7 @@ Feature: Yardımcı Kontrolörün Vatandaşlık alması.
     * Api kullanicisi get request gonderir ve donen responsei kaydeder
     * Api kullanicisi status codeun 200 oldugunu dogrular
     * Api kullanıcısi response body icindeki <dataIndex> indexe sahip olanin "<createdAt>", "<updatedAt>" ve "<name>" bilgilerini doğrular.
+    * Api kullanicisi helpers nationality endpointinden donen response bodynin schema validation dogrulamasini yapar
 
     Examples:
       | dataIndex | createdAt                | updatedAt                | name       |

@@ -7,6 +7,7 @@ Feature: Yardımcı Kontrolörlerin Sorumlu Öğrencileri Kazanması.
     * Api kullanicisi "helpers", "responsible-students" path parametrelerini olusturur
     * Api kullanicisi get request gonderir ve donen responsei kaydeder
     * Api kullanicisi status codeun 200 oldugunu dogrular
+    * Api kullanicisi helpers responsible students endpointinden donen response bodynin schema validation dogrulamasini yapar
 
 
   Scenario: /helpers/responsible-students endpoint'ine gecersiz authorization bilgileri ile bir GET request gönderildiginde

@@ -1,18 +1,16 @@
 package stepdefinitions;
 
 import io.cucumber.java.en.Given;
-import io.restassured.module.jsv.JsonSchemaValidator;
 import io.restassured.path.json.JsonPath;
 import utilities.API_Methods;
 import utilities.ConfigReader;
-
-import java.io.InputStream;
 
 import static org.junit.Assert.*;
 
 public class Experiment {
 
     JsonPath jsonPath;
+    API_Methods api_methods = new API_Methods();
 
     // ************************************* /experiment/{id} (get) ************************************************
     @Given("Api kullanicisi donen responsei kaydeder, status codeun '400' ve reason phrase bilgisinin Bad Request oldugunu dogrular")
@@ -38,12 +36,7 @@ public class Experiment {
 
     @Given("Api kullanicisi experiment id endpointinden donen response bodynin schema validation dogrulamasini yapar")
     public void api_kullanicisi_experiment_id_endpointinden_donen_response_bodynin_schema_validation_dogrulamasini_yapar() {
-        InputStream experimentIdGetJsonSchema = getClass().getClassLoader()
-                .getResourceAsStream("features/API/experiment/experimentJsonSchema/experimentIdGet.json");
-
-        API_Methods.response.then()
-                .assertThat()
-                .body(JsonSchemaValidator.matchesJsonSchema(experimentIdGetJsonSchema));
+        api_methods.schemaValidation("features/API/experiment/experimentJsonSchema/experimentIdGet.json");
     }
     // **************************************************************************************************************
 }

@@ -9,6 +9,7 @@ Feature: Sezon Kontrolörü Tümünü Bul.
     * Api kullanicisi get request gonderir ve donen responsei kaydeder
     * Api kullanicisi status codeun 200 oldugunu dogrular
     * Api kullanıcısi response body icinde <dataIndex> indexe sahip olan "<createdAt>", "<updatedAt>", "<name>", "<seasonStartDate>" ve "<seasonEndDate>" bilgilerini doğrular.
+    * Api kullanicisi seasons get endpointinden donen response bodynin schema validation dogrulamasini yapar
 
     Examples:
       | dataIndex | createdAt                | updatedAt                | name   | seasonStartDate          | seasonEndDate            |

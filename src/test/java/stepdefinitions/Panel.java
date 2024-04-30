@@ -8,6 +8,7 @@ import static org.junit.Assert.*;
 
 public class Panel {
 
+    API_Methods api_methods = new API_Methods();
     JsonPath jsonPath;
 
     // ***************************************** /panel/cgs-list ****************************************************
@@ -21,6 +22,11 @@ public class Panel {
         assertNull(jsonPath.get("data[" + dataIndex + "].deletedAt"));
         assertEquals(name, jsonPath.getString("data[" + dataIndex + "].name"));
     }
+
+    @Given("Api kullanicisi panel cgs list endpointinden donen response bodynin schema validation dogrulamasini yapar")
+    public void api_kullanicisi_panel_cgs_list_endpointinden_donen_response_bodynin_schema_validation_dogrulamasini_yapar() {
+        api_methods.schemaValidation("features/API/panel/panelJsonSchema/panelCgsList.json");
+    }
     // **************************************************************************************************************
 
     // *************************************** /panel/module-list ***************************************************
@@ -29,6 +35,10 @@ public class Panel {
         jsonPath = API_Methods.response.jsonPath();
 
         assertEquals(name, jsonPath.getString("data[" + dataIndex + "].name"));
+    }
+    @Given("Api kullanicisi panel module list endpointinden donen response bodynin schema validation dogrulamasini yapar")
+    public void api_kullanicisi_panel_module_list_endpointinden_donen_response_bodynin_schema_validation_dogrulamasini_yapar() {
+        api_methods.schemaValidation("features/API/panel/panelJsonSchema/panelModuleList.json");
     }
     // **************************************************************************************************************
 }

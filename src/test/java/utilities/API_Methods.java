@@ -15,7 +15,6 @@ public class API_Methods {
     public static String pathParam;
     public static Object requestBody;
     public static Map<String, Object> queryParams;
-    ;
 
     public static Response getResponse(String pathParam) {
         response = given()
@@ -145,7 +144,7 @@ public class API_Methods {
         return exceptionMesaj;
     }
 
-    public static Response getResponseWithBodyAndQueryParams(Object requestBody,String pathParam, Map<String, Object> queryParams ) {
+    public static Response getResponseWithBodyAndQueryParams(Object requestBody, String pathParam, Map<String, Object> queryParams) {
         response = given()
                 .spec(spec)
                 .contentType(ContentType.JSON)
@@ -159,13 +158,13 @@ public class API_Methods {
         return response;
     }
 
-    public static void schemaValidateAssert(String schemaJsonPath) {
-        InputStream classessGetJsonSchema = ClassLoader.getSystemResourceAsStream(schemaJsonPath);
+
+    public static void schemaValidation(String jsonSchema) {
+        InputStream classessGetJsonSchema = ClassLoader.getSystemResourceAsStream(jsonSchema);
 
         API_Methods.response.then()
                 .assertThat()
-                .body(JsonSchemaValidator.matchesJsonSchema(classessGetJsonSchema));
+                .body(JsonSchemaValidator.matchesJsonSchema(jsonSchema));
     }
-
 
 }

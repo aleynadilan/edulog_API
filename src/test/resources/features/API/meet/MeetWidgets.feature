@@ -9,6 +9,7 @@ Feature: Görüşmeler Witgetları.
     * Api kullanicisi status codeun 200 oldugunu dogrular
     * Api kullanicisi response bodydeki message bilgisinin "success" oldugunu dogrular
     * Api kullanicisi response bodydeki status bilgisinin true oldugunu dogrular
+    * Api kullanicisi meet widgets endpointinden donen response bodynin schema validation dogrulamasini yapar
 
 
   Scenario: /meet/widgets endpoint'ine gecersiz authorization bilgileri ile bir GET request gönderildiginde

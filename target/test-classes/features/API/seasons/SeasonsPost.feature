@@ -8,6 +8,8 @@ Feature: Sezon Kontrolörü oluştur.
     * Api kullanicisi seasons endpointine gondermek icin gerekli verileri iceren bir post request olusturur
     * Api kullanicisi post request gonderir ve seasons endpointinden donen responsei kaydeder
     * Api kullanicisi status codeun 201 oldugunu dogrular
+    * Api kullanicisi seasons post endpointinden donen response bodynin schema validation dogrulamasini yapar
+
 
 
   Scenario: /seasons endpoint'ine gecersiz authorization bilgileri ve gerekli verileri (isActive, name) iceren bir POST body

@@ -9,6 +9,7 @@ Feature: Meet Denetleyici kontrol paneli Meet Listesi.
     * Api kullanicisi status codeun 200 oldugunu dogrular
     * Api kullanicisi response bodydeki message bilgisinin "success" oldugunu dogrular
     * Api kullanicisi response bodydeki status bilgisinin true oldugunu dogrular
+    * Api kullanicisi meet dashboard meet list endpointinden donen response bodynin schema validation dogrulamasini yapar
 
 
   Scenario: /meet/dashboard-meet-list endpoint'ine gecersiz authorization bilgileri ile bir GET request gönderildiginde

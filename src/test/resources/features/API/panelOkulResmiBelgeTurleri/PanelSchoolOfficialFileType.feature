@@ -10,6 +10,7 @@ Feature: Okul Resmi Dosya Türü Denetleyicisi Tümünü Bul.
     * Api kullanicisi status codeun 200 oldugunu dogrular
     * Api kullanicisi response bodydeki message bilgisinin "success" oldugunu dogrular
     * Api kullanicisi response bodydeki status bilgisinin true oldugunu dogrular
+    * Api kullanicisi panel school official file type endpointinden donen response bodynin schema validation dogrulamasini yapar
 
 
   Scenario: /panel/school-official-file-type endpoint'ine gecersiz authorization bilgileri ile bir GET request
