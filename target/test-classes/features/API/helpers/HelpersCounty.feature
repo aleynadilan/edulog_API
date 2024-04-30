@@ -7,6 +7,7 @@ Feature: Yardımcılar Kontrolörünün İlçeyi alması.
     * Api kullanicisi "helpers", "county" ve <cityId> path parametrelerini olusturur
     * Api kullanicisi get request gonderir ve donen responsei kaydeder
     * Api kullanicisi status codeun 200 oldugunu dogrular
+    * Api kullanicisi helpers county endpointinden donen response bodynin schema validation dogrulamasini yapar
 
     Examples:
       | cityId |

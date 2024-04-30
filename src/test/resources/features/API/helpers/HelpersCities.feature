@@ -9,6 +9,7 @@ Feature: Yardımcı Denetleyicinin Şehirleri alması
     * Api kullanicisi get request gonderir ve donen responsei kaydeder
     * Api kullanicisi status codeun 200 oldugunu dogrular
     * Api kullanıcısi response body icindeki <dataIndex> indexe sahip olanin "<createdAt>", "<updatedAt>" ve "<name>" bilgilerini doğrular.
+    * Api kullanicisi helpers cities endpointinden donen response bodynin schema validation dogrulamasini yapar
 
     Examples:
       | dataIndex | createdAt                | updatedAt                | name     |

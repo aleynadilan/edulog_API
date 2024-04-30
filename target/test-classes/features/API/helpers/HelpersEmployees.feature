@@ -7,6 +7,7 @@ Feature: Yardımcı Denetleyicinin İsim ve Kimliği Olan Çalışanları Almas�
     * Api kullanicisi "helpers", "employees" path parametrelerini olusturur
     * Api kullanicisi get request gonderir ve donen responsei kaydeder
     * Api kullanicisi status codeun 200 oldugunu dogrular
+    * Api kullanicisi helpers employees endpointinden donen response bodynin schema validation dogrulamasini yapar
 
 
   Scenario: /helpers/employees endpoint'ine gecersiz authorization bilgileri ile bir GET request gönderildiginde

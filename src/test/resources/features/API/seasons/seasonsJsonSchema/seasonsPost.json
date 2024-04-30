@@ -1,0 +1,36 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "isActive": {
+      "type": "boolean"
+    },
+    "name": {
+      "type": "string"
+    },
+    "seasonStartDate": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "seasonEndDate": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "id": {
+      "type": "integer"
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updatedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "deletedAt": {
+      "type": ["string", "null"],
+      "format": "date-time"
+    }
+  },
+  "required": ["isActive", "name", "seasonStartDate", "seasonEndDate", "id", "createdAt", "updatedAt", "deletedAt"]
+}

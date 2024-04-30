@@ -10,6 +10,7 @@ Feature: Sınıf Denetleyicisi oluştur.
     * Api kullanicisi post request gonderir ve classess endpointinden donen responsei kaydeder
     * Api kullanicisi status codeun 201 oldugunu dogrular
     * Api kullanicisi response bodydeki bilgileri dogrular
+    * Api kullanicisi classess post endpointinden donen response bodynin schema validation dogrulamasini yapar
 
 
   Scenario: /classess endpoint'ine gecersiz authorization bilgileri ve gerekli verileri (isActive,

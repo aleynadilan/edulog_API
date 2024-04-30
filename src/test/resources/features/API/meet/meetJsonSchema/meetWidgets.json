@@ -1,0 +1,56 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "status": {
+      "type": "boolean"
+    },
+    "message": {
+      "type": "string"
+    },
+    "data": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "key": {
+            "type": "string"
+          },
+          "icon": {
+            "type": "string"
+          },
+          "color": {
+            "type": "string"
+          },
+          "chartType": {
+            "type": "string",
+            "enum": ["radialBar", "line"]
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "key": {
+                  "type": "string"
+                },
+                "value": {
+                  "type": "integer"
+                },
+                "chartData": {
+                  "type": ["integer", "array"]
+                }
+              },
+              "required": ["key", "value", "chartData"]
+            }
+          }
+        },
+        "required": ["key", "icon", "color", "chartType", "data"]
+      }
+    },
+    "statusCode": {
+      "type": "integer"
+    }
+  },
+  "required": ["status", "message", "data", "statusCode"]
+}
