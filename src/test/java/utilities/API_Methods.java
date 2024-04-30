@@ -158,12 +158,13 @@ public class API_Methods {
         return response;
     }
 
-    public void schemaValidation(String path) {
-        InputStream jsonSchema = getClass().getClassLoader()
-                .getResourceAsStream(path);
 
-        response.then()
+    public static void schemaValidation(String jsonSchema) {
+        InputStream classessGetJsonSchema = ClassLoader.getSystemResourceAsStream(jsonSchema);
+
+        API_Methods.response.then()
                 .assertThat()
                 .body(JsonSchemaValidator.matchesJsonSchema(jsonSchema));
     }
+
 }
