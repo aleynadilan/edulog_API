@@ -1,5 +1,5 @@
 Feature: Sezon Kontrolörü Birini Bul.
-  @API
+
   Scenario Outline: /seasons/{id} endpoint'ine gecerli authorization bilgileri ve id verisinin bulundugu
   bir GET request gönderildiginde dönen status code'in 200 oldugu dogrulanmali.
 
