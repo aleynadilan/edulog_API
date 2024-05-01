@@ -7,6 +7,8 @@ import org.json.JSONObject;
 import utilities.API_Methods;
 
 import static hooks.HooksAPI.spec;
+import static org.junit.Assert.*;
+import static utilities.API_Methods.response;
 
 public class Schools {
     JSONObject requestBody;
@@ -43,6 +45,10 @@ public class Schools {
     }
     @Given("ApiN kullanicisi response bodydeki bilgileri dogrular")
     public void api_n_kullanicisi_response_bodydeki_bilgileri_dogrular() {
+        JsonPath jsonPath = response.jsonPath();
+        assertEquals(5, jsonPath.getInt("company_id"));
+        assertEquals(3, jsonPath.getInt("group_id"));
+        assertTrue(jsonPath.getBoolean("isActive"));
 
 
 
