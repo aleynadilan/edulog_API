@@ -7,6 +7,7 @@ Feature: Seçilen Sınıfın Şube/Branşları.
     * Api kullanicisi "helpers", "branches" ve <classId> path parametrelerini olusturur
     * Api kullanicisi get request gonderir ve donen responsei kaydeder
     * Api kullanicisi status codeun 200 oldugunu dogrular
+    * Api kullanicisi helpers branches endpointinden donen response bodynin schema validation dogrulamasini yapar
 
     Examples:
       | classId |

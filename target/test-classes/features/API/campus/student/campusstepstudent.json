@@ -1,0 +1,233 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "status": {
+      "type": "boolean"
+    },
+    "message": {
+      "type": "string"
+    },
+    "data": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "isActive": {
+          "type": "boolean"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "deletedAt": {
+          "type": ["string", "null"],
+          "format": "date-time"
+        },
+        "isBanned": {
+          "type": ["boolean", "null"]
+        },
+        "banEndDate": {
+          "type": ["string", "null"],
+          "format": "date-time"
+        },
+        "nameId": {
+          "type": ["integer", "null"]
+        },
+        "companyId": {
+          "type": "integer"
+        },
+        "groupId": {
+          "type": "integer"
+        },
+        "schoolId": {
+          "type": "integer"
+        },
+        "testUser": {
+          "type": "boolean"
+        },
+        "registerType": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "isForeign": {
+          "type": "boolean"
+        },
+        "idNumber": {
+          "type": "string"
+        },
+        "phone": {
+          "type": ["string", "null"]
+        },
+        "bloodType": {
+          "type": ["string", "null"]
+        },
+        "email": {
+          "type": ["string", "null"]
+        },
+        "birthday": {
+          "type": ["string", "null"],
+          "format": "date"
+        },
+        "gender": {
+          "type": ["string", "null"]
+        },
+        "cityId": {
+          "type": ["integer", "null"]
+        },
+        "countyId": {
+          "type": ["integer", "null"]
+        },
+        "districtId": {
+          "type": ["integer", "null"]
+        },
+        "nationalityId": {
+          "type": ["integer", "null"]
+        },
+        "addressDetail": {
+          "type": ["string", "null"]
+        },
+        "studentNumber": {
+          "type": "string"
+        },
+        "classId": {
+          "type": ["integer", "null"]
+        },
+        "branchId": {
+          "type": ["integer", "null"]
+        },
+        "seasonId": {
+          "type": ["integer", "null"]
+        },
+        "area": {
+          "type": ["string", "null"]
+        },
+        "teacherId": {
+          "type": ["integer", "null"]
+        },
+        "mebScholarshipPoint": {
+          "type": ["integer", "null"]
+        },
+        "mebScholarshipSlice": {
+          "type": ["integer", "null"]
+        },
+        "schoolOrigin": {
+          "type": ["string", "null"]
+        },
+        "scholarshipStatus": {
+          "type": "boolean"
+        },
+        "scholarshipFile": {
+          "type": ["string", "null"]
+        },
+        "scholarshipType": {
+          "type": ["string", "null"]
+        },
+        "meetWorkStatus": {
+          "type": "boolean"
+        },
+        "meetWorkPoint": {
+          "type": ["integer", "null"]
+        },
+        "allergies": {
+          "type": ["string", "null"]
+        },
+        "medications": {
+          "type": ["string", "null"]
+        },
+        "healthDescription": {
+          "type": ["string", "null"]
+        },
+        "sport": {
+          "type": ["string", "null"]
+        },
+        "achievements": {
+          "type": ["string", "null"]
+        },
+        "interestDescription": {
+          "type": ["string", "null"]
+        },
+        "arrivalType": {
+          "type": ["string", "null"]
+        },
+        "referanceInfo": {
+          "type": ["string", "null"]
+        },
+        "notes": {
+          "type": ["string", "null"]
+        },
+        "discount": {
+          "type": ["string", "null"]
+        },
+        "discounts": {
+          "type": ["string", "null"]
+        },
+        "discountedEducationPrice": {
+          "type": ["string", "null"]
+        },
+        "educationPricePaymentStatus": {
+          "type": ["string", "null"]
+        },
+        "total": {
+          "type": ["string", "null"]
+        },
+        "isCorporateInvoice": {
+          "type": ["boolean", "null"]
+        },
+        "creditCard": {
+          "type": ["string", "null"]
+        },
+        "cashTransfer": {
+          "type": ["string", "null"]
+        },
+        "checkBond": {
+          "type": ["string", "null"]
+        },
+        "educationCredit": {
+          "type": ["string", "null"]
+        },
+        "companyTitle": {
+          "type": ["string", "null"]
+        },
+        "taxOffice": {
+          "type": ["string", "null"]
+        },
+        "taxNumber": {
+          "type": ["string", "null"]
+        },
+        "financeAddressDetail": {
+          "type": ["string", "null"]
+        },
+        "financeEmail": {
+          "type": ["string", "null"]
+        },
+        "financeCityId": {
+          "type": ["integer", "null"]
+        },
+        "financeCountyId": {
+          "type": ["integer", "null"]
+        },
+        "chatEmployees": {
+          "type": ["string", "null"]
+        },
+        "chatStudents": {
+          "type": ["string", "null"]
+        }
+      },
+      "required": ["id", "isActive", "createdAt", "updatedAt", "companyId", "groupId", "schoolId", "testUser", "registerType", "name", "isForeign", "idNumber", "studentNumber", "scholarshipStatus", "meetWorkStatus"],
+      "additionalProperties": false
+    },
+    "statusCode": {
+      "type": "integer"
+    }
+  },
+  "required": ["status", "data", "statusCode"],
+  "additionalProperties": false
+}

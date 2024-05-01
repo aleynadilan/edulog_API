@@ -10,6 +10,7 @@ import static org.junit.Assert.*;
 public class Experiment {
 
     JsonPath jsonPath;
+    API_Methods api_methods = new API_Methods();
 
     // ************************************* /experiment/{id} (get) ************************************************
     @Given("Api kullanicisi donen responsei kaydeder, status codeun '400' ve reason phrase bilgisinin Bad Request oldugunu dogrular")
@@ -31,6 +32,11 @@ public class Experiment {
         assertEquals(type, jsonPath.getString("data.type"));
         assertEquals(capacity, jsonPath.getInt("data.capacity"));
         assertEquals(image, jsonPath.getString("data.image"));
+    }
+
+    @Given("Api kullanicisi experiment id endpointinden donen response bodynin schema validation dogrulamasini yapar")
+    public void api_kullanicisi_experiment_id_endpointinden_donen_response_bodynin_schema_validation_dogrulamasini_yapar() {
+        api_methods.schemaValidation("features/API/experiment/experimentJsonSchema/experimentIdGet.json");
     }
     // **************************************************************************************************************
 }

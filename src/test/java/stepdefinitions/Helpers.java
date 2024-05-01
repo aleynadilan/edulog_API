@@ -11,6 +11,7 @@ import static org.junit.Assert.*;
 
 public class Helpers {
 
+    API_Methods api_methods = new API_Methods();
     JsonPath jsonPath;
 
     @Given("Api kullanicisi {string}, {string} path parametrelerini olusturur")
@@ -49,6 +50,11 @@ public class Helpers {
         assertEquals(name, jsonPath.getString("[" + dataIndex + "].name"));
         assertEquals(roleName, jsonPath.getString("[" + dataIndex + "].role.name"));
     }
+
+    @Given("Api kullanicisi helpers employees endpointinden donen response bodynin schema validation dogrulamasini yapar")
+    public void api_kullanicisi_helpers_employees_endpointinden_donen_response_bodynin_schema_validation_dogrulamasini_yapar() {
+        api_methods.schemaValidation("features/API/helpers/helpersJsonSchema/helpersEmployees.json");
+    }
     // **************************************************************************************************************
 
     // ***************************************** /helpers/students **************************************************
@@ -57,6 +63,11 @@ public class Helpers {
         jsonPath = API_Methods.response.jsonPath();
 
         assertEquals(name, jsonPath.getString("[" + dataIndex + "].name"));
+    }
+
+    @Given("Api kullanicisi helpers students endpointinden donen response bodynin schema validation dogrulamasini yapar")
+    public void api_kullanicisi_helpers_students_endpointinden_donen_response_bodynin_schema_validation_dogrulamasini_yapar() {
+        api_methods.schemaValidation("features/API/helpers/helpersJsonSchema/helpersStudents.json");
     }
     // **************************************************************************************************************
 
@@ -70,6 +81,11 @@ public class Helpers {
         assertEquals(updatedAt, jsonPath.getString("[" + dataIndex + "].updatedAt"));
         assertNull(jsonPath.get("[" + dataIndex + "].deletedAt"));
         assertEquals(name, jsonPath.getString("[" + dataIndex + "].name"));
+    }
+
+    @Given("Api kullanicisi helpers cities endpointinden donen response bodynin schema validation dogrulamasini yapar")
+    public void api_kullanicisi_helpers_cities_endpointinden_donen_response_bodynin_schema_validation_dogrulamasini_yapar() {
+        api_methods.schemaValidation("features/API/helpers/helpersJsonSchema/helpersCities.json");
     }
     // **************************************************************************************************************
 
@@ -91,6 +107,11 @@ public class Helpers {
         assertNull(jsonPath.get("[" + dataIndex + "].deletedAt"));
         assertEquals(name, jsonPath.getString("[" + dataIndex + "].name"));
         assertEquals(cityId, jsonPath.getInt("[" + dataIndex + "].cityId"));
+    }
+
+    @Given("Api kullanicisi helpers county endpointinden donen response bodynin schema validation dogrulamasini yapar")
+    public void api_kullanicisi_helpers_county_endpointinden_donen_response_bodynin_schema_validation_dogrulamasini_yapar() {
+        api_methods.schemaValidation("features/API/helpers/helpersJsonSchema/helpersCounty.json");
     }
     // **************************************************************************************************************
 
@@ -134,6 +155,11 @@ public class Helpers {
         assertEquals(seasonStartDate, jsonPath.getString("[" + dataIndex + "].seasonStartDate"));
         assertEquals(seasonEndDate, jsonPath.getString("[" + dataIndex + "].seasonEndDate"));
     }
+
+    @Given("Api kullanicisi helpers seasons endpointinden donen response bodynin schema validation dogrulamasini yapar")
+    public void api_kullanicisi_helpers_seasons_endpointinden_donen_response_bodynin_schema_validation_dogrulamasini_yapar() {
+        api_methods.schemaValidation("features/API/helpers/helpersJsonSchema/helpersSeasons.json");
+    }
     // **************************************************************************************************************
 
     // ************************************* /helpers/classes/{seasonId} ********************************************
@@ -148,6 +174,11 @@ public class Helpers {
         assertEquals(name, jsonPath.getString("[" + dataIndex + "].name"));
         assertEquals(level_key, jsonPath.getString("[" + dataIndex + "].level_key"));
     }
+
+    @Given("Api kullanicisi helpers classes endpointinden donen response bodynin schema validation dogrulamasini yapar")
+    public void api_kullanicisi_helpers_classes_endpointinden_donen_response_bodynin_schema_validation_dogrulamasini_yapar() {
+        api_methods.schemaValidation("features/API/helpers/helpersJsonSchema/helpersClasses.json");
+    }
     // **************************************************************************************************************
 
     // *********************************** /helpers/stage-classes/{stage} *******************************************
@@ -159,6 +190,11 @@ public class Helpers {
         assertEquals(label, jsonPath.getString("branchList[" + dataIndex + "].label"));
         assertEquals(classId, jsonPath.getInt("branchList[" + dataIndex + "].classId"));
     }
+
+    @Given("Api kullanicisi helpers stage classes endpointinden donen response bodynin schema validation dogrulamasini yapar")
+    public void api_kullanicisi_helpers_stage_classes_endpointinden_donen_response_bodynin_schema_validation_dogrulamasini_yapar() {
+        api_methods.schemaValidation("features/API/helpers/helpersJsonSchema/helpersStageClasses.json");
+    }
     // **************************************************************************************************************
 
     // ***************************************** /helpers/role-list *************************************************
@@ -169,6 +205,11 @@ public class Helpers {
                 .body("[" + dataIndex + "].name", equalTo(name),
                         "[" + dataIndex + "].key", equalTo(key));
     }
+
+    @Given("Api kullanicisi helpers role list endpointinden donen response bodynin schema validation dogrulamasini yapar")
+    public void api_kullanicisi_helpers_role_list_endpointinden_donen_response_bodynin_schema_validation_dogrulamasini_yapar() {
+        api_methods.schemaValidation("features/API/helpers/helpersJsonSchema/helpersRoleList.json");
+    }
     // **************************************************************************************************************
 
     // *************************************** /helpers/responsible-teachers ****************************************
@@ -177,6 +218,11 @@ public class Helpers {
         API_Methods.response.then()
                 .assertThat()
                 .body("[" + dataIndex + "].name", equalTo(name));
+    }
+
+    @Given("Api kullanicisi helpers responsible teachers endpointinden donen response bodynin schema validation dogrulamasini yapar")
+    public void api_kullanicisi_helpers_responsible_teachers_endpointinden_donen_response_bodynin_schema_validation_dogrulamasini_yapar() {
+        api_methods.schemaValidation("features/API/helpers/helpersJsonSchema/helpersResponsibleTeachers.json");
     }
     // **************************************************************************************************************
 
@@ -217,6 +263,39 @@ public class Helpers {
         assertNull(jsonPath.get("[" + dataIndex + "].area"));
         assertEquals(teacherId, jsonPath.getInt("[" + dataIndex + "].teacherId"));
     }
+
+    @Given("Api kullanicisi helpers responsible students id endpointinden donen response bodynin schema validation dogrulamasini yapar")
+    public void api_kullanicisi_helpers_responsible_students_id_endpointinden_donen_response_bodynin_schema_validation_dogrulamasini_yapar() {
+        api_methods.schemaValidation("features/API/helpers/helpersJsonSchema/helpersResponsibleStudentsId.json");
+    }
     // **************************************************************************************************************
 
+    // ******************************************** /helpers/branches ***********************************************
+    @Given("Api kullanicisi helpers branches endpointinden donen response bodynin schema validation dogrulamasini yapar")
+    public void api_kullanicisi_helpers_branches_endpointinden_donen_response_bodynin_schema_validation_dogrulamasini_yapar() {
+        api_methods.schemaValidation("features/API/helpers/helpersJsonSchema/helpersBranches.json");
+    }
+    // **************************************************************************************************************
+
+    // ******************************************* /helpers/nationality *********************************************
+    @Given("Api kullanicisi helpers nationality endpointinden donen response bodynin schema validation dogrulamasini yapar")
+    public void api_kullanicisi_helpers_nationality_endpointinden_donen_response_bodynin_schema_validation_dogrulamasini_yapar() {
+        api_methods.schemaValidation("features/API/helpers/helpersJsonSchema/helpersNationality.json");
+    }
+    // **************************************************************************************************************
+
+    // ************************************ /helpers/responsible-students *******************************************
+    @Given("Api kullanicisi helpers responsible students endpointinden donen response bodynin schema validation dogrulamasini yapar")
+    public void api_kullanicisi_helpers_responsible_students_endpointinden_donen_response_bodynin_schema_validation_dogrulamasini_yapar() {
+        api_methods.schemaValidation("features/API/helpers/helpersJsonSchema/helpersResponsibleStudents.json");
+    }
+    // **************************************************************************************************************
+
+    // **************************************** /helpers/stage-branches *********************************************
+
+    @Given("Api kullanicisi helpers stage branches endpointinden donen response bodynin schema validation dogrulamasini yapar")
+    public void api_kullanicisi_helpers_stage_branches_endpointinden_donen_response_bodynin_schema_validation_dogrulamasini_yapar() {
+        api_methods.schemaValidation("features/API/helpers/helpersJsonSchema/helpersStageBranches.json");
+    }
+    // **************************************************************************************************************
 }

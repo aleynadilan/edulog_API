@@ -9,6 +9,7 @@ Feature: Okulun Rol Listesi.
     * Api kullanicisi get request gonderir ve donen responsei kaydeder
     * Api kullanicisi status codeun 200 oldugunu dogrular
     * Api kullanıcısi response body icindeki <dataIndex> indexe sahip olan "<name>" ve "<key>" bilgilerini doğrular.
+    * Api kullanicisi helpers role list endpointinden donen response bodynin schema validation dogrulamasini yapar
 
     Examples:
       | dataIndex | name                      | key                                   |

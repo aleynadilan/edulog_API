@@ -9,6 +9,7 @@ Feature: Yardımcı Kontrolörün Sezonları alması.
     * Api kullanicisi get request gonderir ve donen responsei kaydeder
     * Api kullanicisi status codeun 200 oldugunu dogrular
     * Api kullanıcısi response body icindeki <dataIndex> indexe sahip olan "<createdAt>", "<updatedAt>", "<name>", "<seasonStartDate>" ve "<seasonEndDate>" bilgilerini doğrular.
+    * Api kullanicisi helpers seasons endpointinden donen response bodynin schema validation dogrulamasini yapar
 
     Examples:
       | dataIndex | createdAt                | updatedAt                | name      | seasonStartDate          | seasonEndDate            |

@@ -7,6 +7,7 @@ Feature: Yardımcı Denetleyicinin Çalışan Kimliğine Göre Sorumlu Öğrenci
     * Api kullanicisi "helpers", "responsible-students" ve <id> path parametrelerini olusturur
     * Api kullanicisi get request gonderir ve donen responsei kaydeder
     * Api kullanicisi status codeun 200 oldugunu dogrular
+    * Api kullanicisi helpers responsible students id endpointinden donen response bodynin schema validation dogrulamasini yapar
 
     Examples:
       | id |

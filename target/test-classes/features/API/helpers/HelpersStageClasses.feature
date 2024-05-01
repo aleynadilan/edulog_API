@@ -7,6 +7,7 @@ Feature: İlgili Aşamanın sınıfları.
     * Api kullanicisi "helpers", "stage-classes" ve "<stage>" path parametrelerini olusturur
     * Api kullanicisi get request gonderir ve donen responsei kaydeder
     * Api kullanicisi status codeun 200 oldugunu dogrular
+    * Api kullanicisi helpers stage classes endpointinden donen response bodynin schema validation dogrulamasini yapar
 
     Examples:
       | stage      |
