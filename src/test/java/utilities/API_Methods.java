@@ -164,7 +164,7 @@ public class API_Methods {
 
         API_Methods.response.then()
                 .assertThat()
-                .body(JsonSchemaValidator.matchesJsonSchema(jsonSchema));
+                .body(JsonSchemaValidator.matchesJsonSchema(classessGetJsonSchema));
     }
 
 }
