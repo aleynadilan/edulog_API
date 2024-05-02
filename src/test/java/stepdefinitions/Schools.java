@@ -45,10 +45,10 @@ public class Schools {
     }
     @Given("ApiN kullanicisi response bodydeki bilgileri dogrular")
     public void api_n_kullanicisi_response_bodydeki_bilgileri_dogrular() {
-        JsonPath jsonPath = response.jsonPath();
-        assertEquals(5, jsonPath.getInt("company_id"));
-        assertEquals(3, jsonPath.getInt("group_id"));
+        jsonPath = API_Methods.response.jsonPath();
         assertTrue(jsonPath.getBoolean("isActive"));
+        assertEquals(requestBody.get("name"),jsonPath.getString("name"));
+
 
 
 
