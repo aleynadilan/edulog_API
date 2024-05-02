@@ -9,6 +9,7 @@ import static org.junit.Assert.assertEquals;
 
 public class PanelOkulResmiBelgeTurleri {
 
+    API_Methods api_methods = new API_Methods();
     JsonPath jsonPath;
 
     @Given("Api kullanicisi response bodydeki status bilgisinin true oldugunu dogrular")
@@ -23,5 +24,10 @@ public class PanelOkulResmiBelgeTurleri {
         jsonPath = API_Methods.response.jsonPath();
 
         assertEquals(key, jsonPath.getString("data[" + dataIndex + "].key"));
+    }
+
+    @Given("Api kullanicisi panel school official file type endpointinden donen response bodynin schema validation dogrulamasini yapar")
+    public void api_kullanicisi_panel_school_official_file_type_endpointinden_donen_response_bodynin_schema_validation_dogrulamasini_yapar() {
+        api_methods.schemaValidation("features/API/panelOkulResmiBelgeTurleri/panelSchoolOfficialFileType.json");
     }
 }

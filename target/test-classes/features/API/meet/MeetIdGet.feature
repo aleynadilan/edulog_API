@@ -10,6 +10,7 @@ Feature: Tek Toplantı Verileri.
     * Api kullanicisi status codeun 200 oldugunu dogrular
     * Api kullanicisi response bodydeki message bilgisinin "success" oldugunu dogrular
     * Api kullanicisi response bodydeki status bilgisinin true oldugunu dogrular
+    * Api kullanicisi meet id endpointinden donen response bodynin schema validation dogrulamasini yapar
 
     Examples:
       | id |

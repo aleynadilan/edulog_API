@@ -75,6 +75,17 @@ public class Classess {
                 .body("name", equalTo(name),
                         "id", equalTo(id));
     }
+
+    @Given("Api kullanicisi classess post endpointinden donen response bodynin schema validation dogrulamasini yapar")
+    public void api_kullanicisi_classess_post_endpointinden_donen_response_bodynin_schema_validation_dogrulamasini_yapar() {
+        InputStream classessPostJsonSchema = getClass().getClassLoader()
+                .getResourceAsStream("features/API/classess/classessJsonSchema/classessPost.json");
+
+        API_Methods.response.then()
+                .assertThat()
+                .body(JsonSchemaValidator.matchesJsonSchema(classessPostJsonSchema));
+    }
+
     // **************************************************************************************************************
 
     // ***************************************** /classess (get) ***************************************************

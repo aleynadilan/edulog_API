@@ -9,6 +9,7 @@ Feature: Panel Denetleyicisi Şirket Grubu Okul Listesini Alır.
     * Api kullanicisi status codeun 200 oldugunu dogrular
     * Api kullanicisi response bodydeki message bilgisinin "success" oldugunu dogrular
     * Api kullanicisi response bodydeki status bilgisinin true oldugunu dogrular
+    * Api kullanicisi panel cgs list endpointinden donen response bodynin schema validation dogrulamasini yapar
 
 
   Scenario: /panel/cgs-list endpoint'ine gecersiz authorization bilgileri ile bir GET request gönderildiginde

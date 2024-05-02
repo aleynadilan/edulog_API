@@ -8,6 +8,8 @@ Feature: Yardımcı Denetleyicilerin Sorumlu Öğretmenler Edinmesi.
     * Api kullanicisi get request gonderir ve donen responsei kaydeder
     * Api kullanicisi status codeun 200 oldugunu dogrular
     * Api kullanıcısi response body icindeki <dataIndex> indexe sahip olanin "<name>" bilgisini doğrular.
+    * Api kullanicisi helpers responsible teachers endpointinden donen response bodynin schema validation dogrulamasini yapar
+
 
     Examples:
       | dataIndex | name            |
