@@ -85,4 +85,20 @@ public class Schools {
         }
 assertEquals("status code: 401, reason phrase: Unauthorized",mesaj);
     }
+
+
+    @Given("ApiN kullanicisi {string}, {int} path parametrelerini olusturur")
+    public void api_n_kullanicisi_path_parametrelerini_olusturur(String pp1, int pp2) {
+        spec.pathParams("pp1",pp1,"pp2",pp2);
+        API_Methods.pathParam="/{pp1}/{pp2}";
+
+    }
+
+    @Given("ApiN kullanicisi response body icindeki name bilgisinin {string} ve id bilgisininde {int} oldugunu dogrular")
+    public void api_n_kullanicisi_response_body_icindeki_name_bilgisinin_ve_id_bilgisininde_oldugunu_dogrular(String name, int id) {
+        jsonPath = API_Methods.response.jsonPath();
+        assertEquals(jsonPath.get("name"),"api deneme");
+        assertEquals(jsonPath.getInt("id"),id);
+
+    }
 }
