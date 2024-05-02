@@ -7,6 +7,7 @@ import org.json.JSONObject;
 import utilities.API_Methods;
 
 import static hooks.HooksAPI.spec;
+import static org.hamcrest.CoreMatchers.equalTo;
 import static org.junit.Assert.*;
 import static utilities.API_Methods.response;
 
@@ -55,6 +56,12 @@ public class Schools {
     }
     @Given("ApiN kullanicisi schools post endpointinden donen response bodynin schema validation dogrulamasini yapar")
     public void api_n_kullanicisi_schools_post_endpointinden_donen_response_bodynin_schema_validation_dogrulamasini_yapar() {
+
+    }
+
+    @Given("ApiN kullanicisi response bodydeki errorData bilgisinin {string} oldugunu dogrular")
+    public void api_n_kullanicisi_response_bodydeki_error_data_bilgisinin_oldugunu_dogrular(String mesaj) {
+        response.then().assertThat().body("errorData",equalTo(mesaj));
 
     }
 
