@@ -9,6 +9,7 @@ import utilities.API_Methods;
 import static hooks.HooksAPI.spec;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.junit.Assert.*;
+import static utilities.API_Methods.pathParam;
 import static utilities.API_Methods.response;
 
 public class Schools {
@@ -63,6 +64,10 @@ public class Schools {
     public void api_n_kullanicisi_response_bodydeki_error_data_bilgisinin_oldugunu_dogrular(String mesaj) {
         response.then().assertThat().body("errorData",equalTo(mesaj));
 
+    }
+    @Given("ApiN kullanicisi get request gonderir ve donen responsei kaydeder")
+    public void api_n_kullanicisi_get_request_gonderir_ve_donen_responsei_kaydeder() {
+        API_Methods.getResponse(API_Methods.pathParam);
     }
 
 }
