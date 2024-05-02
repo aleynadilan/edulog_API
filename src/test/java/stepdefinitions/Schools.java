@@ -2,11 +2,13 @@ package stepdefinitions;
 
 import hooks.HooksAPI;
 import io.cucumber.java.en.Given;
+import io.restassured.http.ContentType;
 import io.restassured.path.json.JsonPath;
 import org.json.JSONObject;
 import utilities.API_Methods;
 
 import static hooks.HooksAPI.spec;
+import static io.restassured.RestAssured.given;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.junit.Assert.*;
 import static utilities.API_Methods.pathParam;
@@ -69,5 +71,18 @@ public class Schools {
     public void api_n_kullanicisi_get_request_gonderir_ve_donen_responsei_kaydeder() {
         API_Methods.getResponse(API_Methods.pathParam);
     }
-
+    @Given("ApiN kullanicisi response bodydeki status codeun '401' ve  errorData bilgisinin Unauthorized oldugunu dogrular")
+    public void api_n_kullanicisi_response_bodydeki_status_codeun_ve_error_data_bilgisinin_unauthorized_oldugunu_dogrular() {
+        String mesaj = null;
+        try {
+            response = given()
+                    .spec(spec)
+                    .contentType(ContentType.JSON)
+                    .when()
+                    .get(pathParam);
+        } catch (Exception e) {
+            mesaj = e.getMessage();
+        }
+assertEquals("status code: 401, reason phrase: Unauthorized",mesaj);
+    }
 }
