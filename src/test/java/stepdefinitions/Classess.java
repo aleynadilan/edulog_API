@@ -4,6 +4,7 @@ import io.cucumber.java.en.Given;
 import io.restassured.module.jsv.JsonSchemaValidator;
 import io.restassured.path.json.JsonPath;
 import org.json.JSONObject;
+import pojos.ClassessPostPOJO;
 import utilities.API_Methods;
 import utilities.ConfigReader;
 
@@ -18,6 +19,7 @@ public class Classess {
     JSONObject requestBody;
 
     JsonPath jsonPath;
+    ClassessPostPOJO classessPostPOJO;
 
     @Given("Api kullanicisi {string}, {int} path parametrelerini olusturur")
     public void api_kullanicisi_path_parametrelerini_olusturur(String pp1, int pp2) {
@@ -84,6 +86,16 @@ public class Classess {
         API_Methods.response.then()
                 .assertThat()
                 .body(JsonSchemaValidator.matchesJsonSchema(classessPostJsonSchema));
+    }
+
+    @Given("Api kullanicisi classess endpointine gondermek icin gerekli verileri iceren bir POST request olusturur")
+    public void api_kullanicisi_classess_endpointine_gondermek_icin_gerekli_verileri_iceren_bir_POST_request_olusturur() {
+        classessPostPOJO = new ClassessPostPOJO(true,1,1,1,"Aleyna");
+    }
+
+    @Given("Api kullanicisi POST request gonderir ve classess endpointinden donen responsei kaydeder")
+    public void api_kullanicisi_POST_request_gonderir_ve_classess_endpointinden_donen_responsei_kaydeder() {
+        API_Methods.postResponse(classessPostPOJO, API_Methods.pathParam);
     }
 
     // **************************************************************************************************************
