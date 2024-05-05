@@ -28,7 +28,8 @@ Feature: Schools
     Examples:
       | id | name   |
       | 17 | api deneme |
-#negatif seneryo
+
+#negatif seneryo yanlış id ile
   Scenario Outline: schools endpoint'ine gecersiz id ile bir GET request gönderildiginde dönen status code'in 401 oldugunu dogrular
 
 

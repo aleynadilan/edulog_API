@@ -5,3 +5,5 @@ Feature: Ogrencilerin Toplu Bilgilerini Indirme
     And Mustafa kullanicisi "campus/student/parents-widgets" icin get request gonderir ve donen responsei kaydeder
     Then Mustafa kullanicisi status code 200 oldugunu dogrular
     And Mustafa kullanicisi "campus/student/widgets" icin schema validation yapar
+
+
