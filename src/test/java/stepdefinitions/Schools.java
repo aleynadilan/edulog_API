@@ -105,4 +105,22 @@ assertEquals("status code: 401, reason phrase: Unauthorized",mesaj);
     public void api_n_kullanicisi_delete_request_gonderir_ve_donen_responsei_kaydeder() {
        API_Methods.deleteResponse(API_Methods.pathParam);
     }
+    @Given("ApiN kullanicisi schools endpoint'ine gondermek icin {string}  verisini iceren bir patch request olusturur")
+    public void api_n_kullanicisi_schools_endpoint_ine_gondermek_icin_verisini_iceren_bir_patch_request_olusturur(String name) {
+
+
+    }
+
+
+    @Given("ApiN kullanicisi patch request gonderir ve schools endpoint'inden donen response'u kaydeder")
+    public void api_n_kullanicisi_patch_request_gonderir_ve_schools_endpoint_inden_donen_response_u_kaydeder() {
+
+    }
+
+    @Given("ApiN kullanicisi response body'deki bilgilerin guncellendigini dogrular")
+    public void api_n_kullanicisi_response_body_deki_bilgilerin_guncellendigini_dogrular() {
+
+    }
+
+
 }
