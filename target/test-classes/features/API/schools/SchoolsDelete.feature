@@ -12,7 +12,8 @@ Feature: Schools Delete
       | id |
       | 17 |
 
-
+# negatif Scenario
+  #invalid token ile
   Scenario Outline: schools/{id} endpoint'ine gecersiz authorization bilgileri ve silinmek istenen id'yi iceren bir
   DELETE request gönderildiginde dönen status code'in 401 ve response body'deki errorData bilgisinin "Unauthorized"
   oldugu dogrulanmali.
@@ -23,4 +24,17 @@ Feature: Schools Delete
 
     Examples:
       | id |
-      | 123 |
+      | 17 |
+
+    #invalid id ile
+  Scenario Outline: Schools/{id} endpoint'ine gecerli authorization bilgileri ve sistemde olmayan  id'yi silmeyi iceren bir DELETE
+  request gönderildiginde dönen status code'in 404 oldugu dogrulanmali.
+
+    * ApiN kullanicisi "employee" token ile base urli olusturur
+    * ApiN kullanicisi "schools", <id> path parametrelerini olusturur
+    * ApiN kullanicisi delete request gonderir ve donen responsei kaydeder
+    * ApiN kullanicisi status codeun 404 oldugunu dogrular
+
+    Examples:
+      | id |
+      | 17 |
