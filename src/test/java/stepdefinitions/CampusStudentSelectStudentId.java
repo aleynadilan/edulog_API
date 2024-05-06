@@ -21,8 +21,9 @@ import static utilities.API_Methods.pathParam;
 public class CampusStudentSelectStudentId {
 
     RequestSpecification specStudentId;
+    RequestSpecification specStudentId2;
     int rastgeleSecilenOgrenciId;
-
+    String pathparam2;
     Response response;
 
     @Given("Mustafa kullanicisi {string}, {string} ve :studentId path parametrelerini olusturur")
@@ -30,10 +31,11 @@ public class CampusStudentSelectStudentId {
         specStudentId = new RequestSpecBuilder()
                 .setBaseUri("https://panelbe.edulog.com.tr")
                 .addHeader("Accept", "application/json")
-                .addHeader("Authorization", "Bearer " + Authentication.generateToken("student"))
+                .addHeader("Authorization", "Bearer " + Authentication.generateToken("employee"))
                 .build();
 
         int pp3 = rastgeleSecilenOgrenciId;
+        System.out.println("pp3" + pp3);
         specStudentId.pathParams("pp1", pp1, "pp2", pp2, "pp3", pp3);
         pathParam = "/{pp1}/{pp2}/{pp3}";
 
@@ -41,17 +43,21 @@ public class CampusStudentSelectStudentId {
 
     @Given("Mustafa kullanicisi base_url-campus-student-:studentId icin get request gonderir")
     public void mustafa_kullanicisi_base_url_campus_student_student_ıd_icin_get_request_gonderir() {
-        API_Methods.getResponse(pathParam);
+        response = given()
+                .spec(specStudentId2)
+                .contentType(ContentType.JSON)
+                .when()
+                .get(pathparam2);
     }
 
     @And("Mustafa kullanicisi base_url-campus-student-:studentId icin post request gonderir")
     public void mustafaKullanicisiBase_urlCampusStudentStudentIdIcinPostRequestGonderir() {
         response = given()
-                .spec(specStudentId)
+                .spec(specStudentId2)
                 .contentType(ContentType.JSON)
                 .body("")
                 .when()
-                .post(pathParam);
+                .post(pathparam2);
 
         response.prettyPrint();
 
@@ -82,5 +88,46 @@ public class CampusStudentSelectStudentId {
                 .delete(pathParam);
 
         response.prettyPrint();
+    }
+
+
+
+    @And("Mustafa kullanicisi {string}, {string} ve {string} path icin parametrelerini olusturur")
+    public void mustafaKullanicisiVePathIcinParametreleriniOlusturur(String pp1, String pp2, String arg3) {
+        specStudentId2 = new RequestSpecBuilder()
+                .setBaseUri("https://panelbe.edulog.com.tr")
+                .addHeader("Accept", "application/json")
+                .addHeader("Authorization", "Bearer " + Authentication.generateToken("employee"))
+                .build();
+
+        int pp3= rastgeleSecilenOgrenciId;
+        specStudentId2.pathParams("pp1", pp1, "pp2", pp2,"pp3", pp3);
+        pathparam2 = "/{pp1}/{pp2}/{pp3}";
+    }
+
+
+    @And("Mustafa kullanicisi {string}, {string} ve :studentId gerekli path parametrelerini olusturur")
+    public void mustafaKullanicisiVeStudentIdGerekliPathParametreleriniOlusturur(String pp1, String pp2) {
+        specStudentId = new RequestSpecBuilder()
+                .setBaseUri("https://panelbe.edulog.com.tr")
+                .addHeader("Accept", "application/json")
+                .addHeader("Authorization", "Bearer " + Authentication.generateToken("employee"))
+                .build();
+
+        int pp3 = rastgeleSecilenOgrenciId;
+        System.out.println("pp3" + pp3);
+        specStudentId.pathParams("pp1", pp1, "pp2", pp2, "pp3", pp3);
+        pathParam = "/{pp1}/{pp2}/{pp3}";
+
+    }
+
+    @And("Mustafa kullanicisi base_url-campus-student-:studentId icin get request islemini yapar")
+    public void mustafaKullanicisiBase_urlCampusStudentStudentIdIcinGetRequestIsleminiYapar() {
+        response = given()
+                .spec(specStudentId)
+                .contentType(ContentType.JSON)
+                .body("")
+                .when()
+                .post(pathParam);
     }
 }
