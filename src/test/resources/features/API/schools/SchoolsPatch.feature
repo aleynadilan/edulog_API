@@ -9,4 +9,4 @@ Feature: Schools
     * ApiN kullanicisi response body'deki bilgilerin guncellendigini dogrular
     Examples:
       | id | name   |
-      | 17 | api  |
+      | 21 | api patch  |

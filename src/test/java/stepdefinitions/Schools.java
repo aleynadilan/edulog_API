@@ -4,8 +4,12 @@ import hooks.HooksAPI;
 import io.cucumber.java.en.Given;
 import io.restassured.http.ContentType;
 import io.restassured.path.json.JsonPath;
+import io.restassured.response.Response;
 import org.json.JSONObject;
 import utilities.API_Methods;
+
+import java.util.HashMap;
+import java.util.Map;
 
 import static hooks.HooksAPI.spec;
 import static io.restassured.RestAssured.given;
@@ -15,8 +19,10 @@ import static utilities.API_Methods.pathParam;
 import static utilities.API_Methods.response;
 
 public class Schools {
+
     JSONObject requestBody;
     JsonPath jsonPath;
+   HashMap<String, Object> requestBodyMap ;
     @Given("ApiN kullanicisi {string} token ile base urli olusturur")
     public void api_n_kullanicisi_token_ile_base_urli_olusturur(String user) {
         HooksAPI.setUpApi(user);
@@ -107,6 +113,8 @@ assertEquals("status code: 401, reason phrase: Unauthorized",mesaj);
     }
     @Given("ApiN kullanicisi schools endpoint'ine gondermek icin {string}  verisini iceren bir patch request olusturur")
     public void api_n_kullanicisi_schools_endpoint_ine_gondermek_icin_verisini_iceren_bir_patch_request_olusturur(String name) {
+        requestBodyMap = new HashMap<>();
+        requestBodyMap.put("name",name);
 
 
     }
@@ -114,11 +122,21 @@ assertEquals("status code: 401, reason phrase: Unauthorized",mesaj);
 
     @Given("ApiN kullanicisi patch request gonderir ve schools endpoint'inden donen response'u kaydeder")
     public void api_n_kullanicisi_patch_request_gonderir_ve_schools_endpoint_inden_donen_response_u_kaydeder() {
+        response = given()
+                .spec(spec)//url
+                .contentType(ContentType.JSON)//gönderilen data tipi
+                .when()
+                .body(requestBodyMap)//gönderilen body
+                .patch(pathParam); //paramaetreler
+
+        response.prettyPrint();
 
     }
 
     @Given("ApiN kullanicisi response body'deki bilgilerin guncellendigini dogrular")
     public void api_n_kullanicisi_response_body_deki_bilgilerin_guncellendigini_dogrular() {
+        Map<String, Object> actualData = response.as(HashMap.class); //
+        assertEquals(actualData.get("name"),"api patch");
 
     }
 
