@@ -101,4 +101,8 @@ assertEquals("status code: 401, reason phrase: Unauthorized",mesaj);
         assertEquals(jsonPath.getInt("id"),id);
 
     }
+    @Given("ApiN kullanicisi delete request gonderir ve donen responsei kaydeder")
+    public void api_n_kullanicisi_delete_request_gonderir_ve_donen_responsei_kaydeder() {
+       API_Methods.deleteResponse(API_Methods.pathParam);
+    }
 }
