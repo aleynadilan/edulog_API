@@ -1,0 +1,21 @@
+https://panelbe.edulog.com.tr/campus/student/parents-download
+
+{
+  "status": false,
+  "errorCode": null,
+  "errorData": "Unauthorized"
+}
+
+request body belirsiz
+
+
+////////////////////////////////////////
+{{base_url}}/campus/student/parents/list
+
+{
+    "status": false,
+    "errorCode": null,
+    "errorData": "Cannot GET /campus/student/parents/list"
+}
+
+request body belirsiz

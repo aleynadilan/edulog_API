@@ -166,5 +166,15 @@ public class API_Methods {
                 .assertThat()
                 .body(JsonSchemaValidator.matchesJsonSchema(classessGetJsonSchema));
     }
+    public static Response postResponseNoBody( String pathParam) {
+        response = given()
+                .spec(spec)
+                .contentType(ContentType.JSON)
+                .when()
+                .post(pathParam);
 
+        response.prettyPrint();
+
+        return response;
+    }
 }

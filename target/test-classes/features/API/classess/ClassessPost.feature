@@ -36,3 +36,16 @@ Feature: Sınıf Denetleyicisi oluştur.
     Examples:
       | id | name   | responseId |
       | 76 | Aleyna | 76         |
+
+
+  Scenario: /classess post endpoint'ine gecerli authorization bilgileri ve gerekli verileri (isActive,
+  company_id, group_id, school_id, name) iceren bir POST body gönderildiginde dönen status code'in 201
+  oldugu dogrulanmali.
+
+    * Api kullanicisi "employee" token ile base urli olusturur
+    * Api kullanicisi "classess" path parametrelerini olusturur
+    * Api kullanicisi classess endpointine gondermek icin gerekli verileri iceren bir POST request olusturur
+    * Api kullanicisi POST request gonderir ve classess endpointinden donen responsei kaydeder
+    * Api kullanicisi status codeun 201 oldugunu dogrular
+    * Api kullanicisi response bodydeki bilgileri dogrular
+    * Api kullanicisi classess post endpointinden donen response bodynin schema validation dogrulamasini yapar

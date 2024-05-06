@@ -1,233 +1,450 @@
 {
+  "definitions": {},
   "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://example.com/object1714677464.json",
+  "title": "Root",
   "type": "object",
   "properties": {
     "status": {
-      "type": "boolean"
+      "$id": "#root/status",
+      "title": "Status",
+      "type": "boolean",
+      "default": true
     },
     "message": {
-      "type": "string"
+      "$id": "#root/message",
+      "title": "Message",
+      "type": "string",
+      "default": "",
+      "pattern": "^.*$"
     },
     "data": {
+      "$id": "#root/data",
+      "title": "Data",
       "type": "object",
       "properties": {
         "id": {
-          "type": "integer"
+          "$id": "#root/data/id",
+          "title": "Id",
+          "type": "integer",
+          "default": 0
         },
         "isActive": {
-          "type": "boolean"
+          "$id": "#root/data/isActive",
+          "title": "Isactive",
+          "type": "boolean",
+          "default": true
         },
         "createdAt": {
+          "$id": "#root/data/createdAt",
+          "title": "Createdat",
           "type": "string",
-          "format": "date-time"
+          "default": "",
+          "pattern": "^.*$"
         },
         "updatedAt": {
+          "$id": "#root/data/updatedAt",
+          "title": "Updatedat",
           "type": "string",
-          "format": "date-time"
+          "default": "",
+          "pattern": "^.*$"
         },
         "deletedAt": {
-          "type": ["string", "null"],
-          "format": "date-time"
+          "$id": "#root/data/deletedAt",
+          "title": "Deletedat",
+          "type": "null",
+          "default": null
         },
         "isBanned": {
-          "type": ["boolean", "null"]
+          "$id": "#root/data/isBanned",
+          "title": "Isbanned",
+          "type": "null",
+          "default": null
         },
         "banEndDate": {
-          "type": ["string", "null"],
-          "format": "date-time"
+          "$id": "#root/data/banEndDate",
+          "title": "Banenddate",
+          "type": "null",
+          "default": null
         },
         "nameId": {
-          "type": ["integer", "null"]
+          "$id": "#root/data/nameId",
+          "title": "Nameid",
+          "type": "null",
+          "default": null
         },
         "companyId": {
-          "type": "integer"
+          "$id": "#root/data/companyId",
+          "title": "Companyid",
+          "type": "integer",
+          "default": 0
         },
         "groupId": {
-          "type": "integer"
+          "$id": "#root/data/groupId",
+          "title": "Groupid",
+          "type": "integer",
+          "default": 0
         },
         "schoolId": {
-          "type": "integer"
+          "$id": "#root/data/schoolId",
+          "title": "Schoolid",
+          "type": "integer",
+          "default": 0
         },
         "testUser": {
-          "type": "boolean"
+          "$id": "#root/data/testUser",
+          "title": "Testuser",
+          "type": "boolean",
+          "default": true
         },
         "registerType": {
-          "type": "string"
+          "$id": "#root/data/registerType",
+          "title": "Registertype",
+          "type": "string",
+          "default": "",
+          "pattern": "^.*$"
         },
         "name": {
-          "type": "string"
+          "$id": "#root/data/name",
+          "title": "Name",
+          "type": "string",
+          "default": "",
+          "pattern": "^.*$"
         },
         "isForeign": {
-          "type": "boolean"
+          "$id": "#root/data/isForeign",
+          "title": "Isforeign",
+          "type": "boolean",
+          "default": true
         },
         "idNumber": {
-          "type": "string"
+          "$id": "#root/data/idNumber",
+          "title": "Idnumber",
+          "type": "string",
+          "default": "",
+          "pattern": "^.*$"
         },
         "phone": {
-          "type": ["string", "null"]
+          "$id": "#root/data/phone",
+          "title": "Phone",
+          "type": "null",
+          "default": null
         },
         "bloodType": {
-          "type": ["string", "null"]
+          "$id": "#root/data/bloodType",
+          "title": "Bloodtype",
+          "type": "null",
+          "default": null
         },
         "email": {
-          "type": ["string", "null"]
+          "$id": "#root/data/email",
+          "title": "Email",
+          "type": "null",
+          "default": null
         },
         "birthday": {
-          "type": ["string", "null"],
-          "format": "date"
+          "$id": "#root/data/birthday",
+          "title": "Birthday",
+          "type": "null",
+          "default": null
         },
         "gender": {
-          "type": ["string", "null"]
+          "$id": "#root/data/gender",
+          "title": "Gender",
+          "type": "null",
+          "default": null
         },
         "cityId": {
-          "type": ["integer", "null"]
+          "$id": "#root/data/cityId",
+          "title": "Cityid",
+          "type": "null",
+          "default": null
         },
         "countyId": {
-          "type": ["integer", "null"]
+          "$id": "#root/data/countyId",
+          "title": "Countyid",
+          "type": "null",
+          "default": null
         },
         "districtId": {
-          "type": ["integer", "null"]
+          "$id": "#root/data/districtId",
+          "title": "Districtid",
+          "type": "null",
+          "default": null
         },
         "nationalityId": {
-          "type": ["integer", "null"]
+          "$id": "#root/data/nationalityId",
+          "title": "Nationalityid",
+          "type": "null",
+          "default": null
         },
         "addressDetail": {
-          "type": ["string", "null"]
+          "$id": "#root/data/addressDetail",
+          "title": "Addressdetail",
+          "type": "null",
+          "default": null
         },
         "studentNumber": {
-          "type": "string"
+          "$id": "#root/data/studentNumber",
+          "title": "Studentnumber",
+          "type": "string",
+          "default": "",
+          "pattern": "^.*$"
         },
         "classId": {
-          "type": ["integer", "null"]
+          "$id": "#root/data/classId",
+          "title": "Classid",
+          "type": "null",
+          "default": null
         },
         "branchId": {
-          "type": ["integer", "null"]
+          "$id": "#root/data/branchId",
+          "title": "Branchid",
+          "type": "null",
+          "default": null
         },
         "seasonId": {
-          "type": ["integer", "null"]
+          "$id": "#root/data/seasonId",
+          "title": "Seasonid",
+          "type": "null",
+          "default": null
         },
         "area": {
-          "type": ["string", "null"]
+          "$id": "#root/data/area",
+          "title": "Area",
+          "type": "null",
+          "default": null
         },
         "teacherId": {
-          "type": ["integer", "null"]
+          "$id": "#root/data/teacherId",
+          "title": "Teacherid",
+          "type": "null",
+          "default": null
         },
         "mebScholarshipPoint": {
-          "type": ["integer", "null"]
+          "$id": "#root/data/mebScholarshipPoint",
+          "title": "Mebscholarshippoint",
+          "type": "null",
+          "default": null
         },
         "mebScholarshipSlice": {
-          "type": ["integer", "null"]
+          "$id": "#root/data/mebScholarshipSlice",
+          "title": "Mebscholarshipslice",
+          "type": "null",
+          "default": null
         },
         "schoolOrigin": {
-          "type": ["string", "null"]
+          "$id": "#root/data/schoolOrigin",
+          "title": "Schoolorigin",
+          "type": "null",
+          "default": null
         },
         "scholarshipStatus": {
-          "type": "boolean"
+          "$id": "#root/data/scholarshipStatus",
+          "title": "Scholarshipstatus",
+          "type": "boolean",
+          "default": true
         },
         "scholarshipFile": {
-          "type": ["string", "null"]
+          "$id": "#root/data/scholarshipFile",
+          "title": "Scholarshipfile",
+          "type": "null",
+          "default": null
         },
         "scholarshipType": {
-          "type": ["string", "null"]
+          "$id": "#root/data/scholarshipType",
+          "title": "Scholarshiptype",
+          "type": "null",
+          "default": null
         },
         "meetWorkStatus": {
-          "type": "boolean"
+          "$id": "#root/data/meetWorkStatus",
+          "title": "Meetworkstatus",
+          "type": "boolean",
+          "default": true
         },
         "meetWorkPoint": {
-          "type": ["integer", "null"]
+          "$id": "#root/data/meetWorkPoint",
+          "title": "Meetworkpoint",
+          "type": "null",
+          "default": null
         },
         "allergies": {
-          "type": ["string", "null"]
+          "$id": "#root/data/allergies",
+          "title": "Allergies",
+          "type": "null",
+          "default": null
         },
         "medications": {
-          "type": ["string", "null"]
+          "$id": "#root/data/medications",
+          "title": "Medications",
+          "type": "null",
+          "default": null
         },
         "healthDescription": {
-          "type": ["string", "null"]
+          "$id": "#root/data/healthDescription",
+          "title": "Healthdescription",
+          "type": "null",
+          "default": null
         },
         "sport": {
-          "type": ["string", "null"]
+          "$id": "#root/data/sport",
+          "title": "Sport",
+          "type": "null",
+          "default": null
         },
         "achievements": {
-          "type": ["string", "null"]
+          "$id": "#root/data/achievements",
+          "title": "Achievements",
+          "type": "null",
+          "default": null
         },
         "interestDescription": {
-          "type": ["string", "null"]
+          "$id": "#root/data/interestDescription",
+          "title": "Interestdescription",
+          "type": "null",
+          "default": null
         },
         "arrivalType": {
-          "type": ["string", "null"]
+          "$id": "#root/data/arrivalType",
+          "title": "Arrivaltype",
+          "type": "null",
+          "default": null
         },
         "referanceInfo": {
-          "type": ["string", "null"]
+          "$id": "#root/data/referanceInfo",
+          "title": "Referanceinfo",
+          "type": "null",
+          "default": null
         },
         "notes": {
-          "type": ["string", "null"]
+          "$id": "#root/data/notes",
+          "title": "Notes",
+          "type": "null",
+          "default": null
         },
         "discount": {
-          "type": ["string", "null"]
+          "$id": "#root/data/discount",
+          "title": "Discount",
+          "type": "null",
+          "default": null
         },
         "discounts": {
-          "type": ["string", "null"]
+          "$id": "#root/data/discounts",
+          "title": "Discounts",
+          "type": "null",
+          "default": null
         },
         "discountedEducationPrice": {
-          "type": ["string", "null"]
+          "$id": "#root/data/discountedEducationPrice",
+          "title": "Discountededucationprice",
+          "type": "null",
+          "default": null
         },
         "educationPricePaymentStatus": {
-          "type": ["string", "null"]
+          "$id": "#root/data/educationPricePaymentStatus",
+          "title": "Educationpricepaymentstatus",
+          "type": "null",
+          "default": null
         },
         "total": {
-          "type": ["string", "null"]
+          "$id": "#root/data/total",
+          "title": "Total",
+          "type": "null",
+          "default": null
         },
         "isCorporateInvoice": {
-          "type": ["boolean", "null"]
+          "$id": "#root/data/isCorporateInvoice",
+          "title": "Iscorporateinvoice",
+          "type": "null",
+          "default": null
         },
         "creditCard": {
-          "type": ["string", "null"]
+          "$id": "#root/data/creditCard",
+          "title": "Creditcard",
+          "type": "null",
+          "default": null
         },
         "cashTransfer": {
-          "type": ["string", "null"]
+          "$id": "#root/data/cashTransfer",
+          "title": "Cashtransfer",
+          "type": "null",
+          "default": null
         },
         "checkBond": {
-          "type": ["string", "null"]
+          "$id": "#root/data/checkBond",
+          "title": "Checkbond",
+          "type": "null",
+          "default": null
         },
         "educationCredit": {
-          "type": ["string", "null"]
+          "$id": "#root/data/educationCredit",
+          "title": "Educationcredit",
+          "type": "null",
+          "default": null
         },
         "companyTitle": {
-          "type": ["string", "null"]
+          "$id": "#root/data/companyTitle",
+          "title": "Companytitle",
+          "type": "null",
+          "default": null
         },
         "taxOffice": {
-          "type": ["string", "null"]
+          "$id": "#root/data/taxOffice",
+          "title": "Taxoffice",
+          "type": "null",
+          "default": null
         },
         "taxNumber": {
-          "type": ["string", "null"]
+          "$id": "#root/data/taxNumber",
+          "title": "Taxnumber",
+          "type": "null",
+          "default": null
         },
         "financeAddressDetail": {
-          "type": ["string", "null"]
+          "$id": "#root/data/financeAddressDetail",
+          "title": "Financeaddressdetail",
+          "type": "null",
+          "default": null
         },
         "financeEmail": {
-          "type": ["string", "null"]
+          "$id": "#root/data/financeEmail",
+          "title": "Financeemail",
+          "type": "null",
+          "default": null
         },
         "financeCityId": {
-          "type": ["integer", "null"]
+          "$id": "#root/data/financeCityId",
+          "title": "Financecityid",
+          "type": "null",
+          "default": null
         },
         "financeCountyId": {
-          "type": ["integer", "null"]
+          "$id": "#root/data/financeCountyId",
+          "title": "Financecountyid",
+          "type": "null",
+          "default": null
         },
         "chatEmployees": {
-          "type": ["string", "null"]
+          "$id": "#root/data/chatEmployees",
+          "title": "Chatemployees",
+          "type": "null",
+          "default": null
         },
         "chatStudents": {
-          "type": ["string", "null"]
+          "$id": "#root/data/chatStudents",
+          "title": "Chatstudents",
+          "type": "null",
+          "default": null
         }
-      },
-      "required": ["id", "isActive", "createdAt", "updatedAt", "companyId", "groupId", "schoolId", "testUser", "registerType", "name", "isForeign", "idNumber", "studentNumber", "scholarshipStatus", "meetWorkStatus"],
-      "additionalProperties": false
-    },
-    "statusCode": {
-      "type": "integer"
+      }
     }
-  },
-  "required": ["status", "data", "statusCode"],
-  "additionalProperties": false
+  ,
+    "statusCode": {
+      "$id": "#root/statusCode",
+      "title": "Statuscode",
+      "type": "integer",
+      "default": 0
+    }
+  }
 }
