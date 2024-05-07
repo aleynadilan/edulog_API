@@ -4,3 +4,5 @@ Feature: Stage Controller get List
     And Mustafa kullanicisi base_url-school-stage-list icin path parametrelerini olusturur
     And Mustafa kullanicisi base_url-school-stage-list icin get request yapar
     And Mustafa kullanicisi status code 200 oldugunu assert eder
+
+
