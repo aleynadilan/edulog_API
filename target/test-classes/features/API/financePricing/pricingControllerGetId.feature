@@ -4,12 +4,12 @@ Feature: Finance pricing
   (Response bodyde dönen id ile /finans/{id} endpoint'ine GET request gönderilerek kayıt oluşturulduğu doğrulanabilir.)
 
     * ApiN kullanicisi "employee" token ile base urli olusturur
-    * ApiN kullanicisi "finance","school","pricing",<season> path parametrelerini olusturur
+    * ApiN kullanicisi "finance","school","pricing","pricings",<season> path parametrelerini olusturur
     * ApiN kullanicisi get request gonderir ve donen responsei kaydeder
     * ApiN kullanicisi response body icindeki mesaj bilgisinin "<message>" oldugunu dogrular
     Examples:
       | season |message|
-      | 17 |  success  |
+      | 7027 |  success  |
 
 
 
