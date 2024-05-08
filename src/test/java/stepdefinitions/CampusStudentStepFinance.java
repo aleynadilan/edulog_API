@@ -5,6 +5,7 @@ import io.cucumber.java.en.Given;
 import io.restassured.path.json.JsonPath;
 import org.junit.Assert;
 import utilities.API_Methods;
+import utilities.PicoContainer;
 
 import java.util.Arrays;
 import java.util.List;
@@ -15,9 +16,11 @@ import static org.junit.Assert.assertEquals;
 
 
 public class CampusStudentStepFinance {
-
-
-     int rastgeleSecilenOgrenciId;
+    PicoContainer picoContainer;
+    public CampusStudentStepFinance(PicoContainer picoContainer) {
+        this.picoContainer=picoContainer;
+    }
+    //     int rastgeleSecilenOgrenciId;
 
     int rastgeleSecilenPricingsId;
 
@@ -34,14 +37,10 @@ public class CampusStudentStepFinance {
 
     @And("Mustafa kullanicisi donen body govdesinden rastgele bir ogrenci idsini bir degiskene kaydeder")
     public void mustafaKullanicisiDonenBodyGovdesindenRastgeleBirOgrenciIdsiniBirDegiskeneKaydeder() {
-        JsonPath jsonPath = API_Methods.response.jsonPath();
-        int responseSize = jsonPath.getInt("Array.size()");
 
-        Random random = new Random();
-        int dataIndex = random.nextInt(responseSize);
-
-        rastgeleSecilenOgrenciId = jsonPath.getInt("[" + dataIndex + "].id");
-        System.out.println("rastgeleSecilenOgrenciId = " + rastgeleSecilenOgrenciId);
+        int picoContainerRastgeleSecilenOgrenciId = picoContainer.getRastgeleSecilenOgrenciId();
+        picoContainer.setRastgeleSecilenOgrenciId(picoContainerRastgeleSecilenOgrenciId);
+        System.out.println("picoContainerRastgeleSecilenOgrenciId = " + picoContainerRastgeleSecilenOgrenciId);
     }
 
     @And("Mustafa kullanicisi {string} seklindeki endpointi icin get request gonderir ve donen response kaydeder")
@@ -64,21 +63,23 @@ public class CampusStudentStepFinance {
 
     @And("Mustafa kullanicisi {string} icin yeni body olusturur")
     public void mustafaKullanicisiIcinYeniBodyOlusturur(String arg0) {
+
         API_Methods.requestBody = "{\n" +
                 "  \"financePricings\": [\n" +
                 "    " + rastgeleSecilenPricingsId + "\n" +
                 "  ],\n" +
-                "  \"student\": " + rastgeleSecilenOgrenciId + "\n" +
+                "  \"student\": " + picoContainer.rastgeleSecilenOgrenciId + "\n" +
                 "}";
     }
 
     @And("Mustafa kullanicisi base_url-campus-student-step_finance icin yeni body olusturur")
     public void mustafaKullanicisiBase_urlCampusStudentStep_financeIcinYeniBodyOlusturur() {
+
         API_Methods.requestBody = "{\n" +
                 "  \"financePricings\": [\n" +
                 "    " + rastgeleSecilenPricingsId + "\n" +
                 "  ],\n" +
-                "  \"student\": " + rastgeleSecilenOgrenciId + "\n" +
+                "  \"student\": " + picoContainer.rastgeleSecilenOgrenciId + "\n" +
                 "}";
     }
 
@@ -86,6 +87,7 @@ public class CampusStudentStepFinance {
     @And("Mustafa kullanicisi base_url-campus-student-step_finance-calculate icin post request gonderir")
     public void mustafaKullanicisiBase_urlCampusStudentStep_financeCalculateIcinPostRequestGonderir() {
         API_Methods.postResponse(API_Methods.requestBody, API_Methods.pathParam);
+
     }
 
     @And("Mustafa kullanicisi base_url-campus-student-step_finance icin post request gonderir")

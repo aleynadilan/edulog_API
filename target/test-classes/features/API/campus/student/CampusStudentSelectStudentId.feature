@@ -4,7 +4,8 @@ Feature: Campus student select
     Given Mustafa kullanicisi "employee" token ile base urli olusturur
     And Mustafa kullanicisi "helpers", "students" path parametrelerini olusturur
     And Mustafa kullanicisi "{{base_url}}/helpers/students" endpointi icin get request gonderir ve donen response kaydeder
-    And Mustafa kullanicisi donen body govdesinden base_url-campus-student-:studentId icin rastgele bir ogrenci idsini bir degiskene kaydeder
+    And Mustafa kullanicisi donen body govdesinden rastgele bir ogrenci idsini bir degiskene kaydeder
+    #And Mustafa kullanicisi donen body govdesinden base_url-campus-student-:studentId icin rastgele bir ogrenci idsini bir degiskene kaydeder
     And Mustafa kullanicisi "campus", "student" ve :studentId gerekli path parametrelerini olusturur
     And Mustafa kullanicisi base_url-campus-student-:studentId icin get request islemini yapar
     Then Mustafa kullanicisi status code 200 oldugunu dogrular
