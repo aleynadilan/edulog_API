@@ -18,9 +18,9 @@ Feature: Finance pricing
 
 
     * ApiN kullanicisi "employee" token ile base urli olusturur
-    * ApiN kullanicisi "schools", <id> path parametrelerini olusturur
-    * ApiN kullanicisi get request gonderir ve donen responsei kaydeder
-    * ApiN kullanicisi status codeun 401 oldugunu dogrular
+    * ApiN kullanicisi "finance","school","pricing","pricings",<season> path parametrelerini olusturur
+    *  ApiN kullanicisi response hata mesajinin da status code '400',  reason phrase: Bad Request oldugunu dogrular
     Examples:
-      | id |
-      | 1741 |
+      | season |
+      | 1 |
+
