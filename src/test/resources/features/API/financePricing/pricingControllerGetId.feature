@@ -14,7 +14,7 @@ Feature: Finance pricing
 
 
 #negatif seneryo yanlış id ile
-  Scenario Outline: schools endpoint'ine gecersiz id ile bir GET request gönderildiginde dönen status code'in 401 oldugunu dogrular
+  Scenario Outline: finans endpoint'ine gecersiz id ile bir GET request gönderildiginde dönen status code'in 401 oldugunu dogrular
 
 
     * ApiN kullanicisi "employee" token ile base urli olusturur
