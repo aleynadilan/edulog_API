@@ -1,6 +1,6 @@
 Feature: Schools
   # GET
-  @ApiN
+  @API
   Scenario: API uzerinden olusturulmak istenen yeni Schools kaydinin olustugu API uzerinden dogrulanmali.
   (Response bodyde dönen schools endpoint'ine GET request gönderilerek kayıt oluşturulduğu doğrulanabilir.)
 
@@ -10,7 +10,7 @@ Feature: Schools
     * ApiN kullanicisi status codeun 200 oldugunu dogrular
 
 #negatif Scenario
-  @ApiN
+  @API
   Scenario: schools endpoint'ine gecersiz authorization bilgileri bir GET request gönderildiginde dönen status code'in 401 ve
   response body'deki errorData bilgisinin "Unauthorized" oldugu dogrulanmali.
 

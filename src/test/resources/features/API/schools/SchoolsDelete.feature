@@ -14,7 +14,7 @@ Feature: Schools Delete
 
 # negatif Scenario
   #invalid token ile
-  @ApiN
+
   Scenario Outline: schools/{id} endpoint'ine gecersiz authorization bilgileri ve silinmek istenen id'yi iceren bir
   DELETE request gönderildiginde dönen status code'in 401 ve response body'deki errorData bilgisinin "Unauthorized"
   oldugu dogrulanmali.
