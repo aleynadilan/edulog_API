@@ -41,8 +41,8 @@ public class Visitor {
 
         response.prettyPrint();
     }
-    @Given("ApiN kullanicisi response bodydeki messagen {string} olduğunu dogrular")
-    public void api_n_kullanicisi_response_bodydeki_messagen_olduğunu_dogrular(String success) {
+    @Given("ApiN kullanicisi response bodydeki messagen {string} oldugunu dogrular")
+    public void api_n_kullanicisi_response_bodydeki_messagen_oldugunu_dogrular(String success) {
         jsonPath = response.jsonPath();
 
         assertEquals(success,jsonPath.get("message"));

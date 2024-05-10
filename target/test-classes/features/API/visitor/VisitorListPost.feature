@@ -11,7 +11,7 @@ Feature: Visitor Post
     * ApiN kullanicisi status codeun 201 oldugunu dogrular
     * ApiN kullanicisi response bodydeki messagen "success" olduğunu dogrular
     * ApiN kullanicisi schools post endpointinden donen response bodynin schema validation dogrulamasini yapar
-
+#negatif seneryo
   Scenario: /visitor /list endpoint'ine gecersiz authorization bilgileri bir Post request gönderildiginde dönen status code'in 401 ve
   response body'deki errorData bilgisinin "Unauthorized" oldugu dogrulanmali.
 
