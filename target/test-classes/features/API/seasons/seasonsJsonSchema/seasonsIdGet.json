@@ -32,5 +32,6 @@
       "format": "date-time"
     }
   },
-  "required": ["id", "isActive", "createdAt", "updatedAt", "name", "seasonStartDate", "seasonEndDate"]
+  "required": ["id", "isActive", "createdAt", "updatedAt", "name", "seasonStartDate", "seasonEndDate"],
+  "additionalProperties": false
 }

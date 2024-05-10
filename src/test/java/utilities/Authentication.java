@@ -23,7 +23,7 @@ public class Authentication {
                 .header("Accept", "application/json")
                 .when()
                 .body(body.toString())
-                .post("https://panelbe.edulog.com.tr/auth/web-login/student/phone");
+                .post("https://testpanelbe.edulog.com.tr/auth/web-login/student/phone");
         response.prettyPrint();
     }
 
@@ -38,7 +38,7 @@ public class Authentication {
                 .header("Accept", "application/json")
                 .when()
                 .body(body.toString())
-                .post("https://panelbe.edulog.com.tr/auth/web-login/student/login-type");
+                .post("https://testpanelbe.edulog.com.tr/auth/web-login/student/login-type");
         response.prettyPrint();
     }
 
@@ -53,7 +53,7 @@ public class Authentication {
                 .header("Accept", "application/json")
                 .when()
                 .body(body.toString())
-                .post("https://panelbe.edulog.com.tr/auth/web-login/employee/phone");
+                .post("https://testpanelbe.edulog.com.tr/auth/web-login/employee/phone");
         response.prettyPrint();
     }
 
@@ -63,7 +63,7 @@ public class Authentication {
         switch (user) {
             case "employee":
                 authentication.employeePhone();
-                authentication.url = "https://panelbe.edulog.com.tr/auth/web-login/employee/otp";
+                authentication.url = "https://testpanelbe.edulog.com.tr/auth/web-login/employee/otp";
                 authentication.body = new JSONObject();
                 authentication.body.put("phone", "5000000000");
                 authentication.body.put("otpCode", "999999");
@@ -71,7 +71,7 @@ public class Authentication {
             case "student":
                 authentication.studentPhone();
                 authentication.studentLoginType();
-                authentication.url ="https://panelbe.edulog.com.tr/auth/web-login/student/otp";
+                authentication.url ="https://testpanelbe.edulog.com.tr/auth/web-login/student/otp";
                 authentication.body = new JSONObject();
                 authentication.body.put("phone", "5000000000");
                 authentication.body.put("otpCode", "999999");

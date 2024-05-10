@@ -53,5 +53,5 @@ Feature: Sınıf Denetleyicisi Birini Bul.
 
 
     Examples:
-      | id | id | createdAt                | updatedAt                | name   |
-      | 76 | 76 | 2024-04-24T16:48:48.212Z | 2024-04-24T16:48:48.212Z | Aleyna |
+      | id | id | createdAt                | updatedAt                | name |
+      | 76 | 76 | 2024-04-25T11:43:55.101Z | 2024-04-25T11:43:55.101Z | 5    |

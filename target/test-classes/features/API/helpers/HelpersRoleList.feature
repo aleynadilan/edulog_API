@@ -1,3 +1,4 @@
+@Dilan
 Feature: Okulun Rol Listesi.
 
   Scenario Outline: /helpers/role-list endpoint'ine gecerli authorization bilgileri ile bir GET request
@@ -12,8 +13,8 @@ Feature: Okulun Rol Listesi.
     * Api kullanicisi helpers role list endpointinden donen response bodynin schema validation dogrulamasini yapar
 
     Examples:
-      | dataIndex | name                      | key                                   |
-      | 6         | Halkla İlişkiler Yönetici | halklai̇lişkileryönetici1711715023797 |
+      | dataIndex | name   | key                 |
+      | 0         | Kurucu | kurucu1711714889939 |
 
 
   Scenario: /helpers/role-list endpoint'ine gecersiz authorization bilgileri ile bir GET request gönderildiginde

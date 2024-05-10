@@ -1,4 +1,61 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<<<<<<< HEAD
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="12" time="19.339">
+    <testcase classname="Sezon Kontrolörü Tümünü Bul." name="/seasons endpoint'ine gecerli authorization bilgileri ile bir GET request" time="10.106">
+        <system-out>
+            <![CDATA[* Api kullanicisi "employee" token ile base urli olusturur..................passed
+* Api kullanicisi "seasons" path parametrelerini olusturur..................passed
+* Api kullanicisi get request gonderir ve donen responsei kaydeder..........passed
+* Api kullanicisi status codeun 200 oldugunu dogrular.......................passed
+* Api kullanıcısi response body icinde 2 indexe sahip olan "2024-04-25T11:39:34.500Z", "2024-04-25T11:39:34.500Z", "2024/2025", "2024-09-17T00:00:00.000Z" ve "2025-09-17T00:00:00.000Z" bilgilerini doğrular..passed
+* Api kullanicisi seasons get endpointinden donen response bodynin schema validation dogrulamasini yapar.passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Sezon Kontrolörü Tümünü Bul." name="/seasons endpoint'ine gecersiz authorization bilgileri ile bir GET request gönderildiginde" time="0.222">
+        <system-out>
+            <![CDATA[* Api kullanicisi "invalid" token ile base urli olusturur...................passed
+* Api kullanicisi "seasons" path parametrelerini olusturur..................passed
+* Api kullanicisi donen responsei kaydeder, status codeun '401' ve reason phrase bilgisinin Unauthorized oldugunu dogrular.passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Sezon Kontrolörü kaldır." name="/seasons/{id} endpoint'ine gecerli authorization bilgileri ve silinmek istenen id'yi iceren bir DELETE" time="0.846">
+        <system-out>
+            <![CDATA[* Api kullanicisi "employee" token ile base urli olusturur..................passed
+* Api kullanicisi "seasons", 12 path parametrelerini olusturur..............passed
+* Api kullanicisi delete request gonderir ve donen responsei kaydeder.......passed
+* Api kullanicisi status codeun 200 oldugunu dogrular.......................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Sezon Kontrolörü kaldır." name="/seasons/{id} endpoint'ine gecersiz authorization bilgileri ve silinmek istenen id'yi iceren bir" time="0.174">
+        <system-out>
+            <![CDATA[* Api kullanicisi "invalid" token ile base urli olusturur...................passed
+* Api kullanicisi "seasons", 12 path parametrelerini olusturur..............passed
+* Api kullanicisi donen delete responsei kaydeder, status codeun '401' ve reason phrase bilgisinin Unauthorized oldugunu dogrular.passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Sezon Kontrolörü kaldır." name="API uzerinden silinmek istenen Sezon Kontrolörü kaydinin silindigi, API uzerinden dogrulanmali." time="0.764">
+        <system-out>
+            <![CDATA[* Api kullanicisi "employee" token ile base urli olusturur..................passed
+* Api kullanicisi "seasons", 12 path parametrelerini olusturur..............passed
+* Api kullanicisi get request gonderir ve donen responsei kaydeder..........passed
+* Api kullanicisi response bodynin bos oldugunu dogrular....................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Sezon Kontrolörü Birini Bul." name="/seasons/{id} endpoint'ine gecerli authorization bilgileri ve id verisinin bulundugu" time="1.21">
+        <system-out>
+            <![CDATA[* Api kullanicisi "employee" token ile base urli olusturur..................passed
+* Api kullanicisi "seasons", 1 path parametrelerini olusturur...............passed
+* Api kullanicisi get request gonderir ve donen responsei kaydeder..........passed
+* Api kullanicisi status codeun 200 oldugunu dogrular.......................passed
+* Api kullanicisi seasons id endpointinden donen response bodynin schema validation dogrulamasini yapar.passed
+]]>
+        </system-out>
+=======
 <testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="14" time="34.569">
     <testcase classname="Finance pricing" name="API uzerinden olusturulmak istenen yeni finance pricing kaydinin olustugu API uzerinden dogrulanmali." time="16.969">
         <system-out><![CDATA[* ApiN kullanicisi "employee" token ile base urli olusturur.................passed
@@ -143,5 +200,64 @@ Expected status code <404> but was <200>.
 * ApiN kullanicisi get request gonderir ve donen responsei kaydeder.........passed
 * ApiN kullanicisi response body icindeki mesaj bilgisinin "visitor success." oldugunu dogrular.passed
 ]]></system-out>
+>>>>>>> d20f706896aeb707d09e0a0921702b5a78be6c33
+    </testcase>
+    <testcase classname="Sezon Kontrolörü Birini Bul." name="/seasons/{id} endpoint'ine gecerli authorization bilgileri ve sistemde bulunmayan" time="0.86">
+        <system-out>
+            <![CDATA[* Api kullanicisi "employee" token ile base urli olusturur..................passed
+* Api kullanicisi "seasons", 11 path parametrelerini olusturur..............passed
+* Api kullanicisi get request gonderir ve donen responsei kaydeder..........passed
+* Api kullanicisi status codeun 200 oldugunu dogrular.......................passed
+* Api kullanicisi response bodynin bos oldugunu dogrular....................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Sezon Kontrolörü Birini Bul." name="/seasons/{id} endpoint'ine gecersiz authorization bilgileri ve id verisinin bulundugu" time="0.18">
+        <system-out>
+            <![CDATA[* Api kullanicisi "invalid" token ile base urli olusturur...................passed
+* Api kullanicisi "seasons", 1 path parametrelerini olusturur...............passed
+* Api kullanicisi donen responsei kaydeder, status codeun '401' ve reason phrase bilgisinin Unauthorized oldugunu dogrular.passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Sezon Kontrolörü Birini Bul." name="/seasons/{id} endpoint'ine gecerli authorization bilgileri ve id verisinin bulundugu bir GET" time="0.84">
+        <system-out>
+            <![CDATA[* Api kullanicisi "employee" token ile base urli olusturur..................passed
+* Api kullanicisi "seasons", 1 path parametrelerini olusturur...............passed
+* Api kullanicisi get request gonderir ve donen responsei kaydeder..........passed
+* Api kullanicisi response bodydeki data 1, "2023-10-25T07:14:40.077Z", "2023-10-25T07:14:40.077Z", "2023/2024", "2024-09-17T00:00:00.000Z" ve "2025-09-17T00:00:00.000Z" iceriklerini dogrular.passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Sezon Kontrolörü oluştur." name="/seasons endpoint'ine gecerli authorization bilgileri ve gerekli verileri (isActive, name) iceren bir POST body" time="0.984">
+        <system-out>
+            <![CDATA[* Api kullanicisi "employee" token ile base urli olusturur..................passed
+* Api kullanicisi "seasons" path parametrelerini olusturur..................passed
+* Api kullanicisi seasons endpointine gondermek icin gerekli verileri iceren bir post request olusturur.passed
+* Api kullanicisi post request gonderir ve seasons endpointinden donen responsei kaydeder.passed
+* Api kullanicisi status codeun 201 oldugunu dogrular.......................passed
+* Api kullanicisi seasons post endpointinden donen response bodynin schema validation dogrulamasini yapar.passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Sezon Kontrolörü oluştur." name="/seasons endpoint'ine gecersiz authorization bilgileri ve gerekli verileri (isActive, name) iceren bir POST body" time="0.204">
+        <system-out>
+            <![CDATA[* Api kullanicisi "invalid" token ile base urli olusturur...................passed
+* Api kullanicisi "seasons" path parametrelerini olusturur..................passed
+* Api kullanicisi seasons endpointine gondermek icin gerekli verileri iceren bir post request olusturur.passed
+* Api kullanicisi post request gonderir ve seasons endpointinden donen responsei kaydeder.passed
+* Api kullanicisi status codeun 401 oldugunu dogrular.......................passed
+* Api kullanicisi response bodydeki errorData bilgisinin "Unauthorized" oldugunu dogrular.passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Sezon Kontrolörü oluştur." name="API uzerinden olusturulmak istenen yeni Sezon Kontrolörü kaydinin olustugu API uzerinden dogrulanmali." time="0.699">
+        <system-out>
+            <![CDATA[* Api kullanicisi "employee" token ile base urli olusturur..................passed
+* Api kullanicisi "seasons", 9 path parametrelerini olusturur...............passed
+* Api kullanicisi get request gonderir ve donen responsei kaydeder..........passed
+* Api kullanicisi response body icindeki name bilgisinin "ahmet" ve id bilgisininde 9 oldugunu dogrular.passed
+]]>
+        </system-out>
     </testcase>
 </testsuite>

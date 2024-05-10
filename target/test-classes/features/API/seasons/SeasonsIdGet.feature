@@ -1,3 +1,4 @@
+@seasons
 Feature: Sezon Kontrolörü Birini Bul.
 
   Scenario Outline: /seasons/{id} endpoint'ine gecerli authorization bilgileri ve id verisinin bulundugu
@@ -11,7 +12,7 @@ Feature: Sezon Kontrolörü Birini Bul.
 
     Examples:
       | id |
-      | 11 |
+      | 1  |
 
 
   Scenario Outline: /seasons/{id} endpoint'ine gecerli authorization bilgileri ve sistemde bulunmayan
@@ -25,8 +26,8 @@ Feature: Sezon Kontrolörü Birini Bul.
     * Api kullanicisi response bodynin bos oldugunu dogrular
 
     Examples:
-      | id  |
-      | 114 |
+      | id |
+      | 11 |
 
 
   Scenario Outline: /seasons/{id} endpoint'ine gecersiz authorization bilgileri ve id verisinin bulundugu
@@ -39,7 +40,7 @@ Feature: Sezon Kontrolörü Birini Bul.
 
     Examples:
       | id |
-      | 11 |
+      | 1  |
 
 
   Scenario Outline: /seasons/{id} endpoint'ine gecerli authorization bilgileri ve id verisinin bulundugu bir GET
@@ -53,5 +54,5 @@ Feature: Sezon Kontrolörü Birini Bul.
 
 
     Examples:
-      | id | id | createdAt                | updatedAt                | name   | seasonStartDate          | seasonEndDate            |
-      | 11 | 11 | 2024-04-25T14:47:00.192Z | 2024-04-25T14:47:00.192Z | Aleyna | 2024-09-17T00:00:00.000Z | 2025-09-17T00:00:00.000Z |
+      | id | id | createdAt                | updatedAt                | name      | seasonStartDate          | seasonEndDate            |
+      | 1  | 1  | 2023-10-25T07:14:40.077Z | 2023-10-25T07:14:40.077Z | 2023/2024 | 2024-09-17T00:00:00.000Z | 2025-09-17T00:00:00.000Z |
