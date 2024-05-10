@@ -48,5 +48,9 @@ public class Visitor {
         assertEquals(success,jsonPath.get("message"));
 
     }
+    @Given("ApiN kullanicisi response hata mesajinin da status code '400', reason phrase: Bad Request oldugunu dogrular")
+    public void api_n_kullanicisi_response_hata_mesajinin_da_status_code_reason_phrase_bad_request_oldugunu_dogrular( ) {
+       API_Methods.tryCatchGet(pathParam);
+    }
 
 }

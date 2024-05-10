@@ -26,12 +26,7 @@ public class FinancePricing {
         pathParam="/{pp1}/{pp2}/{pp3}/{pp4}";
 
 
-
-
-
-
     }
-
 
     @Given("ApiN kullanicisi response body icindeki mesaj bilgisinin {string} oldugunu dogrular")
     public void api_n_kullanicisi_response_body_icindeki_mesaj_bilgisinin_oldugunu_dogrular(String mesaj) {

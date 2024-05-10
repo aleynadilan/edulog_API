@@ -1,5 +1,6 @@
 Feature: Visitor Download Post
 #Post
+  @ApiN
   Scenario: /visitor /Download endpoint'ine gecerli authorization bilgileri ve gerekli verileri
   iceren bir POST body gönderildiginde dönen status code'in 201
   oldugu dogrulanmali.
@@ -11,6 +12,7 @@ Feature: Visitor Download Post
     * ApiN kullanicisi status codeun 201 oldugunu dogrular
 
 #negatif seneryo
+  @ApiN
   Scenario: /visitor /download endpoint'ine gecersiz authorization bilgileri bir Post request gönderildiginde dönen status code'in 401 ve
   response body'deki errorData bilgisinin "Unauthorized" oldugu dogrulanmali.
 
