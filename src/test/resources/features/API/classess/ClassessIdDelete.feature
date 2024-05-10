@@ -10,7 +10,7 @@ Feature: Sınıf Denetleyicisi kaldır.
 
     Examples:
       | id |
-      | 78 |
+      | 76 |
 
 
   Scenario Outline: /classess/{id} endpoint'ine gecersiz authorization bilgileri ve silinmek istenen id'yi iceren bir
@@ -23,7 +23,7 @@ Feature: Sınıf Denetleyicisi kaldır.
 
     Examples:
       | id |
-      | 78 |
+      | 76 |
 
 
   Scenario Outline: API uzerinden silinmek istenen Sınıf Denetleyicisi kaydinin silindigi, API uzerinden dogrulanmali.
@@ -36,4 +36,4 @@ Feature: Sınıf Denetleyicisi kaldır.
 
     Examples:
       | id |
-      | 78 |
+      | 76 |

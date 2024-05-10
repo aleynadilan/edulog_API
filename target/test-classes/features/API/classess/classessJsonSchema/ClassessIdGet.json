@@ -1,78 +1,32 @@
 {
-  "definitions": {},
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://example.com/object1714247590.json",
-  "title": "Root",
   "type": "object",
-  "required": [
-    "id",
-    "isActive",
-    "createdAt",
-    "updatedAt",
-    "deletedAt",
-    "name",
-    "level_key"
-  ],
   "properties": {
     "id": {
-      "$id": "#root/id",
-      "title": "Id",
-      "type": "integer",
-      "examples": [
-        76
-      ],
-      "default": 0
+      "type": "integer"
     },
     "isActive": {
-      "$id": "#root/isActive",
-      "title": "Isactive",
-      "type": "boolean",
-      "examples": [
-        true
-      ],
-      "default": true
+      "type": "boolean"
     },
     "createdAt": {
-      "$id": "#root/createdAt",
-      "title": "Createdat",
       "type": "string",
-      "default": "",
-      "examples": [
-        "2024-04-24T16:48:48.212Z"
-      ],
-      "pattern": "^.*$"
+      "format": "date-time"
     },
     "updatedAt": {
-      "$id": "#root/updatedAt",
-      "title": "Updatedat",
       "type": "string",
-      "default": "",
-      "examples": [
-        "2024-04-24T16:48:48.212Z"
-      ],
-      "pattern": "^.*$"
+      "format": "date-time"
     },
     "deletedAt": {
-      "$id": "#root/deletedAt",
-      "title": "Deletedat",
-      "type": "null",
-      "default": null
+      "type": ["string", "null"],
+      "format": "date-time"
     },
     "name": {
-      "$id": "#root/name",
-      "title": "Name",
-      "type": "string",
-      "default": "",
-      "examples": [
-        "Aleyna"
-      ],
-      "pattern": "^.*$"
+      "type": "string"
     },
     "level_key": {
-      "$id": "#root/level_key",
-      "title": "Level_key",
-      "type": "null",
-      "default": null
+      "type": "string"
     }
-  }
+  },
+  "required": ["id", "isActive", "createdAt", "updatedAt", "name", "level_key"]
 }
+

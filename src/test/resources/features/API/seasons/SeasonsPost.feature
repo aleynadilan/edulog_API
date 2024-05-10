@@ -1,3 +1,4 @@
+@seasons
 Feature: Sezon Kontrolörü oluştur.
 
   Scenario: /seasons endpoint'ine gecerli authorization bilgileri ve gerekli verileri (isActive, name) iceren bir POST body
@@ -9,7 +10,6 @@ Feature: Sezon Kontrolörü oluştur.
     * Api kullanicisi post request gonderir ve seasons endpointinden donen responsei kaydeder
     * Api kullanicisi status codeun 201 oldugunu dogrular
     * Api kullanicisi seasons post endpointinden donen response bodynin schema validation dogrulamasini yapar
-
 
 
   Scenario: /seasons endpoint'ine gecersiz authorization bilgileri ve gerekli verileri (isActive, name) iceren bir POST body
@@ -32,5 +32,5 @@ Feature: Sezon Kontrolörü oluştur.
     * Api kullanicisi response body icindeki name bilgisinin "<name>" ve id bilgisininde <responseId> oldugunu dogrular
 
     Examples:
-      | id | name   | responseId |
-      | 11 | Aleyna | 11         |
+      | id | name  | responseId |
+      | 9  | ahmet | 9          |

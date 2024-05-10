@@ -90,7 +90,7 @@ public class Classess {
 
     @Given("Api kullanicisi classess endpointine gondermek icin gerekli verileri iceren bir POST request olusturur")
     public void api_kullanicisi_classess_endpointine_gondermek_icin_gerekli_verileri_iceren_bir_POST_request_olusturur() {
-        classessPostPOJO = new ClassessPostPOJO(true,1,1,1,"Aleyna");
+        classessPostPOJO = new ClassessPostPOJO(true, 1, 1, 1, "Aleyna");
     }
 
     @Given("Api kullanicisi POST request gonderir ve classess endpointinden donen responsei kaydeder")
@@ -142,7 +142,7 @@ public class Classess {
         assertEquals(updatedAt, jsonPath.getString("updatedAt"));
         assertNull(jsonPath.get("deletedAt"));
         assertEquals(name, jsonPath.getString("name"));
-        assertNull(jsonPath.get("level_key"));
+        assertEquals(5, jsonPath.getInt("level_key"));
     }
 
     @Given("Api kullanicisi classess id endpointinden donen response bodynin schema validation dogrulamasini yapar")

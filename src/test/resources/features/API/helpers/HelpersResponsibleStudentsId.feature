@@ -1,3 +1,4 @@
+@Dilan
 Feature: Yardımcı Denetleyicinin Çalışan Kimliğine Göre Sorumlu Öğrencileri Alması.
 
   Scenario Outline: /helpers/responsible-students/{id} endpoint'ine gecerli authorization bilgileri ve id verisinin
@@ -25,8 +26,8 @@ Feature: Yardımcı Denetleyicinin Çalışan Kimliğine Göre Sorumlu Öğrenci
     * Api kullanicisi response body'deki arrayin bos oldugunu dogrular
 
     Examples:
-      | id |
-      | 2  |
+      | id    |
+      | 22569 |
 
 
   Scenario Outline: /helpers/responsible-students/{id} endpoint'ine gecersiz authorization bilgileri ve id verisinin
@@ -54,5 +55,5 @@ Feature: Yardımcı Denetleyicinin Çalışan Kimliğine Göre Sorumlu Öğrenci
     * Api kullanıcısi response body icindeki <dataIndex> indexe sahip olanin "<createdAt>", "<updatedAt>", <companyId>, <groupId>, <schoolId>, "<registerType>", "<name>", "<idNumber>", "<phone>", "<bloodType>", "<birthday>", "<gender>", <cityId>, <countyId>, <districtId>, "<addressDetail>", "<studentNumber>", <classId>, <branchId>, <seasonId>, <teacherId>  bilgilerini doğrular.
 
     Examples:
-      | id | dataIndex | createdAt                | updatedAt                | companyId | groupId | schoolId | registerType | name       | idNumber    | phone      | bloodType  | birthday   | gender | cityId | countyId | districtId | addressDetail | studentNumber | classId | branchId | seasonId | teacherId |
-      | 16 | 0         | 2024-03-30T11:06:44.653Z | 2024-04-03T16:41:17.638Z | 1         | 1       | 1        | yeni_kayit   | Fuat Bulut | 13911820162 | 5777777777 | AB_RH_PLUS | 2020-12-19 | m      | 1      | 1104     | 72         | Sdfgsdh       | 1008          | 1       | 1        | 1        | 16        |
+      | id | dataIndex | createdAt                | updatedAt                | companyId | groupId | schoolId | registerType | name            | idNumber    | phone      | bloodType  | birthday   | gender | cityId | countyId | districtId | addressDetail | studentNumber | classId | branchId | seasonId | teacherId |
+      | 16 | 0         | 2024-05-06T11:05:40.426Z | 2024-05-08T17:54:21.698Z | 1         | 1       | 1        | yeni_kayit   | Bilal Bilaloğlu | 71164235256 | 5666667745 | A_RH_MINUS | 2003-05-07 | m      | 1      | 1104     | 72         | 2000 Evler    | 1021          | 18      | 1515     | 1        | 16        |

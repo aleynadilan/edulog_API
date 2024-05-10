@@ -1,3 +1,4 @@
+@meet
 Feature: Öğrencileri toplu güncelleme işlemi.
 
   Scenario: /meet/bulk/update endpoint'ine gecerli authorization bilgileri ve gerekli verileri iceren bir POST body

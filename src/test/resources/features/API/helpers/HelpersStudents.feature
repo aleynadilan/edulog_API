@@ -1,3 +1,4 @@
+@Dilan
 Feature: Yardımcı Denetleyicinin Öğrencilere İsim ve Kimliği Getirmesi.
 
   Scenario: /helpers/students endpoint'ine gecerli authorization bilgileri ile bir GET request gönderildiginde
@@ -27,6 +28,6 @@ Feature: Yardımcı Denetleyicinin Öğrencilere İsim ve Kimliği Getirmesi.
     * Api kullanıcısi response body icindeki <dataIndex> indexe sahip olanin "<name>" bilgisinin doğrular.
 
     Examples:
-      | dataIndex | name           |
-      | 5         | Mehmet Kahveci |
+      | dataIndex | name      |
+      | 0         | Erdal Sel |
 

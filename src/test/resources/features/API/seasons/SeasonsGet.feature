@@ -1,3 +1,4 @@
+@seasons
 Feature: Sezon Kontrolörü Tümünü Bul.
 
   Scenario Outline: /seasons endpoint'ine gecerli authorization bilgileri ile bir GET request
@@ -12,8 +13,8 @@ Feature: Sezon Kontrolörü Tümünü Bul.
     * Api kullanicisi seasons get endpointinden donen response bodynin schema validation dogrulamasini yapar
 
     Examples:
-      | dataIndex | createdAt                | updatedAt                | name   | seasonStartDate          | seasonEndDate            |
-      | 2         | 2024-04-25T14:47:00.192Z | 2024-04-25T14:47:00.192Z | Aleyna | 2024-09-17T00:00:00.000Z | 2025-09-17T00:00:00.000Z |
+      | dataIndex | createdAt                | updatedAt                | name      | seasonStartDate          | seasonEndDate            |
+      | 2         | 2024-04-25T11:39:34.500Z | 2024-04-25T11:39:34.500Z | 2024/2025 | 2024-09-17T00:00:00.000Z | 2025-09-17T00:00:00.000Z |
 
 
   Scenario: /seasons endpoint'ine gecersiz authorization bilgileri ile bir GET request gönderildiginde

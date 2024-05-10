@@ -1,3 +1,4 @@
+@Dilan
 Feature: Yardımcı Denetleyicinin İsim ve Kimliği Olan Çalışanları Alması.
 
   Scenario: /helpers/employees endpoint'ine gecerli authorization bilgileri ile bir GET request gönderildiginde
@@ -27,7 +28,7 @@ Feature: Yardımcı Denetleyicinin İsim ve Kimliği Olan Çalışanları Almas�
     * Api kullanıcısi response body icindeki <dataIndex> indexe sahip olanin "<name>" ve "<roleName>" bilgilerini doğrular.
 
     Examples:
-      | dataIndex | name                      | roleName                  |
-      | 0         | Halkla İlişkiler Yönetici | Halkla İlişkiler Yönetici |
-      | 2         | Resmi İşler               | Resmi İşler               |
+      | dataIndex | name            | roleName        |
+      | 0         | Danışma         | HI Danışma      |
+      | 2         | Finans Yönetici | Finans Yönetici |
 

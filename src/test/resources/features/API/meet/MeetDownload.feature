@@ -1,3 +1,4 @@
+@meet
 Feature: Meet Controller Tüm İndirilenleri Bul.
 
   Scenario: /meet/download endpoint'ine gecerli authorization bilgileri ile bir GET request gönderildiginde dönen

@@ -1,3 +1,4 @@
+@Dilan
 Feature: Yardımcı Denetleyicilerin Sorumlu Öğretmenler Edinmesi.
 
   Scenario Outline: /helpers/responsible-teachers endpoint'ine gecerli authorization bilgileri ile bir GET request
@@ -12,8 +13,8 @@ Feature: Yardımcı Denetleyicilerin Sorumlu Öğretmenler Edinmesi.
 
 
     Examples:
-      | dataIndex | name            |
-      | 3         | Finans Yönetici |
+      | dataIndex | name     |
+      | 3         | Muhasebe |
 
 
   Scenario: /helpers/responsible-teachers endpoint'ine gecersiz authorization bilgileri ile bir GET request gönderildiginde
