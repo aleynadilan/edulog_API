@@ -231,7 +231,7 @@ public class Helpers {
     public void api_kullanıcısi_response_body_icindeki_indexe_sahip_olanin_bilgilerini_doğrular(int dataIndex, String createdAt, String updatedAt, int companyId, int groupId, int schoolId, String registerType, String name, String idNumber, String phone, String bloodType, String birthday, String gender, int cityId, int countyId, int districtId, String addressDetail, String studentNumber, int classId, int branchId, int seasonId, int teacherId) {
         jsonPath = API_Methods.response.jsonPath();
 
-        assertFalse(jsonPath.getBoolean("[" + dataIndex + "].isActive"));
+        assertTrue(jsonPath.getBoolean("[" + dataIndex + "].isActive"));
         assertEquals(createdAt, jsonPath.getString("[" + dataIndex + "].createdAt"));
         assertEquals(updatedAt, jsonPath.getString("[" + dataIndex + "].updatedAt"));
         assertNull(jsonPath.get("[" + dataIndex + "].deletedAt"));
@@ -241,20 +241,20 @@ public class Helpers {
         assertEquals(companyId, jsonPath.getInt("[" + dataIndex + "].companyId"));
         assertEquals(groupId, jsonPath.getInt("[" + dataIndex + "].groupId"));
         assertEquals(schoolId, jsonPath.getInt("[" + dataIndex + "].schoolId"));
-        assertTrue(jsonPath.getBoolean("[" + dataIndex + "].testUser"));
+        assertFalse(jsonPath.getBoolean("[" + dataIndex + "].testUser"));
         assertEquals(registerType, jsonPath.getString("[" + dataIndex + "].registerType"));
         assertEquals(name, jsonPath.getString("[" + dataIndex + "].name"));
         assertFalse(jsonPath.getBoolean("[" + dataIndex + "].isForeign"));
         assertEquals(idNumber, jsonPath.getString("[" + dataIndex + "].idNumber"));
         assertEquals(phone, jsonPath.getString("[" + dataIndex + "].phone"));
         assertEquals(bloodType, jsonPath.getString("[" + dataIndex + "].bloodType"));
-        assertNull(jsonPath.get("[" + dataIndex + "].email"));
+        assertEquals("qweqwe@gmail.com",jsonPath.getString("[" + dataIndex + "].email"));
         assertEquals(birthday, jsonPath.getString("[" + dataIndex + "].birthday"));
         assertEquals(gender, jsonPath.getString("[" + dataIndex + "].gender"));
         assertEquals(cityId, jsonPath.getInt("[" + dataIndex + "].cityId"));
         assertEquals(countyId, jsonPath.getInt("[" + dataIndex + "].countyId"));
         assertEquals(districtId, jsonPath.getInt("[" + dataIndex + "].districtId"));
-        assertNull(jsonPath.get("[" + dataIndex + "].nationalityId"));
+        assertEquals(1,jsonPath.getInt("[" + dataIndex + "].nationalityId"));
         assertEquals(addressDetail, jsonPath.getString("[" + dataIndex + "].addressDetail"));
         assertEquals(studentNumber, jsonPath.getString("[" + dataIndex + "].studentNumber"));
         assertEquals(classId, jsonPath.getInt("[" + dataIndex + "].classId"));

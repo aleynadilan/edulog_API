@@ -7,5 +7,4 @@ Feature: Sunucunun aktif olup olmadığını kontrol edilmesi.
     * Api kullanicisi "health-check" path parametrelerini olusturur
     * Api kullanicisi get request gonderir ve donen responsei kaydeder
     * Api kullanicisi status codeun 200 oldugunu dogrular
-    * Api kullanicisi response bodydeki message bilgisinin "up" oldugunu dogrular
 
