@@ -43,7 +43,7 @@
     "statusCode": {
       "$id": "#root/statusCode",
       "title": "Statuscode",
-      "type": "integer",
+      "type": "number",
       "examples": [
         200
       ],
