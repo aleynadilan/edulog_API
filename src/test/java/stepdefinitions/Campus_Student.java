@@ -9,6 +9,7 @@ import io.restassured.module.jsv.JsonSchemaValidator;
 import org.junit.Assert;
 
 import utilities.API_Methods;
+import utilities.PicoContainer;
 
 
 import java.io.IOException;
@@ -22,7 +23,11 @@ import static utilities.API_Methods.*;
 
 
 public class Campus_Student {
+    PicoContainer picoContainer;
 
+    public Campus_Student(PicoContainer picoContainer) {
+        this.picoContainer=picoContainer;
+    }
 
     @Given("Mustafa kullanicisi {string} token ile base urli olusturur")
     public void mustafa_kullanicisi_token_ile_base_urli_olusturur(String user) {
@@ -128,12 +133,14 @@ public class Campus_Student {
     @And("Mustafa kullanicisi get request gonderir ve donen responsei kaydeder")
     public void mustafaKullanicisiGetRequestGonderirVeDonenResponseiKaydeder() {
         //API_Methods.getResponseWithBodyAndQueryParams(requestBody, pathParam,queryParams);
-        API_Methods.getBodyResponse(requestBody,pathParam);
+        //API_Methods.getBodyResponse(requestBody,pathParam);
+        API_Methods.getResponse(pathParam);
     }
 
     @And("Mustafa kullanicisi {string}, {string},{string},{string} path ve query parametrelerini olusturur")
     public void mustafaKullanicisiPathVeQueryParametreleriniOlusturur(String pp1, String pp2, String pp3, String pp4) {
-        spec.pathParams("pp1", pp1, "pp2", pp2, "pp3", pp3, "pp4", pp4).queryParams("ids","34","ids","17");
+        int rastId = picoContainer.rastgeleSecilenOgrenciId;
+        spec.pathParams("pp1", pp1, "pp2", pp2, "pp3", pp3, "pp4", pp4).queryParams("ids",""+rastId+"");
         API_Methods.pathParam = "/{pp1}/{pp2}/{pp3}/{pp4}";
 
 //        queryParams = new HashMap<>();

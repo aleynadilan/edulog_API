@@ -1,263 +1,224 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<<<<<<< HEAD
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="12" time="19.339">
-    <testcase classname="Sezon Kontrolörü Tümünü Bul." name="/seasons endpoint'ine gecerli authorization bilgileri ile bir GET request" time="10.106">
-        <system-out>
-            <![CDATA[* Api kullanicisi "employee" token ile base urli olusturur..................passed
-* Api kullanicisi "seasons" path parametrelerini olusturur..................passed
-* Api kullanicisi get request gonderir ve donen responsei kaydeder..........passed
-* Api kullanicisi status codeun 200 oldugunu dogrular.......................passed
-* Api kullanıcısi response body icinde 2 indexe sahip olan "2024-04-25T11:39:34.500Z", "2024-04-25T11:39:34.500Z", "2024/2025", "2024-09-17T00:00:00.000Z" ve "2025-09-17T00:00:00.000Z" bilgilerini doğrular..passed
-* Api kullanicisi seasons get endpointinden donen response bodynin schema validation dogrulamasini yapar.passed
-]]>
-        </system-out>
-    </testcase>
-    <testcase classname="Sezon Kontrolörü Tümünü Bul." name="/seasons endpoint'ine gecersiz authorization bilgileri ile bir GET request gönderildiginde" time="0.222">
-        <system-out>
-            <![CDATA[* Api kullanicisi "invalid" token ile base urli olusturur...................passed
-* Api kullanicisi "seasons" path parametrelerini olusturur..................passed
-* Api kullanicisi donen responsei kaydeder, status codeun '401' ve reason phrase bilgisinin Unauthorized oldugunu dogrular.passed
-]]>
-        </system-out>
-    </testcase>
-    <testcase classname="Sezon Kontrolörü kaldır." name="/seasons/{id} endpoint'ine gecerli authorization bilgileri ve silinmek istenen id'yi iceren bir DELETE" time="0.846">
-        <system-out>
-            <![CDATA[* Api kullanicisi "employee" token ile base urli olusturur..................passed
-* Api kullanicisi "seasons", 12 path parametrelerini olusturur..............passed
-* Api kullanicisi delete request gonderir ve donen responsei kaydeder.......passed
-* Api kullanicisi status codeun 200 oldugunu dogrular.......................passed
-]]>
-        </system-out>
-    </testcase>
-    <testcase classname="Sezon Kontrolörü kaldır." name="/seasons/{id} endpoint'ine gecersiz authorization bilgileri ve silinmek istenen id'yi iceren bir" time="0.174">
-        <system-out>
-            <![CDATA[* Api kullanicisi "invalid" token ile base urli olusturur...................passed
-* Api kullanicisi "seasons", 12 path parametrelerini olusturur..............passed
-* Api kullanicisi donen delete responsei kaydeder, status codeun '401' ve reason phrase bilgisinin Unauthorized oldugunu dogrular.passed
-]]>
-        </system-out>
-    </testcase>
-    <testcase classname="Sezon Kontrolörü kaldır." name="API uzerinden silinmek istenen Sezon Kontrolörü kaydinin silindigi, API uzerinden dogrulanmali." time="0.764">
-        <system-out>
-            <![CDATA[* Api kullanicisi "employee" token ile base urli olusturur..................passed
-* Api kullanicisi "seasons", 12 path parametrelerini olusturur..............passed
-* Api kullanicisi get request gonderir ve donen responsei kaydeder..........passed
-* Api kullanicisi response bodynin bos oldugunu dogrular....................passed
-]]>
-        </system-out>
-    </testcase>
-    <testcase classname="Sezon Kontrolörü Birini Bul." name="/seasons/{id} endpoint'ine gecerli authorization bilgileri ve id verisinin bulundugu" time="1.21">
-        <system-out>
-            <![CDATA[* Api kullanicisi "employee" token ile base urli olusturur..................passed
-* Api kullanicisi "seasons", 1 path parametrelerini olusturur...............passed
-* Api kullanicisi get request gonderir ve donen responsei kaydeder..........passed
-* Api kullanicisi status codeun 200 oldugunu dogrular.......................passed
-* Api kullanicisi seasons id endpointinden donen response bodynin schema validation dogrulamasini yapar.passed
-]]>
-        </system-out>
-=======
-<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="14" time="34.569">
-    <testcase classname="Finance pricing" name="API uzerinden olusturulmak istenen yeni finance pricing kaydinin olustugu API uzerinden dogrulanmali." time="16.969">
-        <system-out><![CDATA[* ApiN kullanicisi "employee" token ile base urli olusturur.................passed
-* ApiN kullanicisi "finance" , "school" ,"pricing" path parametrelerini olusturur.passed
-* ApiN kullanicisi get request gonderir ve donen responsei kaydeder.........passed
-* ApiN kullanicisi status codeun 200 oldugunu dogrular......................passed
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="23" time="30.606">
+    <testcase classname="Ogrencilerin Toplu Bilgilerini Indirme" name="verilen idlerin bilgilerini excel olarak indirme." time="4.065">
+        <system-out><![CDATA[Given Mustafa kullanicisi "employee" token ile base urli olusturur..........passed
+And Mustafa kullanicisi "helpers", "students" path parametrelerini olusturur.passed
+And Mustafa kullanicisi "{{base_url}}/helpers/students" endpointi icin get request gonderir ve donen response kaydeder.passed
+And Mustafa kullanicisi donen body govdesinden rastgele bir ogrenci idsini bir degiskene kaydeder.passed
+And Mustafa kullanicisi "campus", "student","bulk","download" path ve query parametrelerini olusturur.passed
+And Mustafa kullanicisi download body olusturur.............................passed
+And Mustafa kullanicisi get request gonderir ve donen responsei kaydeder....passed
+Then Mustafa kullanicisi status code 200 oldugunu dogrular..................passed
 ]]></system-out>
     </testcase>
-    <testcase classname="Finance pricing" name="finance pricing endpoint'ine gecersiz authorization bilgileri bir GET request gönderildiginde dönen status code'in 401 ve" time="0.481">
-        <system-out><![CDATA[* ApiN kullanicisi "invalidToken" token ile base urli olusturur.............passed
-* ApiN kullanicisi "finance" , "school" ,"pricing" path parametrelerini olusturur.passed
-* ApiN kullanicisi response bodydeki status codeun '401' ve  errorData bilgisinin Unauthorized oldugunu dogrular.passed
+    <testcase classname="Ogrencilerin Toplu Guncelleme Islemi" name="idleri verilen öğrencilerin field ve value eşleşmelerine göre bulk update yapabilmesi" time="0.927">
+        <system-out><![CDATA[Given Mustafa kullanicisi "employee" token ile base urli olusturur..........passed
+And Mustafa kullanicisi "campus", "student","bulk","update" path parametrelerini olusturur.passed
+And Mustafa kullanicisi body olusturur......................................passed
+And Mustafa kullanicisi post request gonderir ve donen responsei kaydeder...passed
+Then Mustafa kullanicisi status code 201 oldugunu dogrular..................passed
+And Mustafa kullanicisi donen body O zaman yanıtın gövdesi doğrulanır:......passed
 ]]></system-out>
     </testcase>
-    <testcase classname="Schools Delete" name="schools/{id} endpoint'ine gecersiz authorization bilgileri ve silinmek istenen id'yi iceren bir" time="0.965">
-        <system-out><![CDATA[* Api kullanicisi "invalid" token ile base urli olusturur...................passed
-* Api kullanicisi "schools", 17 path parametrelerini olusturur..............passed
-* ApiN kullanicisi response bodydeki status codeun '401' ve  errorData bilgisinin Unauthorized oldugunu dogrular.passed
+    <testcase classname="Ogrencilerin Toplu Guncelleme Islemi" name="Schema validation Öğrencileri toplu güncelleme işlemi." time="1.408">
+        <system-out><![CDATA[Given Mustafa kullanicisi "employee" token ile base urli olusturur..........passed
+And Mustafa kullanicisi "campus", "student","bulk","update" path parametrelerini olusturur.passed
+And Mustafa kullanicisi body olusturur......................................passed
+And Mustafa kullanicisi post request gonderir ve donen responsei kaydeder...passed
+Then Mustafa kullanicisi status code 201 oldugunu dogrular..................passed
+And Mustafa kullanicisi request bodynin schema validation dogrulamasini yapar.passed
 ]]></system-out>
     </testcase>
-    <testcase classname="Schools Delete" name="Schools/{id} endpoint'ine gecerli authorization bilgileri ve sistemde olmayan  id'yi silmeyi iceren bir DELETE" time="1.131">
-        <failure message="1 expectation failed.&#10;Expected status code &lt;404&gt; but was &lt;200&gt;.&#10;" type="java.lang.AssertionError"><![CDATA[* ApiN kullanicisi "employee" token ile base urli olusturur.................passed
-* ApiN kullanicisi "schools", 17 path parametrelerini olusturur.............passed
-* ApiN kullanicisi delete request gonderir ve donen responsei kaydeder......passed
-* ApiN kullanicisi status codeun 404 oldugunu dogrular......................failed
-
-StackTrace:
-java.lang.AssertionError: 1 expectation failed.
-Expected status code <404> but was <200>.
-
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
-	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:72)
-	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:105)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:59)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
-	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:499)
-	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
-	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:684)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
-	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:193)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:61)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
-	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:127)
-	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
-	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
-	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
-	at io.restassured.internal.ValidatableResponseImpl.super$2$statusCode(ValidatableResponseImpl.groovy)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
-	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
-	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1268)
-	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)
-	at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy:142)
-	at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy)
-	at utilities.API_Methods.statusCodeAssert(API_Methods.java:97)
-	at stepdefinitions.Schools.api_n_kullanicisi_status_codeun_oldugunu_dogrular(Schools.java:53)
-	at ✽.ApiN kullanicisi status codeun 404 oldugunu dogrular(file:///C:/Users/nurse/IdeaProjects/edulog_API/src/test/resources/features/API/schools/SchoolsDelete.feature:38)
-]]></failure>
-    </testcase>
-    <testcase classname="Schools" name="API uzerinden olusturulmak istenen yeni Schools kaydinin olustugu API uzerinden dogrulanmali." time="1.008">
-        <system-out><![CDATA[* ApiN kullanicisi "employee" token ile base urli olusturur.................passed
-* ApiN kullanicisi "schools" path parametrelerini olusturur.................passed
-* ApiN kullanicisi get request gonderir ve donen responsei kaydeder.........passed
-* ApiN kullanicisi status codeun 200 oldugunu dogrular......................passed
+    <testcase classname="Ogrencilerin Toplu Guncelleme Islemi" name="Negatif isActive bos Öğrencileri toplu güncelleme işlemi." time="0.85">
+        <system-out><![CDATA[Given Mustafa kullanicisi "employee" token ile base urli olusturur..........passed
+And Mustafa kullanicisi "campus", "student","bulk","update" path parametrelerini olusturur.passed
+And Mustafa kullanicisi isActive kismi null body olusturur..................passed
+And Mustafa kullanicisi post request gonderir ve donen responsei kaydeder...passed
+Then Mustafa kullanicisi status code 400 oldugunu dogrular..................passed
 ]]></system-out>
     </testcase>
-    <testcase classname="Schools" name="schools endpoint'ine gecersiz authorization bilgileri bir GET request gönderildiginde dönen status code'in 401 ve" time="0.303">
-        <system-out><![CDATA[* ApiN kullanicisi "invalidToken" token ile base urli olusturur.............passed
-* ApiN kullanicisi "schools" path parametrelerini olusturur.................passed
-* ApiN kullanicisi response bodydeki status codeun '401' ve  errorData bilgisinin Unauthorized oldugunu dogrular.passed
+    <testcase classname="Ogrencilerin Toplu Guncelleme Islemi" name="Negatif body id kisimlari bos Öğrencileri toplu güncelleme işlemi." time="0.845">
+        <system-out><![CDATA[Given Mustafa kullanicisi "employee" token ile base urli olusturur..........passed
+And Mustafa kullanicisi "campus", "student","bulk","update" path parametrelerini olusturur.passed
+And Mustafa kullanicisi id kismi bos body olusturur.........................passed
+And Mustafa kullanicisi post request gonderir ve donen responsei kaydeder...passed
+Then Mustafa kullanicisi status code 400 oldugunu dogrular..................passed
 ]]></system-out>
     </testcase>
-    <testcase classname="Schools" name="API uzerinden olusturulan schools kaydinin olustugu API uzerinden dogrulanmali." time="1.003">
-        <system-out><![CDATA[* ApiN kullanicisi "employee" token ile base urli olusturur.................passed
-* ApiN kullanicisi "schools", 23 path parametrelerini olusturur.............passed
-* ApiN kullanicisi get request gonderir ve donen responsei kaydeder.........passed
-* ApiN kullanicisi response body icindeki name bilgisinin "api deneme" ve id bilgisininde 23 oldugunu dogrular.passed
+    <testcase classname="campus/student/check-students-familys" name="Students family" time="0.876">
+        <system-out><![CDATA[Given Mustafa kullanicisi "employee" token ile base urli olusturur..........passed
+And Mustafa kullanicisi "campus", "student","check-students-familys" path parametrelerini olusturur.passed
+And Mustafa kullanicisi "campus/student/check-students-familys" icin get request gonderir ve donen response kaydeder.passed
+Then Mustafa kullanicisi status code 200 oldugunu dogrular..................passed
+And Mustafa kullanicisi "campus", "student","check-students-familys" schema validation yapar.passed
 ]]></system-out>
     </testcase>
-    <testcase classname="Schools" name="schools endpoint'ine gecerli authorization bilgileri ve gerekli verileri (isActive," time="0.957">
-        <system-out><![CDATA[* ApiN kullanicisi "employee" token ile base urli olusturur.................passed
-* ApiN kullanicisi "schools" path parametrelerini olusturur.................passed
-* ApiN kullanicisi schools endpointine gondermek icin gerekli verileri iceren bir post request olusturur.passed
-* ApiN kullanicisi post request gonderir ve schools endpointinden donen responsei kaydeder.passed
-* ApiN kullanicisi status codeun 201 oldugunu dogrular......................passed
-* ApiN kullanicisi response bodydeki bilgileri dogrular.....................passed
-* ApiN kullanicisi schools post endpointinden donen response bodynin schema validation dogrulamasini yapar.passed
+    <testcase classname="campus/student" name="Campus Student Controller delete Family" time="0.875">
+        <system-out><![CDATA[Given Mustafa kullanicisi "employee" token ile base urli olusturur..........passed
+And Mustafa kullanicisi "campus", "student","family" ve :familyId path parametrelerini olusturur.passed
+And Mustafa kullanicisi "{{base_url}}/campus/student/family/:familyId" icin delete request gonderir ve donen response kaydeder.passed
+Then Mustafa kullanicisi status code 200 oldugunu dogrular..................passed
 ]]></system-out>
     </testcase>
-    <testcase classname="Schools" name="schools endpoint'ine gecersiz authorization bilgileri ve gerekli verileri (isActive," time="0.385">
-        <system-out><![CDATA[* ApiN kullanicisi "invalidToken" token ile base urli olusturur.............passed
-* ApiN kullanicisi "schools" path parametrelerini olusturur.................passed
-* ApiN kullanicisi schools endpointine gondermek icin gerekli verileri iceren bir post request olusturur.passed
-* ApiN kullanicisi post request gonderir ve schools endpointinden donen responsei kaydeder.passed
-* ApiN kullanicisi status codeun 401 oldugunu dogrular......................passed
-* ApiN kullanicisi response bodydeki errorData bilgisinin "Unauthorized" oldugunu dogrular.passed
+    <testcase classname="campus/student" name="Campus Student Controller delete File" time="0.843">
+        <system-out><![CDATA[Given Mustafa kullanicisi "employee" token ile base urli olusturur..........passed
+And Mustafa kullanicisi "campus", "student","file" path parametrelerini olusturur.passed
+And Mustafa kullanicisi "/campus/student/file" icin delete request gonderir ve donen response kaydeder.passed
+Then Mustafa kullanicisi status code 200 oldugunu dogrular..................passed
 ]]></system-out>
     </testcase>
-    <testcase classname="Visitor Post" name="/visitor /list endpoint'ine gecerli authorization bilgileri ve gerekli verileri" time="1.057">
-        <system-out><![CDATA[* ApiN kullanicisi "employee" token ile base urli olusturur.................passed
-* ApiN kullanicisi "visitor" , "list" path parametrelerini olusturur........passed
-* ApiN kullanicisi visitor list endpointine gondermek icin gerekli verileri iceren bir post request olusturur.passed
-* ApiN kullanicisi post request gonderir ve visitor list endpointinden donen responsei kaydeder.passed
-* ApiN kullanicisi status codeun 201 oldugunu dogrular......................passed
-* ApiN kullanicisi response bodydeki messagen "success" oldugunu dogrular...passed
-* ApiN kullanicisi schools post endpointinden donen response bodynin schema validation dogrulamasini yapar.passed
+    <testcase classname="Ogrencilerin Toplu Bilgilerini Indirme" name="verilen idlerin bilgilerini excel olarak indirme." time="1.801">
+        <system-out><![CDATA[Given Mustafa kullanicisi "employee" token ile base urli olusturur..........passed
+And Mustafa kullanicisi "helpers", "students" path parametrelerini olusturur.passed
+And Mustafa kullanicisi "{{base_url}}/helpers/students" endpointi icin get request gonderir ve donen response kaydeder.passed
+And Mustafa kullanicisi donen body govdesinden rastgele bir ogrenci idsini bir degiskene kaydeder.passed
+And Mustafa kullanicisi "campus", "student","parents","bulk","download" path ve query parametrelerini olusturur.passed
+And Mustafa kullanicisi "campus/student/parents/bulk/download?ids=11&ids=22" icin post request gonderir ve donen responsei kaydeder.passed
+Then Mustafa kullanicisi status code 200 oldugunu dogrular..................passed
 ]]></system-out>
     </testcase>
-    <testcase classname="Visitor Post" name="/visitor /list endpoint'ine gecersiz authorization bilgileri bir Post request gönderildiginde dönen status code'in 401 ve" time="0.549">
-        <system-out><![CDATA[* ApiN kullanicisi "invalidToken" token ile base urli olusturur.............passed
-* ApiN kullanicisi "visitor" , "list" path parametrelerini olusturur........passed
-* ApiN kullanicisi visitor list endpointine gondermek icin gerekli verileri iceren bir post request olusturur.passed
-* ApiN kullanicisi post request gonderir ve visitor list endpointinden donen responsei kaydeder.passed
-* ApiN kullanicisi response bodydeki status codeun '401' ve  errorData bilgisinin Unauthorized oldugunu dogrular.passed
+    <testcase classname="Ogrencilerin Toplu Bilgilerini Indirme" name="verilen idlerin bilgilerini excel olarak indirme." time="0.947">
+        <system-out><![CDATA[Given Mustafa kullanicisi "employee" token ile base urli olusturur..........passed
+And Mustafa kullanicisi "campus", "student","parents-widgets" path ve query parametrelerini olusturur.passed
+And Mustafa kullanicisi "campus/student/parents-widgets" icin get request gonderir ve donen responsei kaydeder.passed
+Then Mustafa kullanicisi status code 200 oldugunu dogrular..................passed
+And Mustafa kullanicisi "campus/student/widgets" icin schema validation yapar.passed
 ]]></system-out>
     </testcase>
-    <testcase classname="Visitor Download Post" name="/visitor /Download endpoint'ine gecerli authorization bilgileri ve gerekli verileri" time="0.926">
-        <system-out><![CDATA[* ApiN kullanicisi "employee" token ile base urli olusturur.................passed
-* ApiN kullanicisi "visitor" , "download" path parametrelerini olusturur....passed
-* ApiN kullanicisi visitor list endpointine gondermek icin gerekli verileri iceren bir post request olusturur.passed
-* ApiN kullanicisi post request gonderir ve visitor list endpointinden donen responsei kaydeder.passed
-* ApiN kullanicisi status codeun 201 oldugunu dogrular......................passed
+    <testcase classname="Campus student select" name="Campus Student select studentid get islemi" time="1.21">
+        <system-out><![CDATA[Given Mustafa kullanicisi "employee" token ile base urli olusturur..........passed
+And Mustafa kullanicisi "helpers", "students" path parametrelerini olusturur.passed
+And Mustafa kullanicisi "{{base_url}}/helpers/students" endpointi icin get request gonderir ve donen response kaydeder.passed
+And Mustafa kullanicisi donen body govdesinden rastgele bir ogrenci idsini bir degiskene kaydeder.passed
+And Mustafa kullanicisi "campus", "student" ve :studentId gerekli path parametrelerini olusturur.passed
+And Mustafa kullanicisi base_url-campus-student-:studentId icin get request islemini yapar.passed
+Then Mustafa kullanicisi status code 200 oldugunu dogrular..................passed
 ]]></system-out>
     </testcase>
-    <testcase classname="Visitor Download Post" name="/visitor /download endpoint'ine gecersiz authorization bilgileri bir Post request gönderildiginde dönen status code'in 401 ve" time="0.533">
-        <system-out><![CDATA[* ApiN kullanicisi "invalidToken" token ile base urli olusturur.............passed
-* ApiN kullanicisi "visitor" , "download" path parametrelerini olusturur....passed
-* ApiN kullanicisi visitor list endpointine gondermek icin gerekli verileri iceren bir post request olusturur.passed
-* ApiN kullanicisi post request gonderir ve visitor list endpointinden donen responsei kaydeder.passed
-* ApiN kullanicisi response bodydeki status codeun '401' ve  errorData bilgisinin Unauthorized oldugunu dogrular.passed
+    <testcase classname="Campus student select" name="Campus Student select studentid post islemi" time="1.093">
+        <system-out><![CDATA[Given Mustafa kullanicisi "employee" token ile base urli olusturur..........passed
+And Mustafa kullanicisi "helpers", "students" path parametrelerini olusturur.passed
+And Mustafa kullanicisi "{{base_url}}/helpers/students" endpointi icin get request gonderir ve donen response kaydeder.passed
+And Mustafa kullanicisi donen body govdesinden base_url-campus-student-:studentId icin rastgele bir ogrenci idsini bir degiskene kaydeder.passed
+And Mustafa kullanicisi "campus", "student" ve ":studentId" path icin parametrelerini olusturur.passed
+And Mustafa kullanicisi base_url-campus-student-:studentId icin post request gonderir.passed
+Then Mustafa kullanicisi base_url-campus-student-:studentId icin status code 201 oldugunu dogrular.passed
 ]]></system-out>
     </testcase>
-    <testcase classname="Visitor Get İd" name="API uzerinden olusturulan visitor kaydinin olustugu API uzerinden dogrulanmali." time="0.898">
-        <system-out><![CDATA[* ApiN kullanicisi "employee" token ile base urli olusturur.................passed
-* ApiN kullanicisi "visitor", 18 path parametrelerini olusturur.............passed
-* ApiN kullanicisi get request gonderir ve donen responsei kaydeder.........passed
-* ApiN kullanicisi response body icindeki mesaj bilgisinin "visitor success." oldugunu dogrular.passed
+    <testcase classname="Campus student select" name="Campus Student select studentid DELETE islemi" time="1.082">
+        <system-out><![CDATA[Given Mustafa kullanicisi "employee" token ile base urli olusturur..........passed
+And Mustafa kullanicisi "helpers", "students" path parametrelerini olusturur.passed
+And Mustafa kullanicisi "{{base_url}}/helpers/students" endpointi icin get request gonderir ve donen response kaydeder.passed
+And Mustafa kullanicisi donen body govdesinden base_url-campus-student-:studentId icin rastgele bir ogrenci idsini bir degiskene kaydeder.passed
+And Mustafa kullanicisi "campus", "student" ve :studentId path parametrelerini olusturur.passed
+And Mustafa kullanicisi base_url-campus-student-:studentId icin DELETE request gonderir.passed
+Then Mustafa kullanicisi status code 200 oldugunu dogrular..................passed
 ]]></system-out>
->>>>>>> d20f706896aeb707d09e0a0921702b5a78be6c33
     </testcase>
-    <testcase classname="Sezon Kontrolörü Birini Bul." name="/seasons/{id} endpoint'ine gecerli authorization bilgileri ve sistemde bulunmayan" time="0.86">
-        <system-out>
-            <![CDATA[* Api kullanicisi "employee" token ile base urli olusturur..................passed
-* Api kullanicisi "seasons", 11 path parametrelerini olusturur..............passed
-* Api kullanicisi get request gonderir ve donen responsei kaydeder..........passed
-* Api kullanicisi status codeun 200 oldugunu dogrular.......................passed
-* Api kullanicisi response bodynin bos oldugunu dogrular....................passed
-]]>
-        </system-out>
+    <testcase classname="Ogrencilerin odeme bilgilerinin alinmasi" name="Ogrencilerin odeme bilgilerinin hesaplanmasi" time="1.878">
+        <system-out><![CDATA[Given Mustafa kullanicisi "employee" token ile base urli olusturur..........passed
+And Mustafa kullanicisi "helpers", "students" path parametrelerini olusturur.passed
+And Mustafa kullanicisi "{{base_url}}/helpers/students" endpointi icin get request gonderir ve donen response kaydeder.passed
+And Mustafa kullanicisi donen body govdesinden rastgele bir ogrenci idsini bir degiskene kaydeder.passed
+And Mustafa kullanicisi "finance", "school","pricing" path parametrelerini olusturur.passed
+And Mustafa kullanicisi "{{base_url}}/finance/school/pricing" seklindeki endpointi icin get request gonderir ve donen response kaydeder.passed
+And Mustafa kullanicisi donen body govdesinden rastgele bir pricings idsini bir degiskene kaydeder.passed
+And Mustafa kullanicisi "campus", "student","step_finance","calculate" path parametrelerini olusturur.passed
+And Mustafa kullanicisi "{{base_url}}/campus/student/step_finance/calculate" icin yeni body olusturur.passed
+And Mustafa kullanicisi base_url-campus-student-step_finance-calculate icin post request gonderir.passed
+Then Mustafa kullanicisi status code 201 oldugunu dogrular..................passed
+]]></system-out>
     </testcase>
-    <testcase classname="Sezon Kontrolörü Birini Bul." name="/seasons/{id} endpoint'ine gecersiz authorization bilgileri ve id verisinin bulundugu" time="0.18">
-        <system-out>
-            <![CDATA[* Api kullanicisi "invalid" token ile base urli olusturur...................passed
-* Api kullanicisi "seasons", 1 path parametrelerini olusturur...............passed
-* Api kullanicisi donen responsei kaydeder, status codeun '401' ve reason phrase bilgisinin Unauthorized oldugunu dogrular.passed
-]]>
-        </system-out>
+    <testcase classname="Ogrencilerin odeme bilgilerinin alinmasi" name="Ogrencilerin odeme bilgilerinin hesaplanmasi 2" time="1.902">
+        <system-out><![CDATA[Given Mustafa kullanicisi "employee" token ile base urli olusturur..........passed
+And Mustafa kullanicisi "helpers", "students" path parametrelerini olusturur.passed
+And Mustafa kullanicisi "{{base_url}}/helpers/students" endpointi icin get request gonderir ve donen response kaydeder.passed
+And Mustafa kullanicisi donen body govdesinden rastgele bir ogrenci idsini bir degiskene kaydeder.passed
+And Mustafa kullanicisi "finance", "school","pricing" path parametrelerini olusturur.passed
+And Mustafa kullanicisi "{{base_url}}/finance/school/pricing" seklindeki endpointi icin get request gonderir ve donen response kaydeder.passed
+And Mustafa kullanicisi donen body govdesinden rastgele bir pricings idsini bir degiskene kaydeder.passed
+And Mustafa kullanicisi "campus", "student","step_finance" path parametrelerini olusturur.passed
+And Mustafa kullanicisi base_url-campus-student-step_finance icin yeni body olusturur.passed
+And Mustafa kullanicisi base_url-campus-student-step_finance icin post request gonderir.passed
+Then Mustafa kullanicisi status code 201 oldugunu dogrular..................passed
+]]></system-out>
     </testcase>
-    <testcase classname="Sezon Kontrolörü Birini Bul." name="/seasons/{id} endpoint'ine gecerli authorization bilgileri ve id verisinin bulundugu bir GET" time="0.84">
-        <system-out>
-            <![CDATA[* Api kullanicisi "employee" token ile base urli olusturur..................passed
-* Api kullanicisi "seasons", 1 path parametrelerini olusturur...............passed
-* Api kullanicisi get request gonderir ve donen responsei kaydeder..........passed
-* Api kullanicisi response bodydeki data 1, "2023-10-25T07:14:40.077Z", "2023-10-25T07:14:40.077Z", "2023/2024", "2024-09-17T00:00:00.000Z" ve "2025-09-17T00:00:00.000Z" iceriklerini dogrular.passed
-]]>
-        </system-out>
+    <testcase classname="Ogrencilerin odeme bilgilerinin alinmasi" name="Ogrencilerin odeme bilgilerinin body olmadan hesaplanmasi negatif senaryo" time="1.822">
+        <system-out><![CDATA[Given Mustafa kullanicisi "employee" token ile base urli olusturur..........passed
+And Mustafa kullanicisi "helpers", "students" path parametrelerini olusturur.passed
+And Mustafa kullanicisi "{{base_url}}/helpers/students" endpointi icin get request gonderir ve donen response kaydeder.passed
+And Mustafa kullanicisi donen body govdesinden rastgele bir ogrenci idsini bir degiskene kaydeder.passed
+And Mustafa kullanicisi "finance", "school","pricing" path parametrelerini olusturur.passed
+And Mustafa kullanicisi "{{base_url}}/finance/school/pricing" seklindeki endpointi icin get request gonderir ve donen response kaydeder.passed
+And Mustafa kullanicisi donen body govdesinden rastgele bir pricings idsini bir degiskene kaydeder.passed
+And Mustafa kullanicisi "campus", "student","step_finance" path parametrelerini olusturur.passed
+And Mustafa kullanicisi base_url-campus-student-step_finance icin bos body olusturur.passed
+And Mustafa kullanicisi base_url-campus-student-step_finance icin post request gonderir.passed
+Then Mustafa kullanicisi status code 400 oldugunu dogrular..................passed
+And Mustafa kullanicisi errorData degerlerinin varligini dogrular...........passed
+]]></system-out>
     </testcase>
-    <testcase classname="Sezon Kontrolörü oluştur." name="/seasons endpoint'ine gecerli authorization bilgileri ve gerekli verileri (isActive, name) iceren bir POST body" time="0.984">
-        <system-out>
-            <![CDATA[* Api kullanicisi "employee" token ile base urli olusturur..................passed
-* Api kullanicisi "seasons" path parametrelerini olusturur..................passed
-* Api kullanicisi seasons endpointine gondermek icin gerekli verileri iceren bir post request olusturur.passed
-* Api kullanicisi post request gonderir ve seasons endpointinden donen responsei kaydeder.passed
-* Api kullanicisi status codeun 201 oldugunu dogrular.......................passed
-* Api kullanicisi seasons post endpointinden donen response bodynin schema validation dogrulamasini yapar.passed
-]]>
-        </system-out>
+    <testcase classname="Ogrencilerin odeme bilgilerinin alinmasi" name="Ogrencilerin odeme bilgilerinin studentid olmadan hesaplanmasi negatif senaryo" time="1.88">
+        <system-out><![CDATA[Given Mustafa kullanicisi "employee" token ile base urli olusturur..........passed
+And Mustafa kullanicisi "helpers", "students" path parametrelerini olusturur.passed
+And Mustafa kullanicisi "{{base_url}}/helpers/students" endpointi icin get request gonderir ve donen response kaydeder.passed
+And Mustafa kullanicisi donen body govdesinden rastgele bir ogrenci idsini bir degiskene kaydeder.passed
+And Mustafa kullanicisi "finance", "school","pricing" path parametrelerini olusturur.passed
+And Mustafa kullanicisi "{{base_url}}/finance/school/pricing" seklindeki endpointi icin get request gonderir ve donen response kaydeder.passed
+And Mustafa kullanicisi donen body govdesinden rastgele bir pricings idsini bir degiskene kaydeder.passed
+And Mustafa kullanicisi "campus", "student","step_finance" path parametrelerini olusturur.passed
+And Mustafa kullanicisi base_url-campus-student-step_finance icin studentid olmayan body olusturur.passed
+And Mustafa kullanicisi base_url-campus-student-step_finance icin post request gonderir.passed
+Then Mustafa kullanicisi status code 400 oldugunu dogrular..................passed
+And Mustafa kullanicisi id olmadan errorData degerlerinin varligini dogrular.passed
+]]></system-out>
     </testcase>
-    <testcase classname="Sezon Kontrolörü oluştur." name="/seasons endpoint'ine gecersiz authorization bilgileri ve gerekli verileri (isActive, name) iceren bir POST body" time="0.204">
-        <system-out>
-            <![CDATA[* Api kullanicisi "invalid" token ile base urli olusturur...................passed
-* Api kullanicisi "seasons" path parametrelerini olusturur..................passed
-* Api kullanicisi seasons endpointine gondermek icin gerekli verileri iceren bir post request olusturur.passed
-* Api kullanicisi post request gonderir ve seasons endpointinden donen responsei kaydeder.passed
-* Api kullanicisi status codeun 401 oldugunu dogrular.......................passed
-* Api kullanicisi response bodydeki errorData bilgisinin "Unauthorized" oldugunu dogrular.passed
-]]>
-        </system-out>
+    <testcase classname="Ogrenci wizard 1. step" name="Ogrenci wizard 1. step happy scenario" time="1.012">
+        <system-out><![CDATA[Given Mustafa kullanicisi "employee" token ile base urli olusturur..........passed
+And Mustafa kullanicisi "{{base_url}}campus/student/step_student" icin body olusturur.passed
+And Mustafa kullanicisi "campus", "student","step_student" path parametrelerini olusturur.passed
+And Mustafa kullanicisi "{{base_url}}campus/student/step_student" icin post request gonderir ve donen response kaydeder.passed
+Then Mustafa kullanicisi status code 201 oldugunu dogrular..................passed
+And Mustafa kullanicisi "features/API/campus/student/campusstepstudent.json" dosyasi schema validation yapar.passed
+]]></system-out>
     </testcase>
-    <testcase classname="Sezon Kontrolörü oluştur." name="API uzerinden olusturulmak istenen yeni Sezon Kontrolörü kaydinin olustugu API uzerinden dogrulanmali." time="0.699">
-        <system-out>
-            <![CDATA[* Api kullanicisi "employee" token ile base urli olusturur..................passed
-* Api kullanicisi "seasons", 9 path parametrelerini olusturur...............passed
-* Api kullanicisi get request gonderir ve donen responsei kaydeder..........passed
-* Api kullanicisi response body icindeki name bilgisinin "ahmet" ve id bilgisininde 9 oldugunu dogrular.passed
-]]>
-        </system-out>
+    <testcase classname="Ogrenci wizard 1. step" name="Ogrenci wizard 1. step bos isim negatif senaryo" time="0.798">
+        <system-out><![CDATA[Given Mustafa kullanicisi "employee" token ile base urli olusturur..........passed
+And Mustafa kullanicisi "{{base_url}}campus/student/step_student" bos name ile  body olusturur.passed
+And Mustafa kullanicisi "campus", "student","step_student" path parametrelerini olusturur.passed
+And Mustafa kullanicisi "{{base_url}}campus/student/step_student" icin post request gonderir ve donen response kaydeder.passed
+Then Mustafa kullanicisi status code 400 oldugunu dogrular..................passed
+And Mustafa kullanicisi response "name should not be empty" icerdigini dogrular.passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Ogrenci wizard 1. step" name="Ogrenci wizard 1. step bos id number negatif senaryo" time="0.8">
+        <system-out><![CDATA[Given Mustafa kullanicisi "employee" token ile base urli olusturur..........passed
+And Mustafa kullanicisi "{{base_url}}campus/student/step_student" bos id number ile  body olusturur.passed
+And Mustafa kullanicisi "campus", "student","step_student" path parametrelerini olusturur.passed
+And Mustafa kullanicisi "{{base_url}}campus/student/step_student" icin post request gonderir ve donen response kaydeder.passed
+Then Mustafa kullanicisi status code 400 oldugunu dogrular..................passed
+And Mustafa kullanicisi response "idNumber must be a number string" icerdigini dogrular.passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Ogrenci wizard 1. step" name="Ogrenci wizard 1. step bos isForeign null negatif senaryo" time="0.8">
+        <system-out><![CDATA[Given Mustafa kullanicisi "employee" token ile base urli olusturur..........passed
+And Mustafa kullanicisi "{{base_url}}campus/student/step_student" isForeign null ile  body olusturur.passed
+And Mustafa kullanicisi "campus", "student","step_student" path parametrelerini olusturur.passed
+And Mustafa kullanicisi "{{base_url}}campus/student/step_student" icin post request gonderir ve donen response kaydeder.passed
+Then Mustafa kullanicisi status code 400 oldugunu dogrular..................passed
+And Mustafa kullanicisi response "isForeign must be a boolean value" icerdigini dogrular.passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Ogrencilerin Toplu Bilgilerini Indirme" name="verilen idlerin bilgilerini excel olarak indirme." time="0.978">
+        <system-out><![CDATA[And Mustafa kullanicisi "campus/student/upload_single_file/:userId" icin post request gonderir ve donen responsei kaydeder.passed
+]]></system-out>
+    </testcase>
+    <testcase classname="campus/student/check-students-familys" name="Students family" time="0.829">
+        <system-out><![CDATA[Given Mustafa kullanicisi "employee" token ile base urli olusturur..........passed
+And Mustafa kullanicisi "campus", "student","widgets" path parametrelerini olusturur.passed
+And Mustafa kullanicisi "campus/student/widgets" icin get request gonderir ve donen response kaydeder.passed
+Then Mustafa kullanicisi status code 200 oldugunu dogrular..................passed
+And Mustafa kullanicisi "campus/student/widgets" schema validation yapar....passed
+]]></system-out>
     </testcase>
 </testsuite>
