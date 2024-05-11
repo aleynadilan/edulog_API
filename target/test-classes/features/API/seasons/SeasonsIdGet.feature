@@ -1,4 +1,4 @@
-@seasons
+@API
 Feature: Sezon Kontrolörü Birini Bul.
 
   Scenario Outline: /seasons/{id} endpoint'ine gecerli authorization bilgileri ve id verisinin bulundugu

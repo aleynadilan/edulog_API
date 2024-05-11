@@ -1,3 +1,4 @@
+@API
 Feature: Schools
 
   Scenario Outline: schools endpoint'ine geçerli authorization bilgileri ve güncellenmesi gereken verileri (isActive, company_id, group_id, name) içeren bir PATCH body gönderildiğinde dönen status code'un 200 olduğu doğrulanmalı.

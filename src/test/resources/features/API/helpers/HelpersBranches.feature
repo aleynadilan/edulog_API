@@ -1,4 +1,3 @@
-@Dilan
 Feature: Seçilen Sınıfın Şube/Branşları.
 
   Scenario Outline: /helpers/branches/{classId} endpoint'ine gecerli authorization bilgileri ve classId verisinin bulundugu

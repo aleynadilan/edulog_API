@@ -1,3 +1,4 @@
+@API
 Feature: Stage Controller get List
   Scenario: Stage Controller get List
     Given Mustafa kullanicisi "student" token ile base urli olusturur

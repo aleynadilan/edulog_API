@@ -1,4 +1,4 @@
-@meet
+@API
 Feature: Görüşmeler Witgetları.
 
   Scenario: /meet/widgets endpoint'ine gecerli authorization bilgileri ile bir GET request gönderildiginde dönen

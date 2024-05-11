@@ -1,3 +1,4 @@
+@API
 Feature: Ogrencileri toplu guncelleme islemi
 
   @TC01

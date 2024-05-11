@@ -1,4 +1,4 @@
-@Dilan
+@API
 Feature: Okulun Rol Listesi.
 
   Scenario Outline: /helpers/role-list endpoint'ine gecerli authorization bilgileri ile bir GET request

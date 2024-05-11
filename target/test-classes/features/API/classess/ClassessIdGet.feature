@@ -1,3 +1,4 @@
+@API
 Feature: Sınıf Denetleyicisi Birini Bul.
 
   Scenario Outline: /classess/{id} endpoint'ine gecerli authorization bilgileri ve id verisinin bulundugu

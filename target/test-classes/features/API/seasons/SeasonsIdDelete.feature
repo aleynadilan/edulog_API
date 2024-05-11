@@ -1,4 +1,4 @@
-@seasons
+@API
 Feature: Sezon Kontrolörü kaldır.
 
   Scenario Outline: /seasons/{id} endpoint'ine gecerli authorization bilgileri ve silinmek istenen id'yi iceren bir DELETE

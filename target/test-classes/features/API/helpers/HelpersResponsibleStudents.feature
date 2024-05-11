@@ -1,4 +1,4 @@
-@Dilan
+@API
 Feature: Yardımcı Kontrolörlerin Sorumlu Öğrencileri Kazanması.
 
   Scenario: /helpers/responsible-students endpoint'ine gecerli authorization bilgileri ile bir GET request gönderildiginde

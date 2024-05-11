@@ -1,4 +1,4 @@
-@Dilan
+@API
 Feature: İlgili Aşamanın sınıfları.
 
   Scenario Outline: /helpers/stage-classes/{stage} endpoint'ine gecerli authorization bilgileri ve stage verisinin

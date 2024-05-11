@@ -1,4 +1,4 @@
-@Dilan
+@API
 Feature: Yardımcı Denetleyicinin Çalışan Kimliğine Göre Sorumlu Öğrencileri Alması.
 
   Scenario Outline: /helpers/responsible-students/{id} endpoint'ine gecerli authorization bilgileri ve id verisinin
