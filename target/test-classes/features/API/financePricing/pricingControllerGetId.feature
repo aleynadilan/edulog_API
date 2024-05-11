@@ -1,5 +1,6 @@
 Feature: Finance pricing
    #parametreli Get
+  @API
   Scenario Outline: API uzerinden olusturulan finance pricing kaydinin olustugu API uzerinden dogrulanmali.
   (Response bodyde dönen id ile /finans/{id} endpoint'ine GET request gönderilerek kayıt oluşturulduğu doğrulanabilir.)
 
@@ -14,6 +15,7 @@ Feature: Finance pricing
 
 
 #negatif seneryo yanlış id ile
+  @API
   Scenario Outline: finans endpoint'ine gecersiz id ile bir GET request gönderildiginde dönen status code'in 401 oldugunu dogrular
 
 

@@ -1,6 +1,6 @@
 Feature: Visitor Get İd
    #parametreli Get
-  @ApiN
+  @API
   Scenario Outline: API uzerinden olusturulan visitor kaydinin olustugu API uzerinden dogrulanmali.
   (Response bodyde dönen id ile /visitor/{id} endpoint'ine GET request gönderilerek kayıt oluşturulduğu doğrulanabilir.)
 

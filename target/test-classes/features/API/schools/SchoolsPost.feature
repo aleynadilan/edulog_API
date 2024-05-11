@@ -1,6 +1,6 @@
 Feature: Schools
 #Post
-  @ApiN
+  @API
   Scenario: schools endpoint'ine gecerli authorization bilgileri ve gerekli verileri (isActive,
   company_id, group_id,  name) iceren bir POST body gönderildiginde dönen status code'in 201
   oldugu dogrulanmali.
@@ -14,7 +14,7 @@ Feature: Schools
     * ApiN kullanicisi schools post endpointinden donen response bodynin schema validation dogrulamasini yapar
 
 #negatif Scenario
-  @ApiN
+  @API
   Scenario: schools endpoint'ine gecersiz authorization bilgileri ve gerekli verileri (isActive,
   company_id, group_id,  name) iceren bir POST body gönderildiginde dönen status code'in 401 ve
   response body'deki errorData bilgisinin "Unauthorized" oldugu dogrulanmali.
