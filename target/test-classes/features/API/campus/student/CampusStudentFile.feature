@@ -1,4 +1,4 @@
-@ml
+@API @ml
 Feature: campus/student
   Scenario: Campus Student Controller delete File
     Given Mustafa kullanicisi "employee" token ile base urli olusturur

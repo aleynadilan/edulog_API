@@ -1,4 +1,4 @@
-@ml
+@API @ml
 Feature: Ogrencilerin odeme bilgilerinin alinmasi
   Scenario: Ogrencilerin odeme bilgilerinin hesaplanmasi
     Given Mustafa kullanicisi "employee" token ile base urli olusturur

@@ -1,4 +1,4 @@
-@Dilan
+@API
 Feature: Yardımcı Kontrolörün Sezonları alması.
 
   Scenario Outline: /helpers/seasons endpoint'ine gecerli authorization bilgileri ile bir GET request

@@ -1,3 +1,4 @@
+@API
 Feature: Sunucunun aktif olup olmadığını kontrol edilmesi.
 
   Scenario: /health-check endpoint'ine bir GET request gönderildiginde dönen status code'in 200 ve

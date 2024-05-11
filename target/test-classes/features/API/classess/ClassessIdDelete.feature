@@ -1,3 +1,4 @@
+@API
 Feature: Sınıf Denetleyicisi kaldır.
 
   Scenario Outline: /classess/{id} endpoint'ine gecerli authorization bilgileri ve silinmek istenen id'yi iceren bir DELETE

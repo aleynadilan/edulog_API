@@ -1,4 +1,4 @@
-@panel
+@API
 Feature: Panel Denetleyicisi Şirket Grubu Okul Listesini Alır.
 
   Scenario: /panel/cgs-list endpoint'ine gecerli authorization bilgileri ile bir GET request gönderildiginde dönen

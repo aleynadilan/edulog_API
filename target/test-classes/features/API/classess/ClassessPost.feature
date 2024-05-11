@@ -1,3 +1,4 @@
+@API
 Feature: Sınıf Denetleyicisi oluştur.
 
   Scenario: /classess endpoint'ine gecerli authorization bilgileri ve gerekli verileri (isActive,
