@@ -30,7 +30,7 @@ public class CampusStudentUploadSinglefileUserId {
         excelSpec = new RequestSpecBuilder()
                 .setBaseUri("https://panelbe.edulog.com.tr")
                 .addHeader("Accept", "application/json")
-                .addHeader("Authorization", "Bearer " + Authentication.generateToken("student"))
+                .addHeader("Authorization", "Bearer " + Authentication.generateToken("employee"))
                 .build();
 
 // Post işlemi için URL oluşturuluyor

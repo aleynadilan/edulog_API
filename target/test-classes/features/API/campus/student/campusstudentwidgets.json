@@ -100,7 +100,7 @@
                 "chartData": {
                   "$id": "#root/data/items/data/items/chartData",
                   "title": "Chartdata",
-                  "type": "integer",
+                  "type": "number",
                   "default": 0
                 }
               }
