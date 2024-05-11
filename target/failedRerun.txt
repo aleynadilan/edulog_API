@@ -1,1 +1,1 @@
-file:src/test/resources/features/API/schools/SchoolsDelete.feature:42
+file:src/test/resources/features/API/financePricing/pricingControllerGetId.feature:27

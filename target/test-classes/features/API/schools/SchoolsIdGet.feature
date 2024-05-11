@@ -1,6 +1,6 @@
 Feature: Schools
    #parametreli Get
-  @ApiN
+  @API
   Scenario Outline: API uzerinden olusturulan schools kaydinin olustugu API uzerinden dogrulanmali.
   (Response bodyde dönen id ile /schools/{id} endpoint'ine GET request gönderilerek kayıt oluşturulduğu doğrulanabilir.)
 
