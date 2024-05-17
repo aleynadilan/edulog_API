@@ -1,4 +1,4 @@
-@API @ml
+@ml
 Feature: campus/student/check-students-familys
   Scenario: Students family
     Given Mustafa kullanicisi "employee" token ile base urli olusturur

@@ -1,4 +1,4 @@
-@API
+@helpers
 Feature: Yardımcılar Kontrolörünün İlçeyi alması.
 
   Scenario Outline: /helpers/county/{cityId} endpoint'ine gecerli authorization bilgileri ve cityId verisinin bulundugu

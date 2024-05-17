@@ -1,4 +1,4 @@
-@API
+@class
 Feature: Sınıf Denetleyicisi Tümünü bul.
 
   Scenario Outline: /classess endpoint'ine gecerli authorization bilgileri ile bir GET request

@@ -1,4 +1,4 @@
-@API
+@helpers
 Feature: Yardımcı Denetleyicinin İsim ve Kimliği Olan Çalışanları Alması.
 
   Scenario: /helpers/employees endpoint'ine gecerli authorization bilgileri ile bir GET request gönderildiginde

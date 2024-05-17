@@ -1,4 +1,4 @@
-@API
+@experiment
 Feature: Kimliğe göre denemeyi al.
 
   Scenario Outline: /experiment/{id} endpoint'ine gecerli authorization bilgileri ve id verisinin bulundugu

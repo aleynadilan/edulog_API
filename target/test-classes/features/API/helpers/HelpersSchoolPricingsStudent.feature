@@ -1,4 +1,4 @@
-@API
+@helpers
 Feature: Yardımcı Denetleyicinin Okul Fiyatlarını Alma Öğrencisi.
 
   Scenario Outline: /helpers/school-pricings-student/{student} endpoint'ine gecerli authorization bilgileri ve student

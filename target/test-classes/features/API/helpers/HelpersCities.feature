@@ -1,4 +1,4 @@
-@API
+@helpers
 Feature: Yardımcı Denetleyicinin Şehirleri alması
 
   Scenario Outline: /helpers/cities endpoint'ine gecerli authorization bilgileri ile bir GET request

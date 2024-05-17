@@ -1,4 +1,3 @@
-@API
 Feature: Ogrencilerin Toplu Bilgilerini Indirme
 
   Scenario Outline: /campus/employee/bulk/dowload endpoint'ine gecerli authorization bilgileri ile

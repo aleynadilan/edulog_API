@@ -1,4 +1,4 @@
-@Dilan
+@helpers
 Feature: Yardımcı Denetleyicinin Öğrencilere İsim ve Kimliği Getirmesi.
 
   Scenario: /helpers/students endpoint'ine gecerli authorization bilgileri ile bir GET request gönderildiginde

@@ -1,3 +1,4 @@
+@class
 Feature: Sınıf Denetleyicisi oluştur.
 
   Scenario: /classess endpoint'ine gecerli authorization bilgileri ve gerekli verileri (isActive,
@@ -35,7 +36,7 @@ Feature: Sınıf Denetleyicisi oluştur.
 
     Examples:
       | id | name | responseId |
-      | 76 | 5    | 76         |
+      | 84 | ali  | 84         |
 
 
   Scenario: /classess post endpoint'ine gecerli authorization bilgileri ve gerekli verileri (isActive,

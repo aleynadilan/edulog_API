@@ -1,4 +1,4 @@
-@Dilan
+@helpers
 Feature: Öğretmenlere atanabilecek mesleki alan bilgisi.
 
   Scenario Outline: /helpers/stage-branches endpoint'ine gecerli authorization bilgileri ile bir GET request

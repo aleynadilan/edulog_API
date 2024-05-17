@@ -1,4 +1,4 @@
-@Dilan
+@helpers
 Feature: Yardımcılar Kontrolörünün Bölgeyi alması.
 
   Scenario Outline: /helpers/district/{countyId} endpoint'ine gecerli authorization bilgileri ve countyId verisinin

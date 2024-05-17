@@ -1,4 +1,4 @@
-@API
+@helpers
 Feature: Yardımcı Denetleyicilerin Sorumlu Öğretmenler Edinmesi.
 
   Scenario Outline: /helpers/responsible-teachers endpoint'ine gecerli authorization bilgileri ile bir GET request

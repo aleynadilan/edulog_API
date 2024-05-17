@@ -1,4 +1,4 @@
-@API @ml
+@ml
 Feature: Campus student select
 
   Scenario: Campus Student select studentid get islemi
