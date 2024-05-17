@@ -24,9 +24,9 @@
       "type": "string"
     },
     "level_key": {
-      "type": "string"
+      "type": ["string", "null"]
     }
   },
-  "required": ["id", "isActive", "createdAt", "updatedAt", "name", "level_key"]
+  "required": ["id", "isActive", "createdAt", "updatedAt", "name"],
+  "additionalProperties": false
 }
-

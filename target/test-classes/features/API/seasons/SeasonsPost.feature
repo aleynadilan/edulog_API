@@ -1,4 +1,4 @@
-@API
+@seasons
 Feature: Sezon Kontrolörü oluştur.
 
   Scenario: /seasons endpoint'ine gecerli authorization bilgileri ve gerekli verileri (isActive, name) iceren bir POST body

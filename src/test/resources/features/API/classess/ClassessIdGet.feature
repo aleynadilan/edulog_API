@@ -1,3 +1,4 @@
+@class
 Feature: Sınıf Denetleyicisi Birini Bul.
 
   Scenario Outline: /classess/{id} endpoint'ine gecerli authorization bilgileri ve id verisinin bulundugu
@@ -11,7 +12,7 @@ Feature: Sınıf Denetleyicisi Birini Bul.
 
     Examples:
       | id |
-      | 76 |
+      | 56 |
 
 
   Scenario Outline: /classess/{id} endpoint'ine gecerli authorization bilgileri ve sistemde bulunmayan
@@ -39,7 +40,7 @@ Feature: Sınıf Denetleyicisi Birini Bul.
 
     Examples:
       | id |
-      | 76 |
+      | 56 |
 
 
   Scenario Outline: /classess/{id} endpoint'ine gecerli authorization bilgileri ve id verisinin bulundugu bir GET
@@ -54,4 +55,4 @@ Feature: Sınıf Denetleyicisi Birini Bul.
 
     Examples:
       | id | id | createdAt                | updatedAt                | name |
-      | 76 | 76 | 2024-04-25T11:43:55.101Z | 2024-04-25T11:43:55.101Z | 5    |
+      | 56 | 56 | 2023-12-23T06:23:56.124Z | 2023-12-23T06:23:56.124Z | 12   |

@@ -1,4 +1,4 @@
-@API
+@meet
 Feature: Tek Toplantı Verileri.
 
   Scenario Outline: /meet/{id} endpoint'ine gecerli authorization bilgileri ve id verisinin bulundugu

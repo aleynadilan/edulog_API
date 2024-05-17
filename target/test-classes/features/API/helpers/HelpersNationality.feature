@@ -1,4 +1,4 @@
-@API
+@helpers
 Feature: Yardımcı Kontrolörün Vatandaşlık alması.
 
   Scenario Outline: /helpers/nationality endpoint'ine gecerli authorization bilgileri ile bir GET request

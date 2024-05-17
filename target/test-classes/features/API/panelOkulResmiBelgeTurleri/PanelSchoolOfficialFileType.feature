@@ -1,4 +1,4 @@
-@API
+@panel1
 Feature: Okul Resmi Dosya Türü Denetleyicisi Tümünü Bul.
 
   Scenario: /panel/school-official-file-type endpoint'ine gecerli authorization bilgileri ile bir GET request

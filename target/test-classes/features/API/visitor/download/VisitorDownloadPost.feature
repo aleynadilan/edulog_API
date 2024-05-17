@@ -1,3 +1,4 @@
+@visitor
 Feature: Visitor Download Post
 #Post
   @API

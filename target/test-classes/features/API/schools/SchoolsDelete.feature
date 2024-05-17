@@ -1,4 +1,3 @@
-@API
 Feature: Schools Delete
 
   Scenario Outline: Schools/{id} endpoint'ine gecerli authorization bilgileri ve silinmek istenen id'yi iceren bir DELETE

@@ -1,4 +1,4 @@
-@API
+@meet
 Feature: Meet Denetleyici kontrol paneli Meet Listesi.
 
   Scenario: /meet/dashboard-meet-list endpoint'ine gecerli authorization bilgileri ile bir GET request gönderildiginde dönen

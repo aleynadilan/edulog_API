@@ -1,4 +1,4 @@
-@API @ml
+@ml
 Feature: Ogrencilerin Toplu Bilgilerini Indirme
 
   Scenario: verilen idlerin bilgilerini excel olarak indirme.

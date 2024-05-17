@@ -1,4 +1,4 @@
-@API @ml
+@ml
 Feature: Ogrencilerin Toplu Guncelleme Islemi
 
   Scenario:idleri verilen öğrencilerin field ve value eşleşmelerine göre bulk update yapabilmesi

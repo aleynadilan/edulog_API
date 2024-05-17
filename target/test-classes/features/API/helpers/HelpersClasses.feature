@@ -1,4 +1,4 @@
-@API
+@helpers
 Feature: İlgili okulun sınıfları.
 
   Scenario Outline: /helpers/classes/{seasonId} endpoint'ine gecerli authorization bilgileri ve seasonId verisinin

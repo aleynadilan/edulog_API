@@ -1,4 +1,4 @@
-@API
+@panel
 Feature: Panel Denetleyicisi tüm Modüller.
 
   Scenario: /panel/module-list endpoint'ine gecerli authorization bilgileri ile bir GET request gönderildiginde dönen

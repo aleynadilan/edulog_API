@@ -1,4 +1,4 @@
-@API
+@helpers
 Feature: Yardımcı Denetleyici, Öğrenci Ekleme Yardımcılarını alır.
 
   Scenario Outline: /helpers/mixed endpoint'ine gecerli authorization bilgileri ile bir GET request

@@ -142,7 +142,7 @@ public class Classess {
         assertEquals(updatedAt, jsonPath.getString("updatedAt"));
         assertNull(jsonPath.get("deletedAt"));
         assertEquals(name, jsonPath.getString("name"));
-        assertEquals(5, jsonPath.getInt("level_key"));
+        assertNull(jsonPath.get("level_key"));
     }
 
     @Given("Api kullanicisi classess id endpointinden donen response bodynin schema validation dogrulamasini yapar")

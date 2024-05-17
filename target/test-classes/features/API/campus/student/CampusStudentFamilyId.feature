@@ -1,4 +1,4 @@
-@API @ml
+@ml
 Feature: campus/student
   Scenario: Campus Student Controller delete Family
     Given Mustafa kullanicisi "employee" token ile base urli olusturur

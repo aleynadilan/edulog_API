@@ -1,3 +1,4 @@
+@visitor
 Feature: Visitor Post
 #Post
   @API

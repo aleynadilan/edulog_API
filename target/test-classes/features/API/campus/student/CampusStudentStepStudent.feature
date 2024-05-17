@@ -1,4 +1,4 @@
-@API @ml
+@ml
 Feature: Ogrenci wizard 1. step
   Scenario: Ogrenci wizard 1. step happy scenario
     Given Mustafa kullanicisi "employee" token ile base urli olusturur

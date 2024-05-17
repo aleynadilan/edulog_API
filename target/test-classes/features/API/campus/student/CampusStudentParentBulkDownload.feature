@@ -1,4 +1,4 @@
-@API @ml
+@ml
 Feature: Ogrencilerin Toplu Bilgilerini Indirme
   Scenario: verilen idlerin bilgilerini excel olarak indirme.
     Given Mustafa kullanicisi "employee" token ile base urli olusturur

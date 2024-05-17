@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="4" time="11.277">
+    <testcase classname="Visitor Post" name="/visitor /list endpoint'ine gecerli authorization bilgileri ve gerekli verileri" time="7.689">
+        <system-out>
+            <![CDATA[* ApiN kullanicisi "employee" token ile base urli olusturur.................passed
+* ApiN kullanicisi "visitor" , "list" path parametrelerini olusturur........passed
+* ApiN kullanicisi visitor list endpointine gondermek icin gerekli verileri iceren bir post request olusturur.passed
+* ApiN kullanicisi post request gonderir ve visitor list endpointinden donen responsei kaydeder.passed
+* ApiN kullanicisi status codeun 201 oldugunu dogrular......................passed
+* ApiN kullanicisi response bodydeki messagen "success" oldugunu dogrular...passed
+* ApiN kullanicisi schools post endpointinden donen response bodynin schema validation dogrulamasini yapar.passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Visitor Post" name="/visitor /list endpoint'ine gecersiz authorization bilgileri bir Post request gönderildiginde dönen status code'in 401 ve" time="0.505">
+        <system-out>
+            <![CDATA[* ApiN kullanicisi "invalidToken" token ile base urli olusturur.............passed
+* ApiN kullanicisi "visitor" , "list" path parametrelerini olusturur........passed
+* ApiN kullanicisi visitor list endpointine gondermek icin gerekli verileri iceren bir post request olusturur.passed
+* ApiN kullanicisi post request gonderir ve visitor list endpointinden donen responsei kaydeder.passed
+* ApiN kullanicisi response bodydeki status codeun '401' ve  errorData bilgisinin Unauthorized oldugunu dogrular.passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Visitor Download Post" name="/visitor /Download endpoint'ine gecerli authorization bilgileri ve gerekli verileri" time="0.927">
+        <system-out>
+            <![CDATA[* ApiN kullanicisi "employee" token ile base urli olusturur.................passed
+* ApiN kullanicisi "visitor" , "download" path parametrelerini olusturur....passed
+* ApiN kullanicisi visitor list endpointine gondermek icin gerekli verileri iceren bir post request olusturur.passed
+* ApiN kullanicisi post request gonderir ve visitor list endpointinden donen responsei kaydeder.passed
+* ApiN kullanicisi status codeun 201 oldugunu dogrular......................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Visitor Download Post" name="/visitor /download endpoint'ine gecersiz authorization bilgileri bir Post request gönderildiginde dönen status code'in 401 ve" time="0.451">
+        <system-out>
+            <![CDATA[* ApiN kullanicisi "invalidToken" token ile base urli olusturur.............passed
+* ApiN kullanicisi "visitor" , "download" path parametrelerini olusturur....passed
+* ApiN kullanicisi visitor list endpointine gondermek icin gerekli verileri iceren bir post request olusturur.passed
+* ApiN kullanicisi post request gonderir ve visitor list endpointinden donen responsei kaydeder.passed
+* ApiN kullanicisi response bodydeki status codeun '401' ve  errorData bilgisinin Unauthorized oldugunu dogrular.passed
+]]>
+        </system-out>
+    </testcase>
+</testsuite>
